@@ -1,0 +1,138 @@
+"use client";
+
+import { useEffect, useState, useRef } from "react";
+import { Sparkles, Play, ChevronDown } from "lucide-react";
+
+function AudioVisualizer() {
+  const bars = 40;
+  return (
+    <div className="flex items-end gap-[2px] h-16" aria-hidden="true">
+      {Array.from({ length: bars }).map((_, i) => (
+        <div
+          key={i}
+          className="w-[3px] rounded-full bg-gradient-to-t from-brand-600 to-gold-400"
+          style={{
+            animation: `waveform ${0.8 + Math.random() * 0.8}s ease-in-out ${Math.random() * 0.5}s infinite`,
+            height: `${8 + Math.random() * 24}px`,
+            opacity: 0.6 + Math.random() * 0.4,
+          }}
+        />
+      ))}
+    </div>
+  );
+}
+
+export function HeroSection() {
+  const [mounted, setMounted] = useState(false);
+  const heroRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  return (
+    <section
+      id="hero"
+      ref={heroRef}
+      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+    >
+      {/* Background image with overlay */}
+      <div className="absolute inset-0">
+        <img
+          src="/images/hero-bg.jpg"
+          alt=""
+          className="absolute inset-0 w-full h-full object-cover"
+          loading="eager"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-surface-950/70 via-surface-950/50 to-surface-950" />
+      </div>
+
+      {/* Floating orbs */}
+      <div
+        className="floating-orb w-96 h-96 bg-brand-600 top-20 -left-48"
+        style={{ animation: "pulse-glow 4s ease-in-out infinite" }}
+      />
+      <div
+        className="floating-orb w-80 h-80 bg-gold-500 -bottom-20 -right-40"
+        style={{ animation: "pulse-glow 5s ease-in-out 1s infinite" }}
+      />
+      <div
+        className="floating-orb w-64 h-64 bg-brand-400 top-1/3 right-1/4"
+        style={{ animation: "pulse-glow 6s ease-in-out 2s infinite" }}
+      />
+
+      {/* Content */}
+      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 text-center">
+        {/* Badge */}
+        <div
+          className={`inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-300 text-sm font-medium mb-8 transition-all duration-700 ${
+            mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+          }`}
+        >
+          <Sparkles className="w-4 h-4" />
+          <span>KI-Generierte Musik — Die Zukunft ist jetzt</span>
+        </div>
+
+        {/* Headline */}
+        <h1
+          className={`text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black leading-[0.95] tracking-tight mb-6 transition-all duration-700 delay-150 ${
+            mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+          }`}
+          style={{ fontFamily: "'Playfair Display', serif" }}
+        >
+          <span className="text-white">Deine</span>{" "}
+          <span className="gradient-text">Seele</span>
+          <br />
+          <span className="text-white">Unser</span>{" "}
+          <span className="gradient-text-gold">Sound</span>
+        </h1>
+
+        {/* Subtitle */}
+        <p
+          className={`text-lg sm:text-xl text-white/60 max-w-2xl mx-auto mb-10 leading-relaxed transition-all duration-700 delay-300 ${
+            mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+          }`}
+        >
+          Soul Lyrics Studio verwandelt deine Emotionen in einzigartige Musik. 
+          Künstliche Intelligenz trifft auf echte Seele — für Songs, die berühren.
+        </p>
+
+        {/* Audio visualizer */}
+        <div
+          className={`flex justify-center mb-10 transition-all duration-700 delay-[450ms] ${
+            mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+          }`}
+        >
+          <AudioVisualizer />
+        </div>
+
+        {/* CTA */}
+        <div
+          className={`flex flex-col sm:flex-row items-center justify-center gap-4 transition-all duration-700 delay-500 ${
+            mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+          }`}
+        >
+          <a href="#showcase" className="btn-primary text-lg px-8 py-4">
+            <Play className="w-5 h-5" />
+            Entdecke den Sound
+          </a>
+          <a href="#how-it-works" className="btn-outline text-lg px-8 py-4">
+            So funktioniert&apos;s
+          </a>
+        </div>
+      </div>
+
+      {/* Scroll indicator */}
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10">
+        <a
+          href="#features"
+          className="flex flex-col items-center gap-2 text-white/30 hover:text-white/60 transition-colors"
+          aria-label="Scroll down"
+        >
+          <span className="text-xs font-medium tracking-widest uppercase">Entdecken</span>
+          <ChevronDown className="w-5 h-5 animate-bounce" />
+        </a>
+      </div>
+    </section>
+  );
+}
