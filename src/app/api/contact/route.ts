@@ -1,5 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { db } from "@/db";
+
+export const dynamic = "force-dynamic";
 import { contactMessages } from "@/db/schema";
 
 export async function POST(request: NextRequest) {
