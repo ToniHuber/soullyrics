@@ -36,16 +36,8 @@ export function HeroSection() {
       ref={heroRef}
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
-      {/* Background image with overlay */}
-      <div className="absolute inset-0">
-        <img
-          src="/images/hero-bg.jpg"
-          alt=""
-          className="absolute inset-0 w-full h-full object-cover"
-          loading="eager"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-surface-950/70 via-surface-950/50 to-surface-950" />
-      </div>
+      {/* Background gradient */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_0%,#4c0ca480_0%,#0a0a12_70%)]" />
 
       {/* Floating orbs */}
       <div
