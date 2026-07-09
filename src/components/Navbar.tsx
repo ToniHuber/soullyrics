@@ -39,20 +39,20 @@ export function Navbar() {
             <div className="absolute inset-0 rounded-full bg-gold-500/20 blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10" />
           </div>
           <div className="flex flex-col">
-            <span className="text-lg font-bold tracking-tight text-white leading-tight" style={{ fontFamily: "'Playfair Display', serif" }}>
+            <span className="text-lg font-bold tracking-tight text-white leading-tight whitespace-nowrap" style={{ fontFamily: "'Playfair Display', serif" }}>
               Soul Lyrics
             </span>
             <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-gold-400 leading-tight">
               Studio
             </span>
           </div>
-          <span className="hidden lg:inline text-white/42 text-xs italic ml-2 border-l border-white/20 pl-3">
+          <span className="hidden xl:inline text-white/42 text-xs italic ml-2 border-l border-white/20 pl-3 whitespace-nowrap">
             Wo Erinnerungen zu Musik werden.
           </span>
         </a>
 
         {/* Desktop links */}
-        <div className="hidden md:flex items-center gap-1">
+        <div className="hidden lg:flex items-center gap-1">
           {navLinks.map((link) => (
             <a
               key={link.href}
@@ -76,7 +76,7 @@ export function Navbar() {
         {/* Mobile burger */}
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
-          className="md:hidden w-11 h-11 flex items-center justify-center rounded-xl text-white hover:bg-white/10 transition-colors"
+          className="lg:hidden w-11 h-11 flex items-center justify-center rounded-xl text-white hover:bg-white/10 transition-colors"
           aria-label="Toggle menu"
         >
           {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -85,7 +85,7 @@ export function Navbar() {
 
       {/* Mobile menu */}
       <div
-        className={`md:hidden overflow-hidden transition-all duration-300 ease-out ${
+        className={`lg:hidden overflow-hidden transition-all duration-300 ease-out ${
           mobileOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
         }`}
       >

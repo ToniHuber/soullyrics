@@ -50,7 +50,7 @@ export function HeroSection() {
     <section
       id="hero"
       ref={heroRef}
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-28 pb-20"
     >
       {/* Background gradient */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_0%,#d4880c40_0%,#0a0a0a_70%)]" />
