@@ -2,24 +2,24 @@
 
 import { useState, useEffect, useRef } from "react";
 import { AnimatedSection } from "./AnimatedSection";
-import { Play, Pause, Heart, Clock, BarChart3 } from "lucide-react";
+import { Play, Pause, Heart, Clock } from "lucide-react";
 
 interface Track {
   id: number;
   title: string;
   artist: string;
   genre: string;
+  description: string;
   duration: string;
-  plays: number;
 }
 
 const demoTracks: Track[] = [
-  { id: 1, title: "Midnight Reflections", artist: "Soul Lyrics Studio", genre: "Neo Soul", duration: "3:42", plays: 12453 },
-  { id: 2, title: "Golden Hour", artist: "Soul Lyrics Studio", genre: "R&B", duration: "4:08", plays: 8921 },
-  { id: 3, title: "Stardust Memories", artist: "Soul Lyrics Studio", genre: "Jazz Soul", duration: "3:55", plays: 15687 },
-  { id: 4, title: "Electric Dreams", artist: "Soul Lyrics Studio", genre: "Synth Soul", duration: "3:28", plays: 7234 },
-  { id: 5, title: "Rainy Sunday", artist: "Soul Lyrics Studio", genre: "Lo-Fi Soul", duration: "4:15", plays: 19102 },
-  { id: 6, title: "Neonlichter", artist: "Soul Lyrics Studio", genre: "German Soul", duration: "3:38", plays: 6518 },
+  { id: 1, title: "Midnight Reflections", artist: "Soul Lyrics Studio", genre: "Neo Soul", description: "Ruhiger Klavier-Song über eine durchwachte Nacht voller Erinnerungen.", duration: "3:42" },
+  { id: 2, title: "Golden Hour", artist: "Soul Lyrics Studio", genre: "R&B", description: "Warmer R&B-Song über einen besonderen Sommerabend zu zweit.", duration: "4:08" },
+  { id: 3, title: "Stardust Memories", artist: "Soul Lyrics Studio", genre: "Jazz Soul", description: "Jazzig-soulige Hommage an eine Freundschaft fürs Leben.", duration: "3:55" },
+  { id: 4, title: "Electric Dreams", artist: "Soul Lyrics Studio", genre: "Synth Soul", description: "Elektronisch geprägter Song über Zukunftspläne und neue Wege.", duration: "3:28" },
+  { id: 5, title: "Rainy Sunday", artist: "Soul Lyrics Studio", genre: "Lo-Fi Soul", description: "Entspannter Lo-Fi-Song für einen ruhigen Moment der Rückbesinnung.", duration: "4:15" },
+  { id: 6, title: "Neonlichter", artist: "Soul Lyrics Studio", genre: "German Soul", description: "Deutschsprachiger Song über eine Nacht, die in Erinnerung bleibt.", duration: "3:38" },
 ];
 
 function MiniVisualizer({ isPlaying }: { isPlaying: boolean }) {
@@ -71,11 +71,6 @@ export function ShowcaseSection() {
     });
   };
 
-  const formatPlays = (n: number) => {
-    if (n >= 1000) return `${(n / 1000).toFixed(1)}k`;
-    return String(n);
-  };
-
   return (
     <section id="showcase" className="relative py-24 sm:py-32">
       <div className="section-divider mb-24" />
@@ -92,7 +87,7 @@ export function ShowcaseSection() {
           >
             Unsere <span className="gradient-text">Showcase</span>
           </h2>
-          <p className="text-white/50 text-lg max-w-2xl mx-auto">
+          <p className="text-white/62 text-lg max-w-2xl mx-auto">
             Entdecke Songs, die aus echten Geschichten entstanden sind — jeder Track ein Unikat.
           </p>
         </AnimatedSection>
@@ -133,7 +128,7 @@ export function ShowcaseSection() {
                     {isPlaying ? (
                       <Pause className="w-5 h-5 text-white" />
                     ) : (
-                      <Play className="w-5 h-5 text-white/70 group-hover:text-white ml-0.5" />
+                      <Play className="w-5 h-5 text-white/79 group-hover:text-white ml-0.5" />
                     )}
                   </div>
 
@@ -143,21 +138,16 @@ export function ShowcaseSection() {
                       <h3 className="text-white font-semibold truncate">{track.title}</h3>
                       {isPlaying && <MiniVisualizer isPlaying={true} />}
                     </div>
-                    <p className="text-white/40 text-sm truncate">
-                      {track.artist} · {track.genre}
+                    <p className="text-white/52 text-xs uppercase tracking-wide mb-1">
+                      {track.genre}
                     </p>
+                    <p className="text-white/62 text-sm truncate">{track.description}</p>
                   </div>
 
                   {/* Meta info */}
-                  <div className="hidden sm:flex items-center gap-6 text-white/30 text-sm shrink-0">
-                    <div className="flex items-center gap-1.5">
-                      <BarChart3 className="w-3.5 h-3.5" />
-                      <span>{formatPlays(track.plays)}</span>
-                    </div>
-                    <div className="flex items-center gap-1.5">
-                      <Clock className="w-3.5 h-3.5" />
-                      <span>{track.duration}</span>
-                    </div>
+                  <div className="hidden sm:flex items-center gap-1.5 text-white/42 text-sm shrink-0">
+                    <Clock className="w-3.5 h-3.5" />
+                    <span>{track.duration}</span>
                   </div>
 
                   {/* Like button */}
@@ -169,7 +159,7 @@ export function ShowcaseSection() {
                     className={`w-10 h-10 rounded-full flex items-center justify-center shrink-0 transition-all duration-200 ${
                       isLiked
                         ? "text-rose-400 bg-rose-400/10"
-                        : "text-white/20 hover:text-white/50 hover:bg-white/5"
+                        : "text-white/32 hover:text-white/62 hover:bg-white/5"
                     }`}
                     aria-label={isLiked ? "Unlike" : "Like"}
                   >
@@ -186,7 +176,7 @@ export function ShowcaseSection() {
 
         {/* Instagram CTA */}
         <AnimatedSection className="mt-12 text-center" delay={600}>
-          <p className="text-white/40 text-sm mb-4">
+          <p className="text-white/52 text-sm mb-4">
             Mehr Songs & Behind-the-Scenes auf Instagram
           </p>
           <a

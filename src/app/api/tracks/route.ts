@@ -10,7 +10,7 @@ export async function GET() {
     const allTracks = await db
       .select()
       .from(tracks)
-      .orderBy(desc(tracks.plays))
+      .orderBy(desc(tracks.createdAt))
       .limit(10);
 
     return NextResponse.json(allTracks);

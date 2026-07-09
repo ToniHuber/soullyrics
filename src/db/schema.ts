@@ -13,6 +13,7 @@ export const tracks = pgTable("tracks", {
   title: text("title").notNull(),
   artist: text("artist").notNull(),
   genre: text("genre").notNull(),
+  description: text("description"),
   duration: text("duration").notNull(),
   imageUrl: text("image_url"),
   plays: integer("plays").default(0).notNull(),

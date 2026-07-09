@@ -40,9 +40,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           theme="dark"
           toastOptions={{
             style: {
-              background: "rgba(26, 26, 46, 0.9)",
-              border: "1px solid rgba(139, 61, 255, 0.3)",
-              color: "#e4e4f0",
+              background: "rgba(30, 30, 30, 0.9)",
+              border: "1px solid rgba(245, 166, 35, 0.3)",
+              color: "#f2ece0",
               backdropFilter: "blur(12px)",
             },
           }}

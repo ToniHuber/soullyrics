@@ -37,7 +37,7 @@ export function HeroSection() {
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
       {/* Background gradient */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_0%,#4c0ca480_0%,#0a0a12_70%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_0%,#4c0ca440_0%,#0a0a0a_70%)]" />
 
       {/* Floating orbs */}
       <div
@@ -49,7 +49,7 @@ export function HeroSection() {
         style={{ animation: "pulse-glow 5s ease-in-out 1s infinite" }}
       />
       <div
-        className="floating-orb w-64 h-64 bg-brand-400 top-1/3 right-1/4"
+        className="floating-orb w-64 h-64 bg-gold-300 top-1/3 right-1/4"
         style={{ animation: "pulse-glow 6s ease-in-out 2s infinite" }}
       />
 
@@ -81,7 +81,7 @@ export function HeroSection() {
 
         {/* Subtitle */}
         <p
-          className={`text-lg sm:text-xl text-white/60 max-w-2xl mx-auto mb-10 leading-relaxed transition-all duration-700 delay-300 ${
+          className={`text-lg sm:text-xl text-white/72 max-w-2xl mx-auto mb-10 leading-relaxed transition-all duration-700 delay-300 ${
             mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
@@ -118,7 +118,7 @@ export function HeroSection() {
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10">
         <a
           href="#features"
-          className="flex flex-col items-center gap-2 text-white/30 hover:text-white/60 transition-colors"
+          className="flex flex-col items-center gap-2 text-white/42 hover:text-white/72 transition-colors"
           aria-label="Scroll down"
         >
           <span className="text-xs font-medium tracking-widest uppercase">Entdecken</span>

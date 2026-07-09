@@ -57,7 +57,7 @@ export function NewsletterSection() {
               >
                 Bleib auf dem <span className="gradient-text">Laufenden</span>
               </h3>
-              <p className="text-white/50 text-lg max-w-xl mx-auto mb-8">
+              <p className="text-white/62 text-lg max-w-xl mx-auto mb-8">
                 Erhalte exklusive Updates, neue Songs und Insider-Einblicke direkt in dein Postfach.
               </p>
 
@@ -73,7 +73,7 @@ export function NewsletterSection() {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="deine@email.de"
-                    className="flex-1 px-5 py-3.5 bg-surface-800/50 border border-brand-500/10 rounded-full text-white placeholder:text-white/20 focus:outline-none focus:border-brand-500/40 focus:ring-2 focus:ring-brand-500/10 transition-all"
+                    className="flex-1 px-5 py-3.5 bg-surface-800/50 border border-brand-500/10 rounded-full text-white placeholder:text-white/32 focus:outline-none focus:border-brand-500/40 focus:ring-2 focus:ring-brand-500/10 transition-all"
                     required
                   />
                   <button type="submit" disabled={loading} className="btn-primary shrink-0">
@@ -86,7 +86,7 @@ export function NewsletterSection() {
                 </form>
               )}
 
-              <p className="text-white/20 text-xs mt-4">
+              <p className="text-white/32 text-xs mt-4">
                 Kein Spam. Jederzeit abmeldbar.
               </p>
             </div>

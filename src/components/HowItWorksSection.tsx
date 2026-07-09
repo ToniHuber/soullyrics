@@ -1,36 +1,36 @@
 "use client";
 
 import { AnimatedSection } from "./AnimatedSection";
-import { MessageSquare, PenTool, Music, Download } from "lucide-react";
+import { Send, BookHeart, PenTool, CheckCircle2 } from "lucide-react";
 
 const steps = [
   {
     number: "01",
-    icon: MessageSquare,
-    title: "Erzähl deine Geschichte",
+    icon: Send,
+    title: "Anfrage senden",
     description:
-      "Du teilst mit uns deine Erinnerungen, Gefühle und Wünsche — die Grundlage für deinen ganz persönlichen Song.",
+      "Der Kunde teilt mit, für wen der Song gedacht ist, zu welchem Anlass er entsteht und welche Stimmung gewünscht ist.",
   },
   {
     number: "02",
-    icon: PenTool,
-    title: "Wir schreiben deinen Song",
+    icon: BookHeart,
+    title: "Persönliche Geschichte übermitteln",
     description:
-      "Auf Basis deiner Geschichte arbeiten wir Liedtext, Stimme und Musikrichtung individuell aus — moderne Technologie unterstützt uns dabei.",
+      "Namen, Erinnerungen, besondere Erlebnisse und persönliche Botschaften werden gesammelt.",
   },
   {
     number: "03",
-    icon: Music,
-    title: "Dein Song entsteht",
+    icon: PenTool,
+    title: "Individuelle Gestaltung des Songs",
     description:
-      "In persönlicher Abstimmung mit dir wird dein Song fertig produziert — mit professionellem Sound und echtem Gefühl.",
+      "Auf Grundlage der Angaben entstehen der Liedtext, die Musikrichtung, die Stimme und die emotionale Atmosphäre.",
   },
   {
     number: "04",
-    icon: Download,
-    title: "Teile & Genieße",
+    icon: CheckCircle2,
+    title: "Abstimmung und Fertigstellung",
     description:
-      "Lade deinen Song herunter, teile ihn oder verschenke ihn an einen besonderen Menschen.",
+      "Nach der vereinbarten Abstimmung erhält der Kunde seinen persönlichen Song als digitale Datei.",
   },
 ];
 
@@ -51,7 +51,7 @@ export function HowItWorksSection() {
             So entsteht dein{" "}
             <span className="gradient-text-gold">Song</span>
           </h2>
-          <p className="text-white/50 text-lg max-w-2xl mx-auto">
+          <p className="text-white/62 text-lg max-w-2xl mx-auto">
             Von deiner Geschichte zum fertigen Song — persönlich begleitet, Schritt für Schritt.
           </p>
         </AnimatedSection>
@@ -77,7 +77,7 @@ export function HowItWorksSection() {
                     </div>
 
                     <h3 className="text-lg font-bold text-white mb-3">{step.title}</h3>
-                    <p className="text-white/50 text-sm leading-relaxed">{step.description}</p>
+                    <p className="text-white/62 text-sm leading-relaxed">{step.description}</p>
                   </div>
                 </AnimatedSection>
               );

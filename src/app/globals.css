@@ -3,7 +3,11 @@
 @theme {
   --font-sans: "Inter", system-ui, -apple-system, sans-serif;
   --font-display: "Inter", system-ui, -apple-system, sans-serif;
-  
+
+  /* Cream white replaces Tailwind's default white everywhere text-white/bg-white is used */
+  --color-cream: #f2ece0;
+  --color-white: var(--color-cream);
+
   --color-brand-50: #f5f0ff;
   --color-brand-100: #ede5ff;
   --color-brand-200: #ddd0ff;
@@ -14,17 +18,18 @@
   --color-brand-700: #6d0ef0;
   --color-brand-800: #5b0cc9;
   --color-brand-900: #4c0ca4;
-  
+
   --color-gold-300: #ffd775;
   --color-gold-400: #ffc940;
   --color-gold-500: #f5a623;
   --color-gold-600: #d4880c;
-  
-  --color-surface-950: #0a0a12;
-  --color-surface-900: #111122;
-  --color-surface-800: #1a1a2e;
-  --color-surface-700: #252540;
-  --color-surface-600: #333355;
+
+  /* Matte black surfaces (no purple tint) */
+  --color-surface-950: #0a0a0a;
+  --color-surface-900: #131313;
+  --color-surface-800: #1e1e1e;
+  --color-surface-700: #2a2a2a;
+  --color-surface-600: #383838;
 }
 
 @layer base {
@@ -40,7 +45,7 @@
   
   body {
     background: var(--color-surface-950);
-    color: #e4e4f0;
+    color: var(--color-cream);
     font-family: var(--font-sans);
     overflow-x: hidden;
   }
@@ -109,20 +114,20 @@
     justify-content: center;
     gap: 0.5rem;
     padding: 0.875rem 2rem;
-    background: linear-gradient(135deg, var(--color-brand-600), var(--color-brand-500));
-    color: white;
+    background: linear-gradient(135deg, var(--color-gold-600), var(--color-gold-400));
+    color: var(--color-surface-950);
     font-weight: 600;
     border-radius: 9999px;
     border: none;
     cursor: pointer;
     transition: transform 160ms ease-out, box-shadow 200ms ease-out;
-    box-shadow: 0 4px 20px -4px rgba(139, 61, 255, 0.5);
+    box-shadow: 0 4px 20px -4px rgba(245, 166, 35, 0.5);
     min-height: 48px;
     font-size: 1rem;
   }
   .btn-primary:hover {
     transform: scale(1.03);
-    box-shadow: 0 8px 32px -4px rgba(139, 61, 255, 0.6);
+    box-shadow: 0 8px 32px -4px rgba(245, 166, 35, 0.6);
   }
   .btn-primary:active {
     transform: scale(0.97);

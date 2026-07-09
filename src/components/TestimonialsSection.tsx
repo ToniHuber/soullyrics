@@ -63,7 +63,7 @@ export function TestimonialsSection() {
                 </div>
 
                 {/* Text */}
-                <p className="text-white/70 leading-relaxed flex-1 mb-6">
+                <p className="text-white/79 leading-relaxed flex-1 mb-6">
                   &ldquo;{t.text}&rdquo;
                 </p>
 
@@ -74,7 +74,7 @@ export function TestimonialsSection() {
                   </div>
                   <div>
                     <p className="text-white font-semibold text-sm">{t.name}</p>
-                    <p className="text-white/40 text-xs">{t.role}</p>
+                    <p className="text-white/52 text-xs">{t.role}</p>
                   </div>
                 </div>
               </div>
