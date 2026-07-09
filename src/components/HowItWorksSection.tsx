@@ -56,33 +56,28 @@ export function HowItWorksSection() {
           </p>
         </AnimatedSection>
 
-        <div className="relative">
-          {/* Connection line — aligned to the vertical center of the icon circles (h-20 = 80px, so center = 40px from top), spanning between the first and last icon center (4 equal columns) */}
-          <div className="hidden lg:block absolute top-10 left-[12.5%] right-[12.5%] h-px bg-gold-500/30" />
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {steps.map((step, i) => {
-              const Icon = step.icon;
-              return (
-                <AnimatedSection key={step.number} delay={i * 150}>
-                  <div className="relative text-center group">
-                    {/* Step number */}
-                    <div className="text-7xl font-black text-gold-500/10 absolute -top-4 left-1/2 -translate-x-1/2 select-none pointer-events-none" style={{ fontFamily: "var(--font-playfair), serif" }}>
-                      {step.number}
-                    </div>
-
-                    {/* Icon circle */}
-                    <div className="relative z-10 w-20 h-20 mx-auto mb-6 rounded-full bg-surface-800 border-2 border-gold-500/20 flex items-center justify-center transition-all duration-300 group-hover:border-gold-500/50 group-hover:shadow-lg group-hover:shadow-gold-500/10">
-                      <Icon className="w-8 h-8 text-gold-400 transition-transform duration-200 group-hover:scale-110" />
-                    </div>
-
-                    <h3 className="text-lg font-bold text-white mb-3">{step.title}</h3>
-                    <p className="text-white/75 text-sm leading-relaxed">{step.description}</p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          {steps.map((step, i) => {
+            const Icon = step.icon;
+            return (
+              <AnimatedSection key={step.number} delay={i * 150}>
+                <div className="relative text-center group">
+                  {/* Step number */}
+                  <div className="text-7xl font-black text-gold-500/10 absolute -top-4 left-1/2 -translate-x-1/2 select-none pointer-events-none" style={{ fontFamily: "var(--font-playfair), serif" }}>
+                    {step.number}
                   </div>
-                </AnimatedSection>
-              );
-            })}
-          </div>
+
+                  {/* Icon circle */}
+                  <div className="relative z-10 w-20 h-20 mx-auto mb-6 rounded-full bg-surface-800 border-2 border-gold-500/20 flex items-center justify-center transition-all duration-300 group-hover:border-gold-500/50 group-hover:shadow-lg group-hover:shadow-gold-500/10">
+                    <Icon className="w-8 h-8 text-gold-400 transition-transform duration-200 group-hover:scale-110" />
+                  </div>
+
+                  <h3 className="text-lg font-bold text-white mb-3">{step.title}</h3>
+                  <p className="text-white/75 text-sm leading-relaxed">{step.description}</p>
+                </div>
+              </AnimatedSection>
+            );
+          })}
         </div>
       </div>
     </section>
