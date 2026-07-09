@@ -23,8 +23,8 @@ export function Footer() {
               </div>
             </a>
             <p className="text-white/40 text-sm leading-relaxed max-w-xs">
-              KI-generierte Musik mit Seele. Einzigartige Songs, die berühren — 
-              powered by Artificial Intelligence.
+              Persönliche Songs aus echten Geschichten. Individuell für dich
+              komponiert — mit Herz und moderner Technologie als Werkzeug.
             </p>
           </div>
 
@@ -75,7 +75,7 @@ export function Footer() {
             &copy; {new Date().getFullYear()} Soul Lyrics Studio. Alle Rechte vorbehalten.
           </p>
           <p className="text-white/20 text-xs flex items-center gap-1">
-            Made with <Heart className="w-3 h-3 text-rose-400 fill-rose-400" /> and AI
+            Made with <Heart className="w-3 h-3 text-rose-400 fill-rose-400" /> für deine Geschichte
           </p>
         </div>
       </div>

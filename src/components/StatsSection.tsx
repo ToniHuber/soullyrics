@@ -7,7 +7,7 @@ const stats = [
   { value: 10000, suffix: "+", label: "Songs erstellt" },
   { value: 50, suffix: "+", label: "Genres verfügbar" },
   { value: 98, suffix: "%", label: "Zufriedenheit" },
-  { value: 5000, suffix: "+", label: "Aktive Nutzer" },
+  { value: 5000, suffix: "+", label: "Zufriedene Kunden" },
 ];
 
 function AnimatedCounter({ target, suffix }: { target: number; suffix: string }) {

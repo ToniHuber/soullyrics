@@ -6,22 +6,22 @@ import { Star, Quote } from "lucide-react";
 const testimonials = [
   {
     name: "Sarah M.",
-    role: "Singer / Songwriter",
-    text: "Soul Lyrics Studio hat meine Art, Musik zu machen, komplett verändert. Die KI versteht Emotionen auf einem ganz anderen Level.",
+    role: "Hochzeitsgeschenk",
+    text: "Ich habe Soul Lyrics Studio unsere gemeinsame Geschichte erzählt — herausgekommen ist ein Song, der uns beide zu Tränen gerührt hat. Zutiefst persönlich.",
     rating: 5,
     initials: "SM",
   },
   {
     name: "Lukas K.",
-    role: "Content Creator",
-    text: "Endlich kann ich einzigartige Musik für meine Videos erstellen, ohne Lizenzprobleme. Der Sound ist einfach unglaublich!",
+    role: "Geburtstagsüberraschung",
+    text: "Der Song für meine Mutter hat unsere ganze Kindheit eingefangen. Jedes Wort hat gepasst, als hätte sie ihn selbst geschrieben.",
     rating: 5,
     initials: "LK",
   },
   {
     name: "Maya T.",
-    role: "Musikproduzentin",
-    text: "Als Produzentin bin ich beeindruckt von der Qualität. Die Beats und Lyrics haben eine Tiefe, die man von KI nicht erwartet.",
+    role: "Erinnerung an meine Großmutter",
+    text: "Ich wollte etwas Bleibendes zur Erinnerung an meine Oma. Aus meinen Erzählungen ist ein Song entstanden, der genau ihr Wesen trifft.",
     rating: 5,
     initials: "MT",
   },
@@ -41,7 +41,7 @@ export function TestimonialsSection() {
             className="text-4xl sm:text-5xl lg:text-6xl font-black text-white mb-6"
             style={{ fontFamily: "'Playfair Display', serif" }}
           >
-            Stimmen unserer <span className="gradient-text-gold">Community</span>
+            Was unsere <span className="gradient-text-gold">Kunden</span> sagen
           </h2>
         </AnimatedSection>
 

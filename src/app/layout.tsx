@@ -4,13 +4,20 @@ import { Toaster } from "sonner";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Soul Lyrics Studio | KI-Generierte Musik der nächsten Generation",
+  title: "Soul Lyrics Studio | Dein persönlicher Song aus deiner Geschichte",
   description:
-    "Entdecke die Zukunft der Musik. Soul Lyrics Studio verbindet künstliche Intelligenz mit der Seele der Musik – einzigartige Songs, Lyrics und Beats auf Knopfdruck.",
-  keywords: ["KI Musik", "AI Music", "Soul Lyrics Studio", "AI Song Generator", "KI Lyrics"],
+    "Soul Lyrics Studio verwandelt deine Erinnerungen, Gefühle und besonderen Momente in einen individuell komponierten Song — persönlich ausgearbeitet, mit moderner Technologie als Werkzeug.",
+  keywords: [
+    "Personalisierter Song",
+    "Individueller Song",
+    "Song als Geschenk",
+    "Soul Lyrics Studio",
+    "Song aus Erinnerungen",
+    "Liedtext schreiben lassen",
+  ],
   openGraph: {
-    title: "Soul Lyrics Studio | KI-Generierte Musik",
-    description: "Entdecke die Zukunft der Musik mit KI-generierten Songs.",
+    title: "Soul Lyrics Studio | Dein persönlicher Song aus deiner Geschichte",
+    description: "Erinnerungen, Gefühle und besondere Momente werden zu deinem individuellen Song.",
     type: "website",
   },
 };

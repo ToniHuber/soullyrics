@@ -1,7 +1,7 @@
 "use client";
 
 import { AnimatedSection } from "./AnimatedSection";
-import { MessageSquare, Cpu, Music, Download } from "lucide-react";
+import { MessageSquare, PenTool, Music, Download } from "lucide-react";
 
 const steps = [
   {
@@ -9,28 +9,28 @@ const steps = [
     icon: MessageSquare,
     title: "Erzähl deine Geschichte",
     description:
-      "Beschreibe deine Stimmung, dein Thema oder deine Geschichte. Die KI versteht Emotionen und kontextuelle Nuancen.",
+      "Du teilst mit uns deine Erinnerungen, Gefühle und Wünsche — die Grundlage für deinen ganz persönlichen Song.",
   },
   {
     number: "02",
-    icon: Cpu,
-    title: "KI komponiert",
+    icon: PenTool,
+    title: "Wir schreiben deinen Song",
     description:
-      "Unsere KI generiert einzigartige Lyrics, Melodien und Beats — perfekt aufeinander abgestimmt.",
+      "Auf Basis deiner Geschichte arbeiten wir Liedtext, Stimme und Musikrichtung individuell aus — moderne Technologie unterstützt uns dabei.",
   },
   {
     number: "03",
     icon: Music,
     title: "Dein Song entsteht",
     description:
-      "In Sekunden wird dein personalisierter Song produziert — mit professionellem Sound und echtem Gefühl.",
+      "In persönlicher Abstimmung mit dir wird dein Song fertig produziert — mit professionellem Sound und echtem Gefühl.",
   },
   {
     number: "04",
     icon: Download,
     title: "Teile & Genieße",
     description:
-      "Lade deinen Song herunter, teile ihn auf Social Media oder nutze ihn für deine Projekte.",
+      "Lade deinen Song herunter, teile ihn oder verschenke ihn an einen besonderen Menschen.",
   },
 ];
 
@@ -52,7 +52,7 @@ export function HowItWorksSection() {
             <span className="gradient-text-gold">Song</span>
           </h2>
           <p className="text-white/50 text-lg max-w-2xl mx-auto">
-            Von der Idee zum fertigen Track — einfacher als du denkst.
+            Von deiner Geschichte zum fertigen Song — persönlich begleitet, Schritt für Schritt.
           </p>
         </AnimatedSection>
 

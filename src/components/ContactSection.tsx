@@ -160,7 +160,7 @@ export function ContactSection() {
                         id="message"
                         value={message}
                         onChange={(e) => setMessage(e.target.value)}
-                        placeholder="Erzähl uns von deiner Idee..."
+                        placeholder="Erzähl uns deine Geschichte..."
                         rows={4}
                         className="w-full pl-11 pr-4 py-3.5 bg-surface-800/50 border border-brand-500/10 rounded-xl text-white placeholder:text-white/20 focus:outline-none focus:border-brand-500/40 focus:ring-2 focus:ring-brand-500/10 transition-all resize-none"
                         required
