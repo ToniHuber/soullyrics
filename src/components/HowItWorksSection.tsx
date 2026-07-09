@@ -57,8 +57,8 @@ export function HowItWorksSection() {
         </AnimatedSection>
 
         <div className="relative">
-          {/* Connection line — spans between the centers of the first and last icon (4 equal columns, icon centered in each) */}
-          <div className="hidden lg:block absolute top-1/2 left-[12.5%] right-[12.5%] h-px -translate-y-1/2 bg-gold-500/30" />
+          {/* Connection line — aligned to the vertical center of the icon circles (h-20 = 80px, so center = 40px from top), spanning between the first and last icon center (4 equal columns) */}
+          <div className="hidden lg:block absolute top-10 left-[12.5%] right-[12.5%] h-px bg-gold-500/30" />
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {steps.map((step, i) => {
