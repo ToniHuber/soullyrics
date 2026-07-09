@@ -3,21 +3,37 @@
 import { useEffect, useState, useRef } from "react";
 import { Sparkles, Play, ChevronDown } from "lucide-react";
 
+const BAR_COUNT = 40;
+
 function AudioVisualizer() {
-  const bars = 40;
+  const [bars, setBars] = useState<{ duration: number; delay: number; height: number; opacity: number }[] | null>(null);
+
+  useEffect(() => {
+    setBars(
+      Array.from({ length: BAR_COUNT }).map(() => ({
+        duration: 0.8 + Math.random() * 0.8,
+        delay: Math.random() * 0.5,
+        height: 8 + Math.random() * 24,
+        opacity: 0.6 + Math.random() * 0.4,
+      }))
+    );
+  }, []);
+
   return (
     <div className="flex items-end gap-[2px] h-16" aria-hidden="true">
-      {Array.from({ length: bars }).map((_, i) => (
-        <div
-          key={i}
-          className="w-[3px] rounded-full bg-gradient-to-t from-brand-600 to-gold-400"
-          style={{
-            animation: `waveform ${0.8 + Math.random() * 0.8}s ease-in-out ${Math.random() * 0.5}s infinite`,
-            height: `${8 + Math.random() * 24}px`,
-            opacity: 0.6 + Math.random() * 0.4,
-          }}
-        />
-      ))}
+      {(bars ?? Array.from({ length: BAR_COUNT }).map(() => ({ duration: 1, delay: 0, height: 16, opacity: 0.7 }))).map(
+        (bar, i) => (
+          <div
+            key={i}
+            className="w-[3px] rounded-full bg-gradient-to-t from-brand-600 to-gold-400"
+            style={{
+              animation: bars ? `waveform ${bar.duration}s ease-in-out ${bar.delay}s infinite` : "none",
+              height: `${bar.height}px`,
+              opacity: bar.opacity,
+            }}
+          />
+        )
+      )}
     </div>
   );
 }

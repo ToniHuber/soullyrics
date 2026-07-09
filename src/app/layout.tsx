@@ -20,6 +20,10 @@ export const metadata: Metadata = {
     description: "Erinnerungen, Gefühle und besondere Momente werden zu deinem individuellen Song.",
     type: "website",
   },
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {

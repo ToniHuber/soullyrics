@@ -1,7 +1,8 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Music, Menu, X } from "lucide-react";
+import Image from "next/image";
+import { Menu, X } from "lucide-react";
 
 const navLinks = [
   { label: "Start", href: "/#hero" },
@@ -33,9 +34,9 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         {/* Logo */}
         <a href="/#hero" className="flex items-center gap-3 group">
-          <div className="relative w-10 h-10 rounded-xl bg-gradient-to-br from-brand-500 to-gold-500 flex items-center justify-center transition-transform duration-200 group-hover:scale-110">
-            <Music className="w-5 h-5 text-white" />
-            <div className="absolute inset-0 rounded-xl bg-brand-500/30 blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+          <div className="relative w-11 h-11 transition-transform duration-200 group-hover:scale-110">
+            <Image src="/logo-emblem.png" alt="Soul Lyrics Studio" fill sizes="44px" className="object-contain" priority />
+            <div className="absolute inset-0 rounded-full bg-gold-500/20 blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10" />
           </div>
           <div className="flex flex-col">
             <span className="text-lg font-bold tracking-tight text-white leading-tight" style={{ fontFamily: "'Playfair Display', serif" }}>
