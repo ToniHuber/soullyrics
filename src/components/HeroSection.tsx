@@ -104,7 +104,7 @@ export function HeroSection() {
             mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          <a href="#contact" className="btn-primary text-lg px-8 py-4">
+          <a href="#request" className="btn-primary text-lg px-8 py-4">
             <Play className="w-5 h-5" />
             Persönlichen Song anfragen
           </a>

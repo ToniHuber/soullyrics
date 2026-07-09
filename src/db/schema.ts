@@ -26,3 +26,15 @@ export const newsletterSubscribers = pgTable("newsletter_subscribers", {
   email: text("email").notNull().unique(),
   createdAt: timestamp("created_at").defaultNow().notNull(),
 });
+
+export const songRequests = pgTable("song_requests", {
+  id: serial("id").primaryKey(),
+  name: text("name").notNull(),
+  email: text("email").notNull(),
+  recipient: text("recipient").notNull(),
+  occasion: text("occasion").notNull(),
+  mood: text("mood").notNull(),
+  story: text("story").notNull(),
+  packageName: text("package_name"),
+  createdAt: timestamp("created_at").defaultNow().notNull(),
+});

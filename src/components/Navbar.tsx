@@ -4,11 +4,12 @@ import { useState, useEffect } from "react";
 import { Music, Menu, X } from "lucide-react";
 
 const navLinks = [
-  { label: "Start", href: "#hero" },
-  { label: "Features", href: "#features" },
-  { label: "So funktioniert's", href: "#how-it-works" },
-  { label: "Showcase", href: "#showcase" },
-  { label: "Kontakt", href: "#contact" },
+  { label: "Start", href: "/#hero" },
+  { label: "Ablauf", href: "/#how-it-works" },
+  { label: "Hörproben", href: "/#showcase" },
+  { label: "Preise", href: "/#pricing" },
+  { label: "FAQ", href: "/#faq" },
+  { label: "Kontakt", href: "/#contact" },
 ];
 
 export function Navbar() {
@@ -31,7 +32,7 @@ export function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         {/* Logo */}
-        <a href="#hero" className="flex items-center gap-3 group">
+        <a href="/#hero" className="flex items-center gap-3 group">
           <div className="relative w-10 h-10 rounded-xl bg-gradient-to-br from-brand-500 to-gold-500 flex items-center justify-center transition-transform duration-200 group-hover:scale-110">
             <Music className="w-5 h-5 text-white" />
             <div className="absolute inset-0 rounded-xl bg-brand-500/30 blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
