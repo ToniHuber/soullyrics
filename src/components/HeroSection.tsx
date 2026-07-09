@@ -21,7 +21,15 @@ function AudioVisualizer() {
 
   return (
     <div className="flex items-end gap-[2px] h-16" aria-hidden="true">
-      {(bars ?? Array.from({ length: BAR_COUNT }).map(() => ({ duration: 1, delay: 0, height: 16, opacity: 0.7 }))).map(
+      {(
+        bars ??
+        Array.from({ length: BAR_COUNT }).map((_, i) => ({
+          duration: 1,
+          delay: 0,
+          height: Math.round((8 + (Math.sin(i * 0.5) + 1) * 12) * 100) / 100,
+          opacity: Math.round((0.6 + Math.abs(Math.sin(i * 0.3)) * 0.4) * 100) / 100,
+        }))
+      ).map(
         (bar, i) => (
           <div
             key={i}
