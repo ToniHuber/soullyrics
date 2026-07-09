@@ -5,7 +5,13 @@ import { AnimatedSection } from "./AnimatedSection";
 import { Send, Loader2, CheckCircle2 } from "lucide-react";
 import { toast } from "sonner";
 
-const packages = ["Erinnerung", "Geschichte", "Meisterwerk", "Ich bin mir noch nicht sicher"];
+const packages = [
+  "Liedtext",
+  "Persönlicher Song",
+  "Song mit Cover",
+  "Song mit Video",
+  "Ich bin mir noch nicht sicher",
+];
 
 export function RequestFormSection() {
   const [name, setName] = useState("");
@@ -45,15 +51,15 @@ export function RequestFormSection() {
   };
 
   const inputClass =
-    "w-full px-4 py-3.5 bg-surface-800/50 border border-white/10 rounded-xl text-white placeholder:text-white/32 focus:outline-none focus:border-gold-500/50 focus:ring-2 focus:ring-gold-500/15 transition-all";
+    "w-full px-4 py-3.5 bg-surface-800/50 border border-white/10 rounded-xl text-white placeholder:text-white/46 focus:outline-none focus:border-gold-500/50 focus:ring-2 focus:ring-gold-500/15 transition-all";
 
   return (
-    <section id="request" className="relative py-24 sm:py-32">
-      <div className="section-divider mb-24" />
+    <section id="request" className="relative py-20 sm:py-28">
+      <div className="section-divider mb-16" />
       <div className="floating-orb w-[500px] h-[500px] bg-gold-500 top-1/2 -right-60" />
 
       <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-        <AnimatedSection className="text-center mb-16">
+        <AnimatedSection className="text-center mb-12">
           <p className="text-gold-400 font-semibold text-sm uppercase tracking-widest mb-4">
             Anfrageformular
           </p>
@@ -63,7 +69,7 @@ export function RequestFormSection() {
           >
             Deinen persönlichen <span className="gradient-text">Song</span> anfragen
           </h2>
-          <p className="text-white/62 text-lg max-w-xl mx-auto">
+          <p className="text-white/75 text-lg max-w-xl mx-auto">
             Erzähl uns von deiner Geschichte — wir melden uns bei dir, um alles Weitere
             gemeinsam zu besprechen.
           </p>
@@ -77,7 +83,7 @@ export function RequestFormSection() {
                   <CheckCircle2 className="w-8 h-8 text-emerald-400" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2">Anfrage gesendet!</h3>
-                <p className="text-white/62 mb-6">Wir melden uns in Kürze bei dir.</p>
+                <p className="text-white/75 mb-6">Wir melden uns in Kürze bei dir.</p>
                 <button onClick={() => setSent(false)} className="btn-outline !text-sm">
                   Neue Anfrage
                 </button>
@@ -124,7 +130,7 @@ export function RequestFormSection() {
                     type="text"
                     value={recipient}
                     onChange={(e) => setRecipient(e.target.value)}
-                    placeholder="z.B. für meine Frau, meinen besten Freund, mich selbst..."
+                    placeholder="z.B. meine Frau, mein bester Freund"
                     className={inputClass}
                     required
                   />
@@ -140,7 +146,7 @@ export function RequestFormSection() {
                       type="text"
                       value={occasion}
                       onChange={(e) => setOccasion(e.target.value)}
-                      placeholder="z.B. Hochzeit, Geburtstag, Erinnerung..."
+                      placeholder="z.B. Hochzeit, Geburtstag"
                       className={inputClass}
                       required
                     />
@@ -154,7 +160,7 @@ export function RequestFormSection() {
                       type="text"
                       value={mood}
                       onChange={(e) => setMood(e.target.value)}
-                      placeholder="z.B. warm & nostalgisch, fröhlich & tanzbar..."
+                      placeholder="z.B. warm, fröhlich, ruhig"
                       className={inputClass}
                       required
                     />
@@ -163,7 +169,7 @@ export function RequestFormSection() {
 
                 <div>
                   <label htmlFor="req-package" className="block text-sm font-medium text-white/79 mb-2">
-                    Welches Paket interessiert dich? (optional)
+                    Welche Leistung interessiert dich? (optional)
                   </label>
                   <select
                     id="req-package"
@@ -194,6 +200,16 @@ export function RequestFormSection() {
                     required
                   />
                 </div>
+
+                <p className="text-white/65 text-xs leading-relaxed">
+                  Mit dem Absenden dieser Anfrage entsteht noch kein kostenpflichtiger
+                  Auftrag — sie ist für dich unverbindlich. Deine Angaben werden nur zur
+                  Bearbeitung deiner Anfrage verwendet, siehe{" "}
+                  <a href="/datenschutz" className="text-gold-400 hover:text-gold-300 underline">
+                    Datenschutzerklärung
+                  </a>
+                  .
+                </p>
 
                 <button type="submit" disabled={loading} className="btn-primary w-full !text-base">
                   {loading ? (

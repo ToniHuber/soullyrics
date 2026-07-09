@@ -39,7 +39,7 @@ export function NewsletterSection() {
   };
 
   return (
-    <section className="relative py-24 sm:py-32">
+    <section className="relative py-20 sm:py-28">
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <AnimatedSection>
           <div className="glass-card p-8 sm:p-12 text-center relative overflow-hidden">
@@ -57,7 +57,7 @@ export function NewsletterSection() {
               >
                 Bleib auf dem <span className="gradient-text">Laufenden</span>
               </h3>
-              <p className="text-white/62 text-lg max-w-xl mx-auto mb-8">
+              <p className="text-white/75 text-lg max-w-xl mx-auto mb-8">
                 Erhalte exklusive Updates, neue Songs und Insider-Einblicke direkt in dein Postfach.
               </p>
 
@@ -73,7 +73,7 @@ export function NewsletterSection() {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="deine@email.de"
-                    className="flex-1 px-5 py-3.5 bg-surface-800/50 border border-white/10 rounded-full text-white placeholder:text-white/32 focus:outline-none focus:border-gold-500/50 focus:ring-2 focus:ring-gold-500/15 transition-all"
+                    className="flex-1 px-5 py-3.5 bg-surface-800/50 border border-white/10 rounded-full text-white placeholder:text-white/46 focus:outline-none focus:border-gold-500/50 focus:ring-2 focus:ring-gold-500/15 transition-all"
                     required
                   />
                   <button type="submit" disabled={loading} className="btn-primary shrink-0">
@@ -86,7 +86,7 @@ export function NewsletterSection() {
                 </form>
               )}
 
-              <p className="text-white/32 text-xs mt-4">
+              <p className="text-white/46 text-xs mt-4">
                 Kein Spam. Jederzeit abmeldbar.
               </p>
             </div>

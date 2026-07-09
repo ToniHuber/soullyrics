@@ -24,7 +24,7 @@ export default function ImpressumPage() {
       <p>
         Telefon: [Telefonnummer]
         <br />
-        E-Mail: <a href="mailto:hello@soullyricsstudio.com">hello@soullyricsstudio.com</a>
+        E-Mail: [E-Mail-Adresse folgt]
       </p>
 
       <h2>Umsatzsteuer-ID</h2>
@@ -46,7 +46,7 @@ export default function ImpressumPage() {
         <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener noreferrer">
           https://ec.europa.eu/consumers/odr/
         </a>
-        . Unsere E-Mail-Adresse finden Sie oben im Impressum.
+        . Unsere E-Mail-Adresse findest du oben im Impressum.
       </p>
       <p>
         Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer

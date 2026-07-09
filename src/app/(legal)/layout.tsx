@@ -10,7 +10,7 @@ export default function LegalLayout({ children }: { children: ReactNode }) {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="glass-card !border-gold-500/30 p-5 sm:p-6 mb-12 flex gap-3">
             <span className="text-gold-400 font-semibold text-sm shrink-0">Hinweis:</span>
-            <p className="text-white/62 text-sm leading-relaxed">
+            <p className="text-white/75 text-sm leading-relaxed">
               Diese Seite ist eine Platzhaltervorlage. Die mit eckigen Klammern
               markierten Angaben müssen vor Veröffentlichung durch die echten
               Unternehmensdaten ersetzt und der gesamte Text von einem Anwalt bzw.

@@ -46,7 +46,7 @@ export function Navbar() {
               Studio
             </span>
           </div>
-          <span className="hidden xl:inline text-white/42 text-xs italic ml-2 border-l border-white/20 pl-3 whitespace-nowrap">
+          <span className="hidden xl:inline text-white/55 text-xs italic ml-2 border-l border-white/20 pl-3 whitespace-nowrap">
             Wo Erinnerungen zu Musik werden.
           </span>
         </a>

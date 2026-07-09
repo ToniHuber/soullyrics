@@ -44,12 +44,12 @@ const features = [
 
 export function FeaturesSection() {
   return (
-    <section id="features" className="relative py-24 sm:py-32">
+    <section id="features" className="relative py-20 sm:py-28">
       {/* Background accent */}
       <div className="floating-orb w-[500px] h-[500px] bg-gold-500 top-0 left-1/2 -translate-x-1/2" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <AnimatedSection className="text-center mb-16 sm:mb-20">
+        <AnimatedSection className="text-center mb-12 sm:mb-16">
           <p className="text-gold-400 font-semibold text-sm uppercase tracking-widest mb-4">
             Was uns einzigartig macht
           </p>
@@ -59,9 +59,9 @@ export function FeaturesSection() {
           >
             Musik mit <span className="gradient-text">Seele</span>
           </h2>
-          <p className="text-white/62 text-lg max-w-2xl mx-auto">
-            Jeder Song entsteht aus deiner persönlichen Geschichte — von Menschen für
-            Menschen ausgearbeitet, mit moderner Technologie als Werkzeug im Hintergrund.
+          <p className="text-white/70 text-lg max-w-2xl mx-auto">
+            Jeder Song entsteht aus deiner persönlichen Geschichte — mit persönlicher
+            Gestaltung und Unterstützung moderner Technologie musikalisch umgesetzt.
           </p>
         </AnimatedSection>
 
@@ -75,7 +75,7 @@ export function FeaturesSection() {
                     <Icon className="w-6 h-6 text-surface-950" />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
-                  <p className="text-white/62 leading-relaxed">{feature.description}</p>
+                  <p className="text-white/75 leading-relaxed">{feature.description}</p>
                 </div>
               </AnimatedSection>
             );

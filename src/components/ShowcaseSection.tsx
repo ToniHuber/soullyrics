@@ -1,8 +1,8 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { AnimatedSection } from "./AnimatedSection";
-import { Play, Pause, Heart, Clock } from "lucide-react";
+import { Play, Pause, Heart, Clock, Music } from "lucide-react";
 
 interface Track {
   id: number;
@@ -13,14 +13,7 @@ interface Track {
   duration: string;
 }
 
-const demoTracks: Track[] = [
-  { id: 1, title: "Midnight Reflections", artist: "Soul Lyrics Studio", genre: "Neo Soul", description: "Ruhiger Klavier-Song über eine durchwachte Nacht voller Erinnerungen.", duration: "3:42" },
-  { id: 2, title: "Golden Hour", artist: "Soul Lyrics Studio", genre: "R&B", description: "Warmer R&B-Song über einen besonderen Sommerabend zu zweit.", duration: "4:08" },
-  { id: 3, title: "Stardust Memories", artist: "Soul Lyrics Studio", genre: "Jazz Soul", description: "Jazzig-soulige Hommage an eine Freundschaft fürs Leben.", duration: "3:55" },
-  { id: 4, title: "Electric Dreams", artist: "Soul Lyrics Studio", genre: "Synth Soul", description: "Elektronisch geprägter Song über Zukunftspläne und neue Wege.", duration: "3:28" },
-  { id: 5, title: "Rainy Sunday", artist: "Soul Lyrics Studio", genre: "Lo-Fi Soul", description: "Entspannter Lo-Fi-Song für einen ruhigen Moment der Rückbesinnung.", duration: "4:15" },
-  { id: 6, title: "Neonlichter", artist: "Soul Lyrics Studio", genre: "German Soul", description: "Deutschsprachiger Song über eine Nacht, die in Erinnerung bleibt.", duration: "3:38" },
-];
+const demoTracks: Track[] = [];
 
 function MiniVisualizer({ isPlaying }: { isPlaying: boolean }) {
   return (
@@ -72,12 +65,12 @@ export function ShowcaseSection() {
   };
 
   return (
-    <section id="showcase" className="relative py-24 sm:py-32">
-      <div className="section-divider mb-24" />
+    <section id="showcase" className="relative py-20 sm:py-28">
+      <div className="section-divider mb-16" />
       <div className="floating-orb w-[600px] h-[600px] bg-gold-500 -bottom-60 -right-60" />
 
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <AnimatedSection className="text-center mb-16">
+        <AnimatedSection className="text-center mb-12">
           <p className="text-gold-400 font-semibold text-sm uppercase tracking-widest mb-4">
             Hör rein
           </p>
@@ -87,12 +80,25 @@ export function ShowcaseSection() {
           >
             Unsere <span className="gradient-text">Showcase</span>
           </h2>
-          <p className="text-white/62 text-lg max-w-2xl mx-auto">
-            Entdecke Songs, die aus echten Geschichten entstanden sind — jeder Track ein Unikat.
+          <p className="text-white/75 text-lg max-w-2xl mx-auto">
+            Hier findest du bald Hörproben aus echten Projekten — jeder Track ein Unikat.
           </p>
         </AnimatedSection>
 
-        {/* Track list */}
+        {tracks.length === 0 ? (
+          <AnimatedSection>
+            <div className="glass-card p-10 sm:p-16 text-center">
+              <div className="w-14 h-14 rounded-2xl bg-cream flex items-center justify-center mx-auto mb-6">
+                <Music className="w-6 h-6 text-surface-950" />
+              </div>
+              <h3 className="text-white font-bold text-lg mb-2">Hörproben folgen in Kürze</h3>
+              <p className="text-white/75 max-w-md mx-auto">
+                Wir sammeln gerade unsere ersten fertigen Songs, um sie hier vorzustellen.
+                Bis dahin findest du Beispiele auf Instagram und YouTube.
+              </p>
+            </div>
+          </AnimatedSection>
+        ) : (
         <div className="space-y-3">
           {tracks.map((track, i) => {
             const isPlaying = playingId === track.id;
@@ -138,14 +144,14 @@ export function ShowcaseSection() {
                       <h3 className="text-white font-semibold truncate">{track.title}</h3>
                       {isPlaying && <MiniVisualizer isPlaying={true} />}
                     </div>
-                    <p className="text-white/52 text-xs uppercase tracking-wide mb-1">
+                    <p className="text-white/65 text-xs uppercase tracking-wide mb-1">
                       {track.genre}
                     </p>
-                    <p className="text-white/62 text-sm truncate">{track.description}</p>
+                    <p className="text-white/75 text-sm truncate">{track.description}</p>
                   </div>
 
                   {/* Meta info */}
-                  <div className="hidden sm:flex items-center gap-1.5 text-white/42 text-sm shrink-0">
+                  <div className="hidden sm:flex items-center gap-1.5 text-white/55 text-sm shrink-0">
                     <Clock className="w-3.5 h-3.5" />
                     <span>{track.duration}</span>
                   </div>
@@ -159,7 +165,7 @@ export function ShowcaseSection() {
                     className={`w-10 h-10 rounded-full flex items-center justify-center shrink-0 transition-all duration-200 ${
                       isLiked
                         ? "text-rose-400 bg-rose-400/10"
-                        : "text-white/32 hover:text-white/62 hover:bg-white/5"
+                        : "text-white/46 hover:text-white/75 hover:bg-white/5"
                     }`}
                     aria-label={isLiked ? "Unlike" : "Like"}
                   >
@@ -173,10 +179,11 @@ export function ShowcaseSection() {
             );
           })}
         </div>
+        )}
 
         {/* Social CTAs */}
         <AnimatedSection className="mt-12 text-center" delay={600}>
-          <p className="text-white/52 text-sm mb-4">
+          <p className="text-white/65 text-sm mb-4">
             Mehr Songs & Behind-the-Scenes auf Instagram und YouTube
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

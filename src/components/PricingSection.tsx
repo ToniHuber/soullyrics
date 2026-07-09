@@ -1,110 +1,120 @@
 "use client";
 
 import { AnimatedSection } from "./AnimatedSection";
-import { Check } from "lucide-react";
+import { PenLine, Music, Image as ImageIcon, Video, Pencil, Zap } from "lucide-react";
 
-const packages = [
+const services = [
   {
-    name: "Erinnerung",
-    tagline: "Für einen besonderen Moment",
-    features: [
-      "Individuell geschriebener Liedtext",
-      "Eine Musikrichtung nach Wahl",
-      "Eine Korrekturschleife",
-      "Lieferung als MP3-Datei",
-    ],
-    highlighted: false,
+    icon: PenLine,
+    title: "Liedtext",
+    price: "ab 20 €",
+    description: "Individuell geschriebener Liedtext auf Basis deiner Geschichte.",
   },
   {
-    name: "Geschichte",
-    tagline: "Unser beliebtestes Paket",
-    features: [
-      "Individuell geschriebener Liedtext",
-      "Musikrichtung & Stimme nach Wahl",
-      "Zwei Korrekturschleifen",
-      "Hochwertige Studioproduktion",
-      "Lieferung als MP3 & WAV",
-    ],
-    highlighted: true,
+    icon: Music,
+    title: "Persönlicher Song",
+    price: "ab 40 €",
+    description: "Liedtext und musikalische Umsetzung als fertiger Song.",
   },
   {
-    name: "Meisterwerk",
-    tagline: "Für das ganz besondere Geschenk",
-    features: [
-      "Alles aus dem Paket „Geschichte“",
-      "Persönliche Abstimmung per Telefon/Video",
-      "Korrekturschleifen bis zur Zufriedenheit",
-      "Exklusives Cover-Artwork",
-    ],
-    highlighted: false,
+    icon: ImageIcon,
+    title: "Song mit Cover",
+    price: "ab 55 €",
+    description: "Dein persönlicher Song inklusive Cover-Artwork.",
+  },
+  {
+    icon: Video,
+    title: "Song mit Video",
+    price: "ab 75 €",
+    description: "Dein persönlicher Song inklusive Video.",
+  },
+];
+
+const addOns = [
+  {
+    icon: Pencil,
+    title: "Änderungen",
+    price: "ab 10 €",
+    description: "Nachträgliche Anpassungen an deinem fertigen Song.",
+  },
+  {
+    icon: Zap,
+    title: "Expressbearbeitung",
+    price: "zzgl. 15 €",
+    description: "Schnellere Bearbeitung deiner Anfrage gegen Aufpreis.",
   },
 ];
 
 export function PricingSection() {
   return (
-    <section id="pricing" className="relative py-24 sm:py-32">
-      <div className="section-divider mb-24" />
+    <section id="pricing" className="relative py-20 sm:py-28">
+      <div className="section-divider mb-16" />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <AnimatedSection className="text-center mb-16 sm:mb-20">
+      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <AnimatedSection className="text-center mb-14 sm:mb-16">
           <p className="text-gold-400 font-semibold text-sm uppercase tracking-widest mb-4">
-            Preise & Pakete
+            Preise
           </p>
           <h2
             className="text-4xl sm:text-5xl lg:text-6xl font-black text-white mb-6"
             style={{ fontFamily: "'Playfair Display', serif" }}
           >
-            Das passende <span className="gradient-text-gold">Paket</span> für
-            deine Geschichte
+            Transparente <span className="gradient-text-gold">Preise</span>
           </h2>
-          <p className="text-white/62 text-lg max-w-2xl mx-auto">
-            Jeder Song ist individuell — deshalb besprechen wir den genauen
-            Preis persönlich mit dir, abgestimmt auf Umfang und Anlass.
+          <p className="text-white/70 text-lg max-w-2xl mx-auto">
+            Die folgenden Preise verstehen sich als Startpreise. Den genauen Umfang
+            und Endpreis besprechen wir persönlich mit dir.
           </p>
         </AnimatedSection>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {packages.map((pkg, i) => (
-            <AnimatedSection key={pkg.name} delay={i * 120}>
-              <div
-                className={`glass-card glass-card-hover p-8 h-full flex flex-col ${
-                  pkg.highlighted ? "!border-gold-500/40" : ""
-                }`}
-              >
-                {pkg.highlighted && (
-                  <span className="inline-block self-start px-3 py-1 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-400 text-xs font-semibold uppercase tracking-wide mb-4">
-                    Beliebt
-                  </span>
-                )}
-                <h3
-                  className="text-2xl font-bold text-white mb-1"
-                  style={{ fontFamily: "'Playfair Display', serif" }}
-                >
-                  {pkg.name}
-                </h3>
-                <p className="text-white/52 text-sm mb-6">{pkg.tagline}</p>
-
-                <p className="text-gold-400 font-semibold mb-6">Preis auf Anfrage</p>
-
-                <ul className="space-y-3 mb-8 flex-1">
-                  {pkg.features.map((feature) => (
-                    <li key={feature} className="flex items-start gap-2.5 text-white/72 text-sm">
-                      <Check className="w-4 h-4 text-gold-400 shrink-0 mt-0.5" />
-                      <span>{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-
-                <a
-                  href="#request"
-                  className={pkg.highlighted ? "btn-primary w-full" : "btn-outline w-full"}
-                >
-                  Jetzt anfragen
-                </a>
-              </div>
-            </AnimatedSection>
-          ))}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
+          {services.map((service, i) => {
+            const Icon = service.icon;
+            return (
+              <AnimatedSection key={service.title} delay={i * 100}>
+                <div className="glass-card glass-card-hover p-6 h-full flex flex-col">
+                  <div className="w-12 h-12 rounded-xl bg-cream flex items-center justify-center mb-5">
+                    <Icon className="w-5 h-5 text-surface-950" />
+                  </div>
+                  <h3 className="text-lg font-bold text-white mb-1">{service.title}</h3>
+                  <p className="text-gold-400 font-semibold mb-3">{service.price}</p>
+                  <p className="text-white/70 text-sm leading-relaxed">{service.description}</p>
+                </div>
+              </AnimatedSection>
+            );
+          })}
         </div>
+
+        <AnimatedSection delay={400}>
+          <div className="glass-card p-6 sm:p-8">
+            <p className="text-white font-semibold mb-5">Zusatzoptionen</p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              {addOns.map((addOn) => {
+                const Icon = addOn.icon;
+                return (
+                  <div key={addOn.title} className="flex items-start gap-4">
+                    <div className="w-10 h-10 rounded-lg bg-surface-800 border border-white/10 flex items-center justify-center shrink-0">
+                      <Icon className="w-4 h-4 text-gold-400" />
+                    </div>
+                    <div>
+                      <div className="flex items-baseline gap-2">
+                        <h4 className="text-white font-semibold text-sm">{addOn.title}</h4>
+                        <span className="text-gold-400 text-sm font-semibold">{addOn.price}</span>
+                      </div>
+                      <p className="text-white/70 text-sm leading-relaxed">{addOn.description}</p>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </AnimatedSection>
+
+        <AnimatedSection delay={500} className="text-center mt-10">
+          <a href="#request" className="btn-primary">
+            Jetzt anfragen
+          </a>
+        </AnimatedSection>
       </div>
     </section>
   );

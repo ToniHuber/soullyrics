@@ -13,7 +13,7 @@ const faqs = [
   {
     question: "Wie lange dauert es, bis mein Song fertig ist?",
     answer:
-      "Die Bearbeitungszeit hängt vom gewählten Paket und aktueller Auslastung ab. Den genauen Zeitrahmen besprechen wir direkt bei deiner Anfrage mit dir.",
+      "Die Bearbeitungszeit hängt vom gewählten Leistungsumfang und der aktuellen Auslastung ab. Den genauen Zeitrahmen besprechen wir direkt bei deiner Anfrage mit dir. Gegen eine zusätzliche Gebühr ist auch eine Expressbearbeitung möglich.",
   },
   {
     question: "In welchen Sprachen kann mein Song geschrieben werden?",
@@ -23,7 +23,7 @@ const faqs = [
   {
     question: "Kann ich Änderungswünsche äußern, wenn mir etwas nicht gefällt?",
     answer:
-      "Ja. Je nach gewähltem Paket sind ein oder mehrere Korrekturschleifen inklusive, in denen wir Liedtext, Stimme oder Musikrichtung gemeinsam mit dir anpassen.",
+      "Ja, nachträgliche Änderungen an deinem fertigen Song sind gegen eine zusätzliche Gebühr möglich. Details besprechen wir gerne persönlich mit dir.",
   },
   {
     question: "Eignet sich ein Song auch als Geschenk?",
@@ -33,12 +33,12 @@ const faqs = [
   {
     question: "In welchem Format erhalte ich meinen fertigen Song?",
     answer:
-      "Je nach Paket erhältst du deinen Song als MP3- und/oder WAV-Datei zum Download.",
+      "Du erhältst deinen fertigen Song als MP3-Datei zum Download.",
   },
   {
     question: "Was kostet ein persönlicher Song?",
     answer:
-      "Der Preis richtet sich nach dem gewählten Paket und dem Umfang deines Songs. Details findest du im Bereich „Preise & Pakete“ — dein individuelles Angebot besprechen wir gerne persönlich mit dir.",
+      "Die Preise richten sich nach der gewünschten Leistung — von einzelnem Liedtext bis Song mit Video. Eine Übersicht findest du im Bereich „Preise“, dein individuelles Angebot besprechen wir gerne persönlich mit dir.",
   },
 ];
 
@@ -46,11 +46,11 @@ export function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section id="faq" className="relative py-24 sm:py-32">
-      <div className="section-divider mb-24" />
+    <section id="faq" className="relative py-20 sm:py-28">
+      <div className="section-divider mb-16" />
 
       <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-        <AnimatedSection className="text-center mb-16">
+        <AnimatedSection className="text-center mb-12">
           <p className="text-gold-400 font-semibold text-sm uppercase tracking-widest mb-4">
             Häufige Fragen
           </p>
@@ -86,7 +86,7 @@ export function FAQSection() {
                     }`}
                   >
                     <div className="overflow-hidden">
-                      <p className="text-white/62 text-sm leading-relaxed px-5 sm:px-6 pb-5 sm:pb-6">
+                      <p className="text-white/75 text-sm leading-relaxed px-5 sm:px-6 pb-5 sm:pb-6">
                         {faq.answer}
                       </p>
                     </div>

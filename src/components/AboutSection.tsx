@@ -11,8 +11,8 @@ const values = [
   },
   {
     icon: Sparkles,
-    title: "Handgemacht",
-    description: "Liedtext, Stimme und Musikrichtung werden von Menschen für dich ausgearbeitet — moderne Technologie unterstützt uns dabei nur im Hintergrund.",
+    title: "Persönlich gestaltet",
+    description: "Liedtext, Stimme und Musikrichtung wählen wir gemeinsam mit dir aus und setzen sie mit Unterstützung moderner Technologie musikalisch um.",
   },
   {
     icon: ShieldCheck,
@@ -23,8 +23,8 @@ const values = [
 
 export function AboutSection() {
   return (
-    <section id="about" className="relative py-24 sm:py-32">
-      <div className="section-divider mb-24" />
+    <section id="about" className="relative py-20 sm:py-28">
+      <div className="section-divider mb-16" />
 
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
@@ -38,7 +38,7 @@ export function AboutSection() {
             >
               Soul Lyrics <span className="gradient-text">Studio</span>
             </h2>
-            <div className="space-y-4 text-white/62 text-lg leading-relaxed">
+            <div className="space-y-4 text-white/75 text-lg leading-relaxed">
               <p>
                 Soul Lyrics Studio ist entstanden aus der Überzeugung, dass jede
                 Geschichte einen eigenen Klang verdient. Statt Musik von der
@@ -71,7 +71,7 @@ export function AboutSection() {
                     </div>
                     <div>
                       <h3 className="text-white font-bold mb-1">{value.title}</h3>
-                      <p className="text-white/62 text-sm leading-relaxed">{value.description}</p>
+                      <p className="text-white/75 text-sm leading-relaxed">{value.description}</p>
                     </div>
                   </div>
                 );

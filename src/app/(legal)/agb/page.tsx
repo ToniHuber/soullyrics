@@ -30,28 +30,28 @@ export default function AGBPage() {
         Soul Lyrics Studio erstellt auf Grundlage der vom Auftraggeber mitgeteilten
         persönlichen Geschichte, Erinnerungen und Wünsche einen individuellen Liedtext sowie
         eine dazu passende musikalische Umsetzung (Stimme, Musikrichtung, Produktion). Der
-        Umfang der Leistung richtet sich nach dem gebuchten Paket (siehe Bereich „Preise &amp;
-        Pakete“ auf der Website).
+        Umfang der Leistung richtet sich nach der gebuchten Leistung (siehe Bereich „Preise“
+        auf der Website).
       </p>
 
       <h2>4. Preise und Zahlung</h2>
       <p>
-        Die Preise werden individuell je nach gewähltem Paket und Umfang der Anfrage
-        vereinbart. [Zahlungsbedingungen, Fälligkeit und Zahlungsmethoden bitte ergänzen.]
+        Die auf der Website genannten Preise sind Startpreise. Der genaue Endpreis richtet
+        sich nach dem individuell vereinbarten Umfang der Anfrage. [Zahlungsbedingungen,
+        Fälligkeit und Zahlungsmethoden bitte ergänzen.]
       </p>
 
       <h2>5. Lieferung</h2>
       <p>
-        Der fertige Song wird dem Auftraggeber als digitale Datei (z.B. MP3/WAV) per E-Mail
-        oder Download-Link zur Verfügung gestellt. [Konkrete Lieferzeiten je Paket bitte
-        ergänzen.]
+        Der fertige Song wird dem Auftraggeber als digitale Datei (MP3) per E-Mail oder
+        Download-Link zur Verfügung gestellt. [Konkrete Lieferzeiten bitte ergänzen.]
       </p>
 
-      <h2>6. Korrekturen und Abstimmung</h2>
+      <h2>6. Änderungen und Abstimmung</h2>
       <p>
-        Je nach gebuchtem Paket sind eine oder mehrere Korrekturschleifen enthalten, in denen
-        Liedtext, Stimme oder Musikrichtung angepasst werden können. Der Umfang zusätzlicher,
-        nicht im Paket enthaltener Änderungswünsche wird gesondert vereinbart.
+        Nachträgliche Änderungswünsche am fertigen Song (z.B. an Liedtext, Stimme oder
+        Musikrichtung) sind gegen eine gesondert berechnete Gebühr möglich. Der genaue Ablauf
+        wird individuell mit dem Auftraggeber abgestimmt.
       </p>
 
       <h2>7. Nutzungsrechte</h2>

@@ -134,7 +134,7 @@ export function HeroSection() {
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10">
         <a
           href="#features"
-          className="flex flex-col items-center gap-2 text-white/42 hover:text-white/72 transition-colors"
+          className="flex flex-col items-center gap-2 text-white/55 hover:text-white/72 transition-colors"
           aria-label="Scroll down"
         >
           <span className="text-xs font-medium tracking-widest uppercase">Entdecken</span>

@@ -19,7 +19,7 @@ export default function DatenschutzPage() {
         <br />
         [PLZ und Ort]
         <br />
-        E-Mail: <a href="mailto:hello@soullyricsstudio.com">hello@soullyricsstudio.com</a>
+        E-Mail: [E-Mail-Adresse folgt]
       </p>
 
       <h2>2. Welche Daten wir verarbeiten</h2>
@@ -93,7 +93,7 @@ export default function DatenschutzPage() {
         <li>Widerruf einer erteilten Einwilligung mit Wirkung für die Zukunft</li>
       </ul>
       <p>
-        Wende dich dazu an: <a href="mailto:hello@soullyricsstudio.com">hello@soullyricsstudio.com</a>.
+        Wende dich dazu an die im Impressum genannte Kontaktadresse.
         Zudem besteht ein Beschwerderecht bei der zuständigen Datenschutzaufsichtsbehörde.
       </p>
     </>

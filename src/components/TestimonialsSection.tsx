@@ -29,11 +29,11 @@ const testimonials = [
 
 export function TestimonialsSection() {
   return (
-    <section className="relative py-24 sm:py-32">
-      <div className="section-divider mb-24" />
+    <section className="relative py-20 sm:py-28">
+      <div className="section-divider mb-16" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <AnimatedSection className="text-center mb-16">
+        <AnimatedSection className="text-center mb-12">
           <p className="text-gold-400 font-semibold text-sm uppercase tracking-widest mb-4">
             Was andere sagen
           </p>
@@ -74,7 +74,7 @@ export function TestimonialsSection() {
                   </div>
                   <div>
                     <p className="text-white font-semibold text-sm">{t.name}</p>
-                    <p className="text-white/52 text-xs">{t.role}</p>
+                    <p className="text-white/65 text-xs">{t.role}</p>
                   </div>
                 </div>
               </div>

@@ -6,7 +6,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Soul Lyrics Studio | Dein persönlicher Song aus deiner Geschichte",
   description:
-    "Soul Lyrics Studio verwandelt deine Erinnerungen, Gefühle und besonderen Momente in einen individuell komponierten Song — persönlich ausgearbeitet, mit moderner Technologie als Werkzeug.",
+    "Soul Lyrics Studio verwandelt deine Erinnerungen, Gefühle und besonderen Momente in einen persönlich gestalteten Song — mit Unterstützung moderner Technologie musikalisch umgesetzt.",
   keywords: [
     "Personalisierter Song",
     "Individueller Song",

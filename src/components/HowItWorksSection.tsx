@@ -9,7 +9,7 @@ const steps = [
     icon: Send,
     title: "Anfrage senden",
     description:
-      "Der Kunde teilt mit, für wen der Song gedacht ist, zu welchem Anlass er entsteht und welche Stimmung gewünscht ist.",
+      "Du teilst mit, für wen der Song gedacht ist, zu welchem Anlass er entsteht und welche Stimmung gewünscht ist.",
   },
   {
     number: "02",
@@ -30,17 +30,17 @@ const steps = [
     icon: CheckCircle2,
     title: "Abstimmung und Fertigstellung",
     description:
-      "Nach der vereinbarten Abstimmung erhält der Kunde seinen persönlichen Song als digitale Datei.",
+      "Nach der vereinbarten Abstimmung erhältst du deinen persönlichen Song als digitale Datei.",
   },
 ];
 
 export function HowItWorksSection() {
   return (
-    <section id="how-it-works" className="relative py-24 sm:py-32">
-      <div className="section-divider mb-24" />
+    <section id="how-it-works" className="relative py-20 sm:py-28">
+      <div className="section-divider mb-16" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <AnimatedSection className="text-center mb-16 sm:mb-20">
+        <AnimatedSection className="text-center mb-12 sm:mb-16">
           <p className="text-gold-400 font-semibold text-sm uppercase tracking-widest mb-4">
             In 4 einfachen Schritten
           </p>
@@ -51,7 +51,7 @@ export function HowItWorksSection() {
             So entsteht dein{" "}
             <span className="gradient-text-gold">Song</span>
           </h2>
-          <p className="text-white/62 text-lg max-w-2xl mx-auto">
+          <p className="text-white/75 text-lg max-w-2xl mx-auto">
             Von deiner Geschichte zum fertigen Song — persönlich begleitet, Schritt für Schritt.
           </p>
         </AnimatedSection>
@@ -77,7 +77,7 @@ export function HowItWorksSection() {
                     </div>
 
                     <h3 className="text-lg font-bold text-white mb-3">{step.title}</h3>
-                    <p className="text-white/62 text-sm leading-relaxed">{step.description}</p>
+                    <p className="text-white/75 text-sm leading-relaxed">{step.description}</p>
                   </div>
                 </AnimatedSection>
               );

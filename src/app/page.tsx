@@ -5,12 +5,13 @@ import { HowItWorksSection } from "@/components/HowItWorksSection";
 import { ShowcaseSection } from "@/components/ShowcaseSection";
 import { AboutSection } from "@/components/AboutSection";
 import { PricingSection } from "@/components/PricingSection";
-import { TestimonialsSection } from "@/components/TestimonialsSection";
 import { FAQSection } from "@/components/FAQSection";
 import { RequestFormSection } from "@/components/RequestFormSection";
 import { ContactSection } from "@/components/ContactSection";
-import { NewsletterSection } from "@/components/NewsletterSection";
 import { Footer } from "@/components/Footer";
+
+// TestimonialsSection and NewsletterSection are temporarily hidden per client
+// request until real customer reviews / the newsletter service are ready.
 
 export default function HomePage() {
   return (
@@ -23,11 +24,9 @@ export default function HomePage() {
         <ShowcaseSection />
         <AboutSection />
         <PricingSection />
-        <TestimonialsSection />
         <FAQSection />
         <RequestFormSection />
         <ContactSection />
-        <NewsletterSection />
       </main>
       <Footer />
     </>
