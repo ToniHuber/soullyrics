@@ -28,7 +28,7 @@ function MiniVisualizer({ isPlaying }: { isPlaying: boolean }) {
       {[0, 1, 2, 3].map((i) => (
         <div
           key={i}
-          className="w-[3px] rounded-full bg-brand-400"
+          className="w-[3px] rounded-full bg-gold-400"
           style={{
             height: isPlaying ? undefined : "4px",
             animation: isPlaying
@@ -78,7 +78,7 @@ export function ShowcaseSection() {
 
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <AnimatedSection className="text-center mb-16">
-          <p className="text-brand-400 font-semibold text-sm uppercase tracking-widest mb-4">
+          <p className="text-gold-400 font-semibold text-sm uppercase tracking-widest mb-4">
             Hör rein
           </p>
           <h2
@@ -103,8 +103,8 @@ export function ShowcaseSection() {
                 <div
                   className={`glass-card group flex items-center gap-4 p-4 sm:p-5 transition-all duration-200 cursor-pointer ${
                     isPlaying
-                      ? "!border-brand-500/40 !bg-brand-500/5"
-                      : "hover:!border-brand-500/25"
+                      ? "!border-gold-500/40 !bg-gold-500/5"
+                      : "hover:!border-gold-500/25"
                   }`}
                   onClick={() => togglePlay(track.id)}
                   role="button"
@@ -121,8 +121,8 @@ export function ShowcaseSection() {
                   <div
                     className={`w-12 h-12 rounded-xl flex items-center justify-center shrink-0 transition-all duration-200 ${
                       isPlaying
-                        ? "bg-brand-500 shadow-lg shadow-brand-500/30"
-                        : "bg-surface-700 group-hover:bg-brand-500/20"
+                        ? "bg-gold-600 shadow-lg shadow-gold-500/30"
+                        : "bg-surface-700 group-hover:bg-gold-500/20"
                     }`}
                   >
                     {isPlaying ? (

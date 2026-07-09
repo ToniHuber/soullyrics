@@ -51,7 +51,7 @@ export function FAQSection() {
 
       <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <AnimatedSection className="text-center mb-16">
-          <p className="text-brand-400 font-semibold text-sm uppercase tracking-widest mb-4">
+          <p className="text-gold-400 font-semibold text-sm uppercase tracking-widest mb-4">
             Häufige Fragen
           </p>
           <h2

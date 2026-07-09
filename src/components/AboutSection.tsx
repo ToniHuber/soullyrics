@@ -29,7 +29,7 @@ export function AboutSection() {
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           <AnimatedSection>
-            <p className="text-brand-400 font-semibold text-sm uppercase tracking-widest mb-4">
+            <p className="text-gold-400 font-semibold text-sm uppercase tracking-widest mb-4">
               Über uns
             </p>
             <h2
@@ -66,7 +66,7 @@ export function AboutSection() {
                 const Icon = value.icon;
                 return (
                   <div key={value.title} className="glass-card p-6 flex gap-4">
-                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-brand-500 to-gold-500 flex items-center justify-center shrink-0">
+                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-gold-600 to-gold-400 flex items-center justify-center shrink-0">
                       <Icon className="w-5 h-5 text-white" />
                     </div>
                     <div>

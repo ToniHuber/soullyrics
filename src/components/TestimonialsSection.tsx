@@ -50,7 +50,7 @@ export function TestimonialsSection() {
             <AnimatedSection key={t.name} delay={i * 150}>
               <div className="glass-card glass-card-hover p-8 h-full flex flex-col">
                 {/* Quote icon */}
-                <Quote className="w-8 h-8 text-brand-500/30 mb-4" />
+                <Quote className="w-8 h-8 text-gold-500/30 mb-4" />
 
                 {/* Stars */}
                 <div className="flex gap-1 mb-4">
@@ -69,7 +69,7 @@ export function TestimonialsSection() {
 
                 {/* Author */}
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-brand-500 to-gold-500 flex items-center justify-center text-sm font-bold text-white">
+                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-gold-600 to-gold-400 flex items-center justify-center text-sm font-bold text-white">
                     {t.initials}
                   </div>
                   <div>

@@ -58,7 +58,7 @@ export function HowItWorksSection() {
 
         <div className="relative">
           {/* Connection line */}
-          <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-px bg-gradient-to-r from-transparent via-brand-500/30 to-transparent -translate-y-1/2" />
+          <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold-500/30 to-transparent -translate-y-1/2" />
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {steps.map((step, i) => {
@@ -67,13 +67,13 @@ export function HowItWorksSection() {
                 <AnimatedSection key={step.number} delay={i * 150}>
                   <div className="relative text-center group">
                     {/* Step number */}
-                    <div className="text-7xl font-black text-brand-500/10 absolute -top-4 left-1/2 -translate-x-1/2 select-none pointer-events-none" style={{ fontFamily: "'Playfair Display', serif" }}>
+                    <div className="text-7xl font-black text-gold-500/10 absolute -top-4 left-1/2 -translate-x-1/2 select-none pointer-events-none" style={{ fontFamily: "'Playfair Display', serif" }}>
                       {step.number}
                     </div>
 
                     {/* Icon circle */}
-                    <div className="relative z-10 w-20 h-20 mx-auto mb-6 rounded-full bg-surface-800 border-2 border-brand-500/20 flex items-center justify-center transition-all duration-300 group-hover:border-brand-500/50 group-hover:shadow-lg group-hover:shadow-brand-500/10">
-                      <Icon className="w-8 h-8 text-brand-400 transition-transform duration-200 group-hover:scale-110" />
+                    <div className="relative z-10 w-20 h-20 mx-auto mb-6 rounded-full bg-surface-800 border-2 border-gold-500/20 flex items-center justify-center transition-all duration-300 group-hover:border-gold-500/50 group-hover:shadow-lg group-hover:shadow-gold-500/10">
+                      <Icon className="w-8 h-8 text-gold-400 transition-transform duration-200 group-hover:scale-110" />
                     </div>
 
                     <h3 className="text-lg font-bold text-white mb-3">{step.title}</h3>

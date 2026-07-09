@@ -25,7 +25,7 @@ function AudioVisualizer() {
         (bar, i) => (
           <div
             key={i}
-            className="w-[3px] rounded-full bg-gradient-to-t from-brand-600 to-gold-400"
+            className="w-[3px] rounded-full bg-gradient-to-t from-gold-600 to-gold-300"
             style={{
               animation: bars ? `waveform ${bar.duration}s ease-in-out ${bar.delay}s infinite` : "none",
               height: `${bar.height}px`,
@@ -53,11 +53,11 @@ export function HeroSection() {
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
       {/* Background gradient */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_0%,#4c0ca440_0%,#0a0a0a_70%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_0%,#d4880c40_0%,#0a0a0a_70%)]" />
 
       {/* Floating orbs */}
       <div
-        className="floating-orb w-96 h-96 bg-brand-600 top-20 -left-48"
+        className="floating-orb w-96 h-96 bg-gold-600 top-20 -left-48"
         style={{ animation: "pulse-glow 4s ease-in-out infinite" }}
       />
       <div
@@ -73,7 +73,7 @@ export function HeroSection() {
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 text-center">
         {/* Badge */}
         <div
-          className={`inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-300 text-sm font-medium mb-8 transition-all duration-700 ${
+          className={`inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gold-500/10 border border-gold-500/25 text-gold-300 text-sm font-medium mb-8 transition-all duration-700 ${
             mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
           }`}
         >

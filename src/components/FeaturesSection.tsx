@@ -16,7 +16,7 @@ const features = [
     title: "Individuell geschriebener Liedtext",
     description:
       "Kein Baukasten-Text: Jeder Liedtext wird eigens für dich verfasst und musikalisch ausgearbeitet.",
-    gradient: "from-brand-500 to-brand-700",
+    gradient: "from-gold-600 to-gold-500",
   },
   {
     icon: Mic2,
@@ -30,7 +30,7 @@ const features = [
     title: "Persönliche Abstimmung",
     description:
       "Wir stehen während des gesamten Entstehungsprozesses mit dir im Austausch, damit dein Song genau richtig klingt.",
-    gradient: "from-brand-400 to-brand-600",
+    gradient: "from-gold-400 to-gold-600",
   },
   {
     icon: Globe,
@@ -56,7 +56,7 @@ export function FeaturesSection() {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <AnimatedSection className="text-center mb-16 sm:mb-20">
-          <p className="text-brand-400 font-semibold text-sm uppercase tracking-widest mb-4">
+          <p className="text-gold-400 font-semibold text-sm uppercase tracking-widest mb-4">
             Was uns einzigartig macht
           </p>
           <h2

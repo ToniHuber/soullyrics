@@ -45,7 +45,7 @@ export function RequestFormSection() {
   };
 
   const inputClass =
-    "w-full px-4 py-3.5 bg-surface-800/50 border border-brand-500/10 rounded-xl text-white placeholder:text-white/32 focus:outline-none focus:border-brand-500/40 focus:ring-2 focus:ring-brand-500/10 transition-all";
+    "w-full px-4 py-3.5 bg-surface-800/50 border border-white/10 rounded-xl text-white placeholder:text-white/32 focus:outline-none focus:border-gold-500/50 focus:ring-2 focus:ring-gold-500/15 transition-all";
 
   return (
     <section id="request" className="relative py-24 sm:py-32">
@@ -54,7 +54,7 @@ export function RequestFormSection() {
 
       <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <AnimatedSection className="text-center mb-16">
-          <p className="text-brand-400 font-semibold text-sm uppercase tracking-widest mb-4">
+          <p className="text-gold-400 font-semibold text-sm uppercase tracking-widest mb-4">
             Anfrageformular
           </p>
           <h2

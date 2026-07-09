@@ -27,7 +27,7 @@ export function Navbar() {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "py-3 bg-surface-950/80 backdrop-blur-xl border-b border-brand-500/10 shadow-lg shadow-brand-500/5"
+          ? "py-3 bg-surface-950/80 backdrop-blur-xl border-b border-white/10 shadow-lg shadow-gold-500/5"
           : "py-5 bg-transparent"
       }`}
     >
@@ -42,7 +42,7 @@ export function Navbar() {
             <span className="text-lg font-bold tracking-tight text-white leading-tight" style={{ fontFamily: "'Playfair Display', serif" }}>
               Soul Lyrics
             </span>
-            <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-brand-400 leading-tight">
+            <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-gold-400 leading-tight">
               Studio
             </span>
           </div>
@@ -89,7 +89,7 @@ export function Navbar() {
           mobileOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
         }`}
       >
-        <div className="px-4 py-4 bg-surface-950/95 backdrop-blur-xl border-t border-brand-500/10 flex flex-col gap-1">
+        <div className="px-4 py-4 bg-surface-950/95 backdrop-blur-xl border-t border-white/10 flex flex-col gap-1">
           {navLinks.map((link) => (
             <a
               key={link.href}

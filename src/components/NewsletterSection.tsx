@@ -44,10 +44,10 @@ export function NewsletterSection() {
         <AnimatedSection>
           <div className="glass-card p-8 sm:p-12 text-center relative overflow-hidden">
             {/* Background glow */}
-            <div className="absolute inset-0 bg-gradient-to-br from-brand-600/5 via-transparent to-gold-500/5" />
+            <div className="absolute inset-0 bg-gradient-to-br from-gold-600/5 via-transparent to-gold-400/5" />
 
             <div className="relative z-10">
-              <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-brand-500 to-gold-500 flex items-center justify-center mx-auto mb-6">
+              <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-gold-600 to-gold-400 flex items-center justify-center mx-auto mb-6">
                 <Sparkles className="w-6 h-6 text-white" />
               </div>
 
@@ -73,7 +73,7 @@ export function NewsletterSection() {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="deine@email.de"
-                    className="flex-1 px-5 py-3.5 bg-surface-800/50 border border-brand-500/10 rounded-full text-white placeholder:text-white/32 focus:outline-none focus:border-brand-500/40 focus:ring-2 focus:ring-brand-500/10 transition-all"
+                    className="flex-1 px-5 py-3.5 bg-surface-800/50 border border-white/10 rounded-full text-white placeholder:text-white/32 focus:outline-none focus:border-gold-500/50 focus:ring-2 focus:ring-gold-500/15 transition-all"
                     required
                   />
                   <button type="submit" disabled={loading} className="btn-primary shrink-0">
