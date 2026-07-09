@@ -66,8 +66,8 @@ export function AboutSection() {
                 const Icon = value.icon;
                 return (
                   <div key={value.title} className="glass-card p-6 flex gap-4">
-                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-gold-600 to-gold-400 flex items-center justify-center shrink-0">
-                      <Icon className="w-5 h-5 text-white" />
+                    <div className="w-12 h-12 rounded-xl bg-cream flex items-center justify-center shrink-0">
+                      <Icon className="w-5 h-5 text-surface-950" />
                     </div>
                     <div>
                       <h3 className="text-white font-bold mb-1">{value.title}</h3>
