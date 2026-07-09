@@ -9,42 +9,36 @@ const features = [
     title: "Deine Geschichte im Mittelpunkt",
     description:
       "Du erzählst uns deine persönliche Geschichte, deine Erinnerungen und Wünsche — sie sind die Grundlage für deinen Song.",
-    gradient: "from-rose-400 to-rose-600",
   },
   {
     icon: PenLine,
     title: "Individuell geschriebener Liedtext",
     description:
       "Kein Baukasten-Text: Jeder Liedtext wird eigens für dich verfasst und musikalisch ausgearbeitet.",
-    gradient: "from-gold-600 to-gold-500",
   },
   {
     icon: Mic2,
     title: "Passende Stimme und Musikrichtung",
     description:
       "Ob Soul, R&B oder Pop — wir finden gemeinsam die Stimme und den Musikstil, der zu deiner Geschichte passt.",
-    gradient: "from-gold-500 to-gold-600",
   },
   {
     icon: Users,
     title: "Persönliche Abstimmung",
     description:
       "Wir stehen während des gesamten Entstehungsprozesses mit dir im Austausch, damit dein Song genau richtig klingt.",
-    gradient: "from-gold-400 to-gold-600",
   },
   {
     icon: Globe,
     title: "Viele Sprachen möglich",
     description:
       "Ob Deutsch, Englisch oder eine andere Sprache — dein Song entsteht in der Sprache, die zu dir passt.",
-    gradient: "from-emerald-400 to-emerald-600",
   },
   {
     icon: Sparkles,
     title: "Songs für besondere Momente",
     description:
       "Ob Hochzeit, Geburtstag oder eine bewegende Erinnerung — dein Song wird zum musikalischen Andenken.",
-    gradient: "from-amber-400 to-amber-600",
   },
 ];
 
@@ -77,10 +71,8 @@ export function FeaturesSection() {
             return (
               <AnimatedSection key={feature.title} delay={i * 100}>
                 <div className="glass-card glass-card-hover p-8 h-full group">
-                  <div
-                    className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${feature.gradient} flex items-center justify-center mb-6 transition-transform duration-200 group-hover:scale-110`}
-                  >
-                    <Icon className="w-6 h-6 text-white" />
+                  <div className="w-14 h-14 rounded-2xl bg-cream flex items-center justify-center mb-6 transition-transform duration-200 group-hover:scale-110">
+                    <Icon className="w-6 h-6 text-surface-950" />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
                   <p className="text-white/62 leading-relaxed">{feature.description}</p>
