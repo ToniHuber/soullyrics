@@ -62,7 +62,7 @@ export function HeroSection() {
           }`}
         >
           <Sparkles className="w-4 h-4" />
-          <span>KI-Generierte Musik — Die Zukunft ist jetzt</span>
+          <span>Wo Erinnerungen zu Musik werden</span>
         </div>
 
         {/* Headline */}
@@ -73,10 +73,10 @@ export function HeroSection() {
           style={{ fontFamily: "'Playfair Display', serif" }}
         >
           <span className="text-white">Deine</span>{" "}
-          <span className="gradient-text">Seele</span>
+          <span className="gradient-text">Geschichte.</span>
           <br />
-          <span className="text-white">Unser</span>{" "}
-          <span className="gradient-text-gold">Sound</span>
+          <span className="text-white">Dein</span>{" "}
+          <span className="gradient-text-gold">persönlicher Song.</span>
         </h1>
 
         {/* Subtitle */}
@@ -85,8 +85,8 @@ export function HeroSection() {
             mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          Soul Lyrics Studio verwandelt deine Emotionen in einzigartige Musik. 
-          Künstliche Intelligenz trifft auf echte Seele — für Songs, die berühren.
+          Soul Lyrics Studio verwandelt Erinnerungen, Gefühle und besondere Momente
+          in individuelle Musik.
         </p>
 
         {/* Audio visualizer */}
@@ -104,12 +104,12 @@ export function HeroSection() {
             mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          <a href="#showcase" className="btn-primary text-lg px-8 py-4">
+          <a href="#contact" className="btn-primary text-lg px-8 py-4">
             <Play className="w-5 h-5" />
-            Entdecke den Sound
+            Persönlichen Song anfragen
           </a>
-          <a href="#how-it-works" className="btn-outline text-lg px-8 py-4">
-            So funktioniert&apos;s
+          <a href="#showcase" className="btn-outline text-lg px-8 py-4">
+            Hörproben entdecken
           </a>
         </div>
       </div>

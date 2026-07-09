@@ -1,50 +1,50 @@
 "use client";
 
 import { AnimatedSection } from "./AnimatedSection";
-import { Brain, Mic2, Wand2, Heart, Zap, Globe } from "lucide-react";
+import { Heart, PenLine, Mic2, Users, Globe, Sparkles } from "lucide-react";
 
 const features = [
   {
-    icon: Brain,
-    title: "KI-Songwriting",
+    icon: Heart,
+    title: "Deine Geschichte im Mittelpunkt",
     description:
-      "Unsere fortschrittliche KI analysiert Emotionen, Genres und Stimmungen, um einzigartige Lyrics zu generieren, die wirklich berühren.",
+      "Du erzählst uns deine persönliche Geschichte, deine Erinnerungen und Wünsche — sie sind die Grundlage für deinen Song.",
+    gradient: "from-rose-400 to-rose-600",
+  },
+  {
+    icon: PenLine,
+    title: "Individuell geschriebener Liedtext",
+    description:
+      "Kein Baukasten-Text: Jeder Liedtext wird eigens für dich verfasst und musikalisch ausgearbeitet.",
     gradient: "from-brand-500 to-brand-700",
   },
   {
     icon: Mic2,
-    title: "Vocal Synthese",
+    title: "Passende Stimme und Musikrichtung",
     description:
-      "Realistischer KI-Gesang mit Gefühl. Verschiedene Stimmprofile für jeden Stil — von Soul über R&B bis Pop.",
+      "Ob Soul, R&B oder Pop — wir finden gemeinsam die Stimme und den Musikstil, der zu deiner Geschichte passt.",
     gradient: "from-gold-500 to-gold-600",
   },
   {
-    icon: Wand2,
-    title: "Beat-Produktion",
+    icon: Users,
+    title: "Persönliche Abstimmung",
     description:
-      "Professionelle Beats und Instrumentals, maßgeschneidert für deinen Song. Von akustisch bis elektronisch.",
+      "Wir stehen während des gesamten Entstehungsprozesses mit dir im Austausch, damit dein Song genau richtig klingt.",
     gradient: "from-brand-400 to-brand-600",
   },
   {
-    icon: Heart,
-    title: "Emotionale Tiefe",
-    description:
-      "Wir glauben, dass Musik Seele braucht. Deshalb ist jeder Song einzigartig — geprägt von deiner Geschichte.",
-    gradient: "from-rose-400 to-rose-600",
-  },
-  {
-    icon: Zap,
-    title: "Blitzschnell",
-    description:
-      "Von der Idee zum fertigen Song in Minuten. Kein Warten, keine komplizierten Tools — nur pure Kreativität.",
-    gradient: "from-amber-400 to-amber-600",
-  },
-  {
     icon: Globe,
-    title: "Mehrsprachig",
+    title: "Viele Sprachen möglich",
     description:
-      "Songs in Deutsch, Englisch, Spanisch und vielen weiteren Sprachen. Deine Musik kennt keine Grenzen.",
+      "Ob Deutsch, Englisch oder eine andere Sprache — dein Song entsteht in der Sprache, die zu dir passt.",
     gradient: "from-emerald-400 to-emerald-600",
+  },
+  {
+    icon: Sparkles,
+    title: "Songs für besondere Momente",
+    description:
+      "Ob Hochzeit, Geburtstag oder eine bewegende Erinnerung — dein Song wird zum musikalischen Andenken.",
+    gradient: "from-amber-400 to-amber-600",
   },
 ];
 
@@ -66,8 +66,8 @@ export function FeaturesSection() {
             Musik mit <span className="gradient-text">Seele</span>
           </h2>
           <p className="text-white/50 text-lg max-w-2xl mx-auto">
-            Soul Lyrics Studio vereint die Präzision moderner KI mit der emotionalen 
-            Tiefe echter Musikkunst.
+            Jeder Song entsteht aus deiner persönlichen Geschichte — von Menschen für
+            Menschen ausgearbeitet, mit moderner Technologie als Werkzeug im Hintergrund.
           </p>
         </AnimatedSection>
 
