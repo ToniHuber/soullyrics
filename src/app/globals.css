@@ -153,9 +153,15 @@
   .floating-orb {
     position: absolute;
     border-radius: 50%;
-    filter: blur(80px);
     opacity: 0.3;
     pointer-events: none;
+    /* Soft edge via mask instead of a large filter: blur() — a heavy blur
+       needs a separate GPU compositing pass, which can briefly show the
+       shape's hard, unblurred edge on first paint (looks "square") before
+       it catches up. A mask paints the soft edge immediately, no flash. */
+    -webkit-mask-image: radial-gradient(circle, black 0%, black 35%, transparent 70%);
+    mask-image: radial-gradient(circle, black 0%, black 35%, transparent 70%);
+    filter: blur(24px);
   }
 }
 
