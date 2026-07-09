@@ -39,7 +39,7 @@ export function TestimonialsSection() {
           </p>
           <h2
             className="text-4xl sm:text-5xl lg:text-6xl font-black text-white mb-6"
-            style={{ fontFamily: "'Playfair Display', serif" }}
+            style={{ fontFamily: "var(--font-playfair), serif" }}
           >
             Was unsere <span className="gradient-text-gold">Kunden</span> sagen
           </h2>

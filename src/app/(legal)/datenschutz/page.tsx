@@ -26,17 +26,20 @@ export default function DatenschutzPage() {
       <p>Über diese Website werden folgende personenbezogene Daten verarbeitet, wenn du sie aktiv übermittelst:</p>
       <ul>
         <li>
-          <strong>Kontaktformular:</strong> Name, E-Mail-Adresse und deine Nachricht.
-        </li>
-        <li>
           <strong>Anfrageformular für einen persönlichen Song:</strong> Name, E-Mail-Adresse,
-          Angaben zum Songempfänger, Anlass, gewünschte Stimmung, gewünschtes Paket sowie die von
-          dir mitgeteilte persönliche Geschichte (z.B. Erinnerungen, Namen, besondere Erlebnisse).
+          Angaben zum Songempfänger, Anlass, gewünschte Stimmung, gewünschte Leistung sowie die
+          von dir mitgeteilte persönliche Geschichte (z.B. Erinnerungen, Namen, besondere
+          Erlebnisse).
         </li>
         <li>
-          <strong>Newsletter-Anmeldung:</strong> E-Mail-Adresse.
+          <strong>Newsletter-Anmeldung:</strong> E-Mail-Adresse (Funktion aktuell nicht auf der
+          Website aktiv).
         </li>
       </ul>
+      <p>
+        Für allgemeine Anfragen kannst du uns außerdem direkt über Instagram kontaktieren; es
+        gelten dann zusätzlich die Datenschutzbestimmungen von Meta/Instagram.
+      </p>
       <p>
         Diese Daten werden ausschließlich zur Bearbeitung deiner Anfrage bzw. zum Versand des
         Newsletters verwendet und nicht an Dritte weiterverkauft.
@@ -66,19 +69,24 @@ export default function DatenschutzPage() {
         Serverstandort und ggf. Auftragsverarbeitungsvertrag ergänzen.]
       </p>
 
-      <h2>6. Google Fonts</h2>
+      <h2>6. Schriftarten</h2>
       <p>
-        Diese Website bindet Schriftarten von Google Fonts ein, die über Server von Google
-        geladen werden. Dabei kann die IP-Adresse deines Endgeräts an Google übermittelt werden.
-        [Bitte prüfen, ob eine lokale Einbindung der Schriftarten oder eine Einwilligungslösung
-        erforderlich ist.]
+        Die auf dieser Website verwendeten Schriftarten (Google Fonts) werden lokal auf unserem
+        eigenen Server ausgeliefert. Es findet keine Verbindung zu Servern von Google statt und
+        es werden dabei keine Daten an Google übermittelt.
       </p>
 
-      <h2>7. Cookies und Tracking</h2>
+      <h2>7. Cookies und Einwilligung</h2>
       <p>
-        Diese Website setzt aktuell keine Analyse- oder Marketing-Cookies ein. Sollte sich dies
-        ändern (z.B. durch Einbindung von Statistik-Tools), wird diese Erklärung entsprechend
-        aktualisiert und ggf. eine Einwilligung über ein Cookie-Banner eingeholt.
+        Diese Website setzt aktuell keine Analyse- oder Marketing-Cookies ein. Beim ersten Besuch
+        wird dir ein Cookie-Banner angezeigt, über den du optionale Kategorien (Statistik,
+        Marketing) zwar bereits jetzt einsehen und auswählen kannst — diese sind jedoch derzeit
+        technisch nicht aktiv, da wir entsprechende Dienste noch nicht einsetzen. Deine Auswahl
+        wird lokal in deinem Browser (localStorage) gespeichert, nicht als Cookie und nicht auf
+        unseren Servern. Du kannst deine Auswahl jederzeit über den Link „Cookie-Einstellungen“
+        im Footer der Website ändern. Sollten wir künftig Statistik- oder Marketing-Dienste
+        einsetzen, werden diese ausschließlich nach deiner ausdrücklichen Einwilligung aktiviert
+        und diese Erklärung entsprechend aktualisiert.
       </p>
 
       <h2>8. Deine Rechte</h2>

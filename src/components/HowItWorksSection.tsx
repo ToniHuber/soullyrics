@@ -46,7 +46,7 @@ export function HowItWorksSection() {
           </p>
           <h2
             className="text-4xl sm:text-5xl lg:text-6xl font-black text-white mb-6"
-            style={{ fontFamily: "'Playfair Display', serif" }}
+            style={{ fontFamily: "var(--font-playfair), serif" }}
           >
             So entsteht dein{" "}
             <span className="gradient-text-gold">Song</span>
@@ -67,7 +67,7 @@ export function HowItWorksSection() {
                 <AnimatedSection key={step.number} delay={i * 150}>
                   <div className="relative text-center group">
                     {/* Step number */}
-                    <div className="text-7xl font-black text-gold-500/10 absolute -top-4 left-1/2 -translate-x-1/2 select-none pointer-events-none" style={{ fontFamily: "'Playfair Display', serif" }}>
+                    <div className="text-7xl font-black text-gold-500/10 absolute -top-4 left-1/2 -translate-x-1/2 select-none pointer-events-none" style={{ fontFamily: "var(--font-playfair), serif" }}>
                       {step.number}
                     </div>
 

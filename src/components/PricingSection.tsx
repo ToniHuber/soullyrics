@@ -57,7 +57,7 @@ export function PricingSection() {
           </p>
           <h2
             className="text-4xl sm:text-5xl lg:text-6xl font-black text-white mb-6"
-            style={{ fontFamily: "'Playfair Display', serif" }}
+            style={{ fontFamily: "var(--font-playfair), serif" }}
           >
             Transparente <span className="gradient-text-gold">Preise</span>
           </h2>

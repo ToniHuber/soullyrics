@@ -39,7 +39,7 @@ export function Navbar() {
             <div className="absolute inset-0 rounded-full bg-gold-500/20 blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10" />
           </div>
           <div className="flex flex-col">
-            <span className="text-lg font-bold tracking-tight text-white leading-tight whitespace-nowrap" style={{ fontFamily: "'Playfair Display', serif" }}>
+            <span className="text-lg font-bold tracking-tight text-white leading-tight whitespace-nowrap" style={{ fontFamily: "var(--font-playfair), serif" }}>
               Soul Lyrics
             </span>
             <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-gold-400 leading-tight">

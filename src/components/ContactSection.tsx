@@ -15,7 +15,7 @@ export function ContactSection() {
           </p>
           <h2
             className="text-4xl sm:text-5xl font-black text-white mb-6"
-            style={{ fontFamily: "'Playfair Display', serif" }}
+            style={{ fontFamily: "var(--font-playfair), serif" }}
           >
             Lass uns{" "}
             <span className="gradient-text">gemeinsam</span> etwas

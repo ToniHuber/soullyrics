@@ -15,7 +15,7 @@ export function Footer() {
                 <Image src="/logo-emblem.png" alt="Soul Lyrics Studio" fill sizes="44px" className="object-contain" />
               </div>
               <div className="flex flex-col">
-                <span className="text-lg font-bold text-white leading-tight" style={{ fontFamily: "'Playfair Display', serif" }}>
+                <span className="text-lg font-bold text-white leading-tight" style={{ fontFamily: "var(--font-playfair), serif" }}>
                   Soul Lyrics
                 </span>
                 <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-gold-400 leading-tight">
@@ -76,6 +76,14 @@ export function Footer() {
                   </a>
                 </li>
               ))}
+              <li>
+                <button
+                  onClick={() => window.dispatchEvent(new Event("open-cookie-settings"))}
+                  className="text-white/65 text-sm hover:text-white transition-colors"
+                >
+                  Cookie-Einstellungen
+                </button>
+              </li>
             </ul>
           </div>
 

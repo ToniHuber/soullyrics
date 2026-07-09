@@ -53,7 +53,7 @@ export function NewsletterSection() {
 
               <h3
                 className="text-3xl sm:text-4xl font-black text-white mb-4"
-                style={{ fontFamily: "'Playfair Display', serif" }}
+                style={{ fontFamily: "var(--font-playfair), serif" }}
               >
                 Bleib auf dem <span className="gradient-text">Laufenden</span>
               </h3>

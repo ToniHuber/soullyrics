@@ -1,7 +1,24 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
+import { Inter, Playfair_Display } from "next/font/google";
 import { Toaster } from "sonner";
+import { CookieConsent } from "@/components/CookieConsent";
 import "./globals.css";
+
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800", "900"],
+  variable: "--font-inter",
+  display: "swap",
+});
+
+const playfairDisplay = Playfair_Display({
+  subsets: ["latin"],
+  weight: ["400", "700", "900"],
+  style: ["normal", "italic"],
+  variable: "--font-playfair",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "Soul Lyrics Studio | Dein persönlicher Song aus deiner Geschichte",
@@ -28,17 +45,10 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="de" className="scroll-smooth">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&display=swap"
-          rel="stylesheet"
-        />
-      </head>
+    <html lang="de" className={`scroll-smooth ${inter.variable} ${playfairDisplay.variable}`}>
       <body className="antialiased">
         {children}
+        <CookieConsent />
         <Toaster
           position="bottom-right"
           theme="dark"
