@@ -33,7 +33,7 @@ const faqs = [
   {
     question: "In welchem Format erhalte ich meinen fertigen Song?",
     answer:
-      "Du erhältst deinen fertigen Song als MP3-Datei zum Download.",
+      "Die Audiodatei erhältst du als MP3. Beim Paket „Song mit Cover“ kommt zusätzlich eine Coverdatei als JPG dazu, beim Paket „Song mit Video“ eine Videodatei als MP4.",
   },
   {
     question: "Was kostet ein persönlicher Song?",

@@ -43,8 +43,10 @@ export default function AGBPage() {
 
       <h2>5. Lieferung</h2>
       <p>
-        Der fertige Song wird dem Auftraggeber als digitale Datei (MP3) per E-Mail oder
-        Download-Link zur Verfügung gestellt. [Konkrete Lieferzeiten bitte ergänzen.]
+        Der fertige Song wird dem Auftraggeber als Audiodatei (MP3) per E-Mail oder
+        Download-Link zur Verfügung gestellt. Beim Paket „Song mit Cover“ wird zusätzlich
+        eine Coverdatei (JPG) geliefert, beim Paket „Song mit Video“ zusätzlich eine
+        Videodatei (MP4). [Konkrete Lieferzeiten bitte ergänzen.]
       </p>
 
       <h2>6. Änderungen und Abstimmung</h2>
