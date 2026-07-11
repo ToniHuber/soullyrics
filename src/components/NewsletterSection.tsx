@@ -39,7 +39,7 @@ export function NewsletterSection() {
   };
 
   return (
-    <section className="relative py-20 sm:py-28">
+    <section className="relative py-12 sm:py-28">
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <AnimatedSection>
           <div className="glass-card p-8 sm:p-12 text-center relative overflow-hidden">

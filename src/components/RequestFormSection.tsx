@@ -51,11 +51,11 @@ export function RequestFormSection() {
   };
 
   const inputClass =
-    "w-full px-4 py-3.5 bg-surface-800/50 border border-white/10 rounded-xl text-white placeholder:text-white/46 focus:outline-none focus:border-gold-500/50 focus:ring-2 focus:ring-gold-500/15 transition-all";
+    "w-full px-4 py-3.5 bg-surface-800/50 border border-white/10 rounded-xl text-white placeholder:text-white/46 placeholder:text-sm focus:outline-none focus:border-gold-500/50 focus:ring-2 focus:ring-gold-500/15 transition-all";
 
   return (
-    <section id="request" className="relative py-20 sm:py-28">
-      <div className="section-divider mb-16" />
+    <section id="request" className="relative py-12 sm:py-28">
+      <div className="section-divider mb-8 sm:mb-16" />
       <div className="floating-orb w-[500px] h-[500px] bg-gold-500 top-1/2 -right-60" />
 
       <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -130,7 +130,7 @@ export function RequestFormSection() {
                     type="text"
                     value={recipient}
                     onChange={(e) => setRecipient(e.target.value)}
-                    placeholder="z.B. meine Frau, mein bester Freund"
+                    placeholder="z. B. meine Frau oder bester Freund"
                     className={inputClass}
                     required
                   />

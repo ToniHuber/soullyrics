@@ -36,8 +36,8 @@ const steps = [
 
 export function HowItWorksSection() {
   return (
-    <section id="how-it-works" className="relative py-20 sm:py-28">
-      <div className="section-divider mb-16" />
+    <section id="how-it-works" className="relative py-12 sm:py-28">
+      <div className="section-divider mb-8 sm:mb-16" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <AnimatedSection className="text-center mb-12 sm:mb-16">

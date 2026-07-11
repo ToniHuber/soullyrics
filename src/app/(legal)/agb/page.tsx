@@ -49,9 +49,11 @@ export default function AGBPage() {
 
       <h2>6. Änderungen und Abstimmung</h2>
       <p>
-        Nachträgliche Änderungswünsche am fertigen Song (z.B. an Liedtext, Stimme oder
-        Musikrichtung) sind gegen eine gesondert berechnete Gebühr möglich. Der genaue Ablauf
-        wird individuell mit dem Auftraggeber abgestimmt.
+        Im vereinbarten Preis sind drei Korrekturschleifen enthalten, sofern der Auftraggeber
+        diese innerhalb von 14 Werktagen nach der ersten Entwurfsvorstellung schriftlich
+        einreicht. Weitere Änderungswünsche sowie nach Ablauf dieser Frist eingereichte
+        Änderungen (z.B. an Liedtext, Stimme oder Musikrichtung) werden gesondert berechnet.
+        Der genaue Ablauf wird individuell mit dem Auftraggeber abgestimmt.
       </p>
 
       <h2>7. Nutzungsrechte</h2>

@@ -33,9 +33,9 @@ const services = [
 const addOns = [
   {
     icon: Pencil,
-    title: "Änderungen",
+    title: "Weitere Änderungen",
     price: "ab 10 €",
-    description: "Nachträgliche Anpassungen an deinem fertigen Song.",
+    description: "Für Änderungswünsche über die drei enthaltenen Korrekturschleifen hinaus oder nach Ablauf der 14-Tage-Frist.",
   },
   {
     icon: Zap,
@@ -47,8 +47,8 @@ const addOns = [
 
 export function PricingSection() {
   return (
-    <section id="pricing" className="relative py-20 sm:py-28">
-      <div className="section-divider mb-16" />
+    <section id="pricing" className="relative py-12 sm:py-28">
+      <div className="section-divider mb-8 sm:mb-16" />
 
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <AnimatedSection className="text-center mb-14 sm:mb-16">
@@ -87,7 +87,11 @@ export function PricingSection() {
 
         <AnimatedSection delay={400}>
           <div className="glass-card p-6 sm:p-8">
-            <p className="text-white font-semibold mb-5">Zusatzoptionen</p>
+            <p className="text-white font-semibold mb-2">Zusatzoptionen</p>
+            <p className="text-white/70 text-sm leading-relaxed mb-5">
+              In jedem Preis sind bereits drei Korrekturschleifen enthalten, wenn du sie
+              innerhalb von 14 Werktagen nach dem ersten Entwurf schriftlich einreichst.
+            </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {addOns.map((addOn) => {
                 const Icon = addOn.icon;

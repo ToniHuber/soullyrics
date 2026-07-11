@@ -23,8 +23,8 @@ const values = [
 
 export function AboutSection() {
   return (
-    <section id="about" className="relative py-20 sm:py-28">
-      <div className="section-divider mb-16" />
+    <section id="about" className="relative py-12 sm:py-28">
+      <div className="section-divider mb-8 sm:mb-16" />
 
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">

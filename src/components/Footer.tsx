@@ -6,7 +6,7 @@ import { Heart } from "lucide-react";
 export function Footer() {
   return (
     <footer className="relative border-t border-white/10 bg-surface-950/50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Brand */}
           <div className="sm:col-span-2 lg:col-span-1">
@@ -28,7 +28,7 @@ export function Footer() {
             </p>
             <p className="text-white/65 text-sm leading-relaxed max-w-xs">
               Persönliche Songs aus echten Geschichten. Individuell für dich
-              komponiert — mit Herz und moderner Technologie als Werkzeug.
+              musikalisch umgesetzt — mit Herz und moderner Technologie als Werkzeug.
             </p>
           </div>
 

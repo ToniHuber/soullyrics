@@ -32,7 +32,12 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
-  
+
+  /* Keeps section headings clear of the fixed navbar when jumping to an anchor */
+  section[id] {
+    scroll-margin-top: 6rem;
+  }
+
   body {
     background: var(--color-surface-950);
     color: var(--color-cream);

@@ -65,8 +65,8 @@ export function ShowcaseSection() {
   };
 
   return (
-    <section id="showcase" className="relative py-20 sm:py-28">
-      <div className="section-divider mb-16" />
+    <section id="showcase" className="relative py-12 sm:py-28">
+      <div className="section-divider mb-8 sm:mb-16" />
       <div className="floating-orb w-[600px] h-[600px] bg-gold-500 -bottom-60 -right-60" />
 
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -182,7 +182,7 @@ export function ShowcaseSection() {
         )}
 
         {/* Social CTAs */}
-        <AnimatedSection className="mt-12 text-center" delay={600}>
+        <AnimatedSection className="mt-8 sm:mt-12 text-center" delay={600}>
           <p className="text-white/65 text-sm mb-4">
             Mehr Songs & Behind-the-Scenes auf Instagram und YouTube
           </p>

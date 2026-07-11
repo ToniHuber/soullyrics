@@ -20,7 +20,7 @@ const features = [
     icon: Mic2,
     title: "Passende Stimme und Musikrichtung",
     description:
-      "Ob Soul, R&B oder Pop — wir finden gemeinsam die Stimme und den Musikstil, der zu deiner Geschichte passt.",
+      "Ob Ballade, Pop, Rap, R&B oder eine andere Musikrichtung — wir finden gemeinsam die passende Stimme und den Musikstil für deine Geschichte.",
   },
   {
     icon: Users,
@@ -44,7 +44,7 @@ const features = [
 
 export function FeaturesSection() {
   return (
-    <section id="features" className="relative py-20 sm:py-28">
+    <section id="features" className="relative py-12 sm:py-28">
       {/* Background accent */}
       <div className="floating-orb w-[500px] h-[500px] bg-gold-500 top-0 left-1/2 -translate-x-1/2" />
 

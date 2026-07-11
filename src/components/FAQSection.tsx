@@ -23,7 +23,7 @@ const faqs = [
   {
     question: "Kann ich Änderungswünsche äußern, wenn mir etwas nicht gefällt?",
     answer:
-      "Ja, nachträgliche Änderungen an deinem fertigen Song sind gegen eine zusätzliche Gebühr möglich. Details besprechen wir gerne persönlich mit dir.",
+      "Ja. Drei Korrekturschleifen sind im Preis enthalten, wenn du sie innerhalb von 14 Werktagen nach dem ersten Entwurf schriftlich einreichst. Weitere oder später eingereichte Änderungen berechnen wir ab 10 €.",
   },
   {
     question: "Eignet sich ein Song auch als Geschenk?",
@@ -46,8 +46,8 @@ export function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section id="faq" className="relative py-20 sm:py-28">
-      <div className="section-divider mb-16" />
+    <section id="faq" className="relative py-12 sm:py-28">
+      <div className="section-divider mb-8 sm:mb-16" />
 
       <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <AnimatedSection className="text-center mb-12">
