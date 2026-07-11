@@ -19,7 +19,7 @@ export default function DatenschutzPage() {
         <br />
         [PLZ und Ort]
         <br />
-        E-Mail: [E-Mail-Adresse folgt]
+        E-Mail: office@soullyricsstudio.at
       </p>
 
       <h2>2. Welche Daten wir verarbeiten</h2>
@@ -31,33 +31,29 @@ export default function DatenschutzPage() {
           von dir mitgeteilte persönliche Geschichte (z.B. Erinnerungen, Namen, besondere
           Erlebnisse).
         </li>
-        <li>
-          <strong>Newsletter-Anmeldung:</strong> E-Mail-Adresse (Funktion aktuell nicht auf der
-          Website aktiv).
-        </li>
       </ul>
       <p>
         Für allgemeine Anfragen kannst du uns außerdem direkt über Instagram kontaktieren; es
         gelten dann zusätzlich die Datenschutzbestimmungen von Meta/Instagram.
       </p>
       <p>
-        Diese Daten werden ausschließlich zur Bearbeitung deiner Anfrage bzw. zum Versand des
-        Newsletters verwendet und nicht an Dritte weiterverkauft.
+        Diese Daten werden ausschließlich zur Bearbeitung deiner Anfrage verwendet und nicht an
+        Dritte weiterverkauft.
       </p>
 
       <h2>3. Rechtsgrundlage</h2>
       <p>
         Die Verarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO (zur Erfüllung
         eines Vertrags bzw. zur Durchführung vorvertraglicher Maßnahmen auf deine Anfrage hin)
-        sowie bei der Newsletter-Anmeldung auf Grundlage deiner Einwilligung nach Art. 6 Abs. 1
-        lit. a DSGVO.
+        sowie, sofern du der Verarbeitung sensibler Angaben in deiner Geschichte gesondert
+        zugestimmt hast, auf Grundlage deiner Einwilligung nach Art. 6 Abs. 1 lit. a DSGVO.
       </p>
 
       <h2>4. Speicherdauer</h2>
       <p>
-        Deine Daten werden gespeichert, solange dies zur Bearbeitung deiner Anfrage bzw. für die
-        Dauer deines Newsletter-Abonnements erforderlich ist, sofern keine gesetzlichen
-        Aufbewahrungspflichten entgegenstehen. [Konkrete Löschfristen bitte ergänzen.]
+        [Konkrete Speicherdauer bzw. Löschfristen bitte final festlegen.] Deine Daten werden
+        gespeichert, solange dies zur Bearbeitung deiner Anfrage erforderlich ist, sofern keine
+        gesetzlichen Aufbewahrungspflichten entgegenstehen.
       </p>
 
       <h2>5. Hosting und technische Infrastruktur</h2>
@@ -78,15 +74,13 @@ export default function DatenschutzPage() {
 
       <h2>7. Cookies und Einwilligung</h2>
       <p>
-        Diese Website setzt aktuell keine Analyse- oder Marketing-Cookies ein. Beim ersten Besuch
-        wird dir ein Cookie-Banner angezeigt, über den du optionale Kategorien (Statistik,
-        Marketing) zwar bereits jetzt einsehen und auswählen kannst — diese sind jedoch derzeit
-        technisch nicht aktiv, da wir entsprechende Dienste noch nicht einsetzen. Deine Auswahl
-        wird lokal in deinem Browser (localStorage) gespeichert, nicht als Cookie und nicht auf
-        unseren Servern. Du kannst deine Auswahl jederzeit über den Link „Cookie-Einstellungen“
-        im Footer der Website ändern. Sollten wir künftig Statistik- oder Marketing-Dienste
-        einsetzen, werden diese ausschließlich nach deiner ausdrücklichen Einwilligung aktiviert
-        und diese Erklärung entsprechend aktualisiert.
+        Diese Website setzt keine Analyse- oder Marketing-Cookies ein. Beim ersten Besuch wird
+        ein Hinweis zu den technisch notwendigen Funktionen angezeigt; deine Bestätigung wird
+        lokal in deinem Browser (localStorage) gespeichert, nicht als Cookie und nicht auf
+        unseren Servern. Du kannst diesen Hinweis jederzeit über den Link
+        „Cookie-Einstellungen“ im Footer der Website erneut aufrufen. Sollten wir künftig
+        Statistik- oder Marketing-Dienste einsetzen, werden diese ausschließlich nach deiner
+        ausdrücklichen Einwilligung aktiviert und diese Erklärung entsprechend aktualisiert.
       </p>
 
       <h2>8. Deine Rechte</h2>

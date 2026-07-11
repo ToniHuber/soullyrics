@@ -1,6 +1,7 @@
 "use client";
 
 import { AnimatedSection } from "./AnimatedSection";
+import { Mail } from "lucide-react";
 
 export function ContactSection() {
   return (
@@ -27,7 +28,7 @@ export function ContactSection() {
             andere erreichst du uns direkt hier.
           </p>
 
-          <div className="flex justify-center">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
               href="https://www.instagram.com/soullyrics.studio/"
               target="_blank"
@@ -40,6 +41,19 @@ export function ContactSection() {
               <div className="text-left">
                 <p className="text-white font-semibold text-sm">Instagram</p>
                 <p className="text-white/65 text-sm">@soullyrics.studio</p>
+              </div>
+            </a>
+
+            <a
+              href="mailto:office@soullyricsstudio.at"
+              className="flex items-center gap-4 glass-card glass-card-hover px-6 py-4 text-white/75 hover:text-white transition-colors group w-full sm:w-auto"
+            >
+              <div className="w-12 h-12 rounded-xl bg-surface-800 border border-white/10 flex items-center justify-center shrink-0 group-hover:border-gold-500/30 transition-colors">
+                <Mail className="w-5 h-5" />
+              </div>
+              <div className="text-left">
+                <p className="text-white font-semibold text-sm">E-Mail</p>
+                <p className="text-white/65 text-sm">office@soullyricsstudio.at</p>
               </div>
             </a>
           </div>

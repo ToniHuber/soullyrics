@@ -65,20 +65,20 @@ export default function AGBPage() {
         Soul Lyrics Studio (z.B. Verwendung als Referenz/Hörprobe)?]
       </p>
 
-      <h2>8. Widerrufsrecht</h2>
+      <h2>8. Rücktrittsrecht (Widerruf)</h2>
       <p>
-        Verbrauchern steht grundsätzlich ein gesetzliches Widerrufsrecht zu. Bei Verträgen über
-        die Lieferung von Waren bzw. digitalen Inhalten, die nach Kundenspezifikation
-        angefertigt werden oder eindeutig auf die persönlichen Bedürfnisse des Kunden
-        zugeschnitten sind, kann das Widerrufsrecht gemäß § 312g Abs. 2 Nr. 1 BGB
-        ausgeschlossen sein — ein individuell komponierter Song auf Basis einer persönlichen
-        Geschichte dürfte hierunter fallen.
+        Verbraucher:innen steht bei Fernabsatzverträgen grundsätzlich ein gesetzliches
+        Rücktrittsrecht nach dem österreichischen Fern- und Auswärtsgeschäfte-Gesetz (FAGG)
+        zu. Bei Waren, die nach Kundenspezifikation angefertigt werden oder eindeutig auf die
+        persönlichen Bedürfnisse des Auftraggebers zugeschnitten sind, kann das Rücktrittsrecht
+        gemäß § 18 Abs. 1 Z 1 FAGG ausgeschlossen sein — ein individuell gestalteter Song auf
+        Basis einer persönlichen Geschichte dürfte hierunter fallen.
       </p>
       <p>
         <strong>
-          Wichtiger Hinweis: Ob und in welchem Umfang das Widerrufsrecht für dieses konkrete
+          Wichtiger Hinweis: Ob und in welchem Umfang das Rücktrittsrecht für dieses konkrete
           Geschäftsmodell tatsächlich ausgeschlossen ist, muss anwaltlich geprüft werden. Bis
-          zu dieser Prüfung sollte hier keine verbindliche Aussage zum Widerrufsrecht
+          zu dieser Prüfung sollte hier keine verbindliche Aussage zum Rücktrittsrecht
           veröffentlicht werden.
         </strong>
       </p>
@@ -99,8 +99,11 @@ export default function AGBPage() {
 
       <h2>11. Schlussbestimmungen</h2>
       <p>
-        Es gilt das Recht der Bundesrepublik Deutschland. Sollten einzelne Bestimmungen dieser
-        AGB unwirksam sein, bleibt die Wirksamkeit der übrigen Bestimmungen unberührt.
+        Es gilt österreichisches Recht unter Ausschluss der Verweisungsnormen des
+        internationalen Privatrechts. Zwingende verbraucherschutzrechtliche Bestimmungen des
+        Staates, in dem der Auftraggeber seinen gewöhnlichen Aufenthalt hat, bleiben unberührt.
+        Sollten einzelne Bestimmungen dieser AGB unwirksam sein, bleibt die Wirksamkeit der
+        übrigen Bestimmungen unberührt.
       </p>
     </>
   );

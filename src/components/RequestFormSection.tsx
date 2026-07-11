@@ -21,6 +21,7 @@ export function RequestFormSection() {
   const [mood, setMood] = useState("");
   const [packageName, setPackageName] = useState("");
   const [story, setStory] = useState("");
+  const [consent, setConsent] = useState(false);
   const [loading, setLoading] = useState(false);
   const [sent, setSent] = useState(false);
 
@@ -28,6 +29,10 @@ export function RequestFormSection() {
     e.preventDefault();
     if (!name.trim() || !email.trim() || !recipient.trim() || !occasion.trim() || !mood.trim() || !story.trim()) {
       toast.error("Bitte fülle alle Pflichtfelder aus.");
+      return;
+    }
+    if (!consent) {
+      toast.error("Bitte bestätige die Datenschutzhinweise.");
       return;
     }
 
@@ -71,7 +76,11 @@ export function RequestFormSection() {
           </h2>
           <p className="text-white/75 text-lg max-w-xl mx-auto">
             Erzähl uns von deiner Geschichte — wir melden uns bei dir, um alles Weitere
-            gemeinsam zu besprechen.
+            gemeinsam zu besprechen. Alternativ erreichst du uns direkt unter{" "}
+            <a href="mailto:anfrage@soullyricsstudio.at" className="text-gold-400 hover:text-gold-300 underline">
+              anfrage@soullyricsstudio.at
+            </a>
+            .
           </p>
         </AnimatedSection>
 
@@ -84,7 +93,13 @@ export function RequestFormSection() {
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2">Anfrage gesendet!</h3>
                 <p className="text-white/75 mb-6">Wir melden uns in Kürze bei dir.</p>
-                <button onClick={() => setSent(false)} className="btn-outline !text-sm">
+                <button
+                  onClick={() => {
+                    setSent(false);
+                    setConsent(false);
+                  }}
+                  className="btn-outline !text-sm"
+                >
                   Neue Anfrage
                 </button>
               </div>
@@ -210,6 +225,25 @@ export function RequestFormSection() {
                   </a>
                   .
                 </p>
+
+                <label className="flex items-start gap-3 cursor-pointer">
+                  <input
+                    type="checkbox"
+                    checked={consent}
+                    onChange={(e) => setConsent(e.target.checked)}
+                    required
+                    className="mt-0.5 w-4 h-4 shrink-0 rounded border-white/20 bg-surface-800/50 accent-gold-500 cursor-pointer"
+                  />
+                  <span className="text-white/65 text-xs leading-relaxed">
+                    Ich habe die{" "}
+                    <a href="/datenschutz" className="text-gold-400 hover:text-gold-300 underline">
+                      Datenschutzerklärung
+                    </a>{" "}
+                    gelesen und stimme der Verarbeitung meiner Angaben, einschließlich
+                    etwaiger persönlicher oder sensibler Informationen in meiner Geschichte,
+                    zur Bearbeitung dieser Anfrage zu. *
+                  </span>
+                </label>
 
                 <button type="submit" disabled={loading} className="btn-primary w-full !text-base">
                   {loading ? (
