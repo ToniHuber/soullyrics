@@ -11,39 +11,47 @@ export default function ImpressumPage() {
 
       <h2>Angaben gemäß § 5 ECG, § 63 GewO, § 14 UGB</h2>
       <p>
-        [Vor- und Nachname (Einzelunternehmen)]
+        Meriton Huber
         <br />
-        [Straße und Hausnummer]
+        Soul Lyrics Studio (Einzelunternehmen)
         <br />
-        [PLZ und Ort]
+        Brückenstraße 21/7/4
+        <br />
+        2100 Korneuburg
         <br />
         Österreich
       </p>
 
       <h2>Kontakt</h2>
       <p>
-        Telefon: [Telefonnummer]
+        Telefon/WhatsApp: +43 677 614 42956
         <br />
-        E-Mail: office@soullyricsstudio.at
+        E-Mail: office@soullyrics.at
       </p>
 
       <h2>Gewerbeinformationen</h2>
       <p>
-        [Gewerbeart/Tätigkeit] · [Gewerbebehörde] · [ggf. Mitgliedschaft WKO, anwendbare
-        Rechtsvorschriften einfügen]
+        Ton- und Musikproduktion
+        <br />
+        Gewerbebehörde: Bezirkshauptmannschaft Korneuburg
+        <br />
+        GISA-Zahl: 39781819
+        <br />
+        Mitglied der Wirtschaftskammer Österreich (WKO-Mitgliedsnummer: 1532808)
+        <br />
+        Anwendbare Rechtsvorschriften: Gewerbeordnung 1994 (abrufbar unter www.ris.bka.gv.at)
       </p>
 
-      <h2>Umsatzsteuer-ID</h2>
+      <h2>Umsatzsteuer</h2>
       <p>
-        Umsatzsteuer-Identifikationsnummer gemäß § 27a Umsatzsteuergesetz: [USt-IdNr. einfügen,
-        falls vorhanden]
+        Kleinunternehmer gemäß § 6 Abs. 1 Z 27 UStG. Es wird keine Umsatzsteuer ausgewiesen.
       </p>
 
       <h2>Verantwortlich für den Inhalt</h2>
       <p>
-        [Vor- und Nachname]
+        Meriton Huber
         <br />
-        [Anschrift wie oben]
+        Anschrift wie oben
       </p>
 
       <h2>Haftung für Inhalte</h2>

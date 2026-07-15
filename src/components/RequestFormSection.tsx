@@ -120,8 +120,8 @@ export function RequestFormSection() {
             Erzähl mir von deiner Geschichte — ich melde mich bei dir, um alles Weitere
             gemeinsam zu besprechen. Alternativ erreichst du Soul Lyrics Studio direkt
             unter{" "}
-            <a href="mailto:anfrage@soullyricsstudio.at" className="text-gold-400 hover:text-gold-300 underline">
-              anfrage@soullyricsstudio.at
+            <a href="mailto:anfrage@soullyrics.at" className="text-gold-400 hover:text-gold-300 underline">
+              anfrage@soullyrics.at
             </a>
             .
           </p>

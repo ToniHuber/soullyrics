@@ -13,13 +13,13 @@ export default function DatenschutzPage() {
       <p>
         Verantwortlich für die Datenverarbeitung auf dieser Website ist:
         <br />
-        [Vor- und Nachname bzw. Firmenname]
+        Meriton Huber, Soul Lyrics Studio (Einzelunternehmen)
         <br />
-        [Straße und Hausnummer]
+        Brückenstraße 21/7/4
         <br />
-        [PLZ und Ort]
+        2100 Korneuburg, Österreich
         <br />
-        E-Mail: office@soullyricsstudio.at
+        E-Mail: office@soullyrics.at
       </p>
 
       <h2>2. Welche Daten wir verarbeiten</h2>
@@ -58,11 +58,13 @@ export default function DatenschutzPage() {
 
       <h2>5. Hosting und technische Infrastruktur</h2>
       <p>
-        Diese Website wird bei Vercel Inc. gehostet. Formulardaten werden in einer PostgreSQL-Datenbank
-        gespeichert. Beim Aufruf der Website werden durch den Hosting-Anbieter automatisch
-        technische Zugriffsdaten (z.B. IP-Adresse, Zeitpunkt des Zugriffs) in Server-Logs
-        verarbeitet, die zur Absicherung des Betriebs erforderlich sind. [Bitte Hosting-Anbieter,
-        Serverstandort und ggf. Auftragsverarbeitungsvertrag ergänzen.]
+        Diese Website wird bei Netlify gehostet. Formulardaten werden zusätzlich in einer
+        PostgreSQL-Datenbank gespeichert. Beim Aufruf der Website werden durch den
+        Hosting-Anbieter automatisch technische Zugriffsdaten (z.B. IP-Adresse, Zeitpunkt des
+        Zugriffs) in Server-Logs verarbeitet, die zur Absicherung des Betriebs erforderlich
+        sind. [Serverstandort von Hosting und Datenbank, Speicherdauer der Server-Logs sowie
+        Auftragsverarbeitungsverträge mit den eingesetzten Dienstleistern bitte final
+        ergänzen.]
       </p>
 
       <h2>6. Schriftarten</h2>

@@ -11,10 +11,10 @@ export default function AGBPage() {
 
       <h2>1. Geltungsbereich</h2>
       <p>
-        Diese Allgemeinen Geschäftsbedingungen gelten für alle Verträge zwischen [Vor- und
-        Nachname bzw. Firmenname], [Anschrift] („Soul Lyrics Studio“, „wir“) und Kund:innen
-        („Auftraggeber“) über die Erstellung individueller, personalisierter Musikstücke
-        („Song“).
+        Diese Allgemeinen Geschäftsbedingungen gelten für alle Verträge zwischen Meriton Huber,
+        Soul Lyrics Studio, Brückenstraße 21/7/4, 2100 Korneuburg, Österreich („Soul Lyrics
+        Studio“, „wir“) und Kund:innen („Auftraggeber“) über die Erstellung individueller,
+        personalisierter Musikstücke („Song“).
       </p>
 
       <h2>2. Vertragsschluss</h2>

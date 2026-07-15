@@ -45,7 +45,7 @@ export function ContactSection() {
             </a>
 
             <a
-              href="mailto:office@soullyricsstudio.at"
+              href="mailto:office@soullyrics.at"
               className="flex items-center gap-4 glass-card glass-card-hover px-6 py-4 text-white/75 hover:text-white transition-colors group w-full sm:w-auto"
             >
               <div className="w-12 h-12 rounded-xl bg-surface-800 border border-white/10 flex items-center justify-center shrink-0 group-hover:border-gold-500/30 transition-colors">
@@ -53,7 +53,7 @@ export function ContactSection() {
               </div>
               <div className="text-left">
                 <p className="text-white font-semibold text-sm">E-Mail</p>
-                <p className="text-white/65 text-sm">office@soullyricsstudio.at</p>
+                <p className="text-white/65 text-sm">office@soullyrics.at</p>
               </div>
             </a>
           </div>
