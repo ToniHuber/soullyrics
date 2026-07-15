@@ -78,7 +78,7 @@ export function ShowcaseSection() {
             className="text-4xl sm:text-5xl lg:text-6xl font-black text-white mb-6"
             style={{ fontFamily: "var(--font-playfair), serif" }}
           >
-            Unsere <span className="gradient-text">Showcase</span>
+            Hörproben
           </h2>
           <p className="text-white/75 text-lg max-w-2xl mx-auto">
             Hier findest du bald Hörproben aus echten Projekten — jeder Track ein Unikat.
@@ -93,8 +93,8 @@ export function ShowcaseSection() {
               </div>
               <h3 className="text-white font-bold text-lg mb-2">Hörproben folgen in Kürze</h3>
               <p className="text-white/75 max-w-md mx-auto">
-                Wir sammeln gerade unsere ersten fertigen Songs, um sie hier vorzustellen.
-                Bis dahin findest du Beispiele auf Instagram und YouTube.
+                Weitere Hörproben folgen in Kürze. Aktuelle Beispiele findest du bereits auf
+                Instagram und YouTube.
               </p>
             </div>
           </AnimatedSection>
@@ -184,7 +184,7 @@ export function ShowcaseSection() {
         {/* Social CTAs */}
         <AnimatedSection className="mt-8 sm:mt-12 text-center" delay={600}>
           <p className="text-white/65 text-sm mb-4">
-            Mehr Songs & Behind-the-Scenes auf Instagram und YouTube
+            Weitere Songs und Einblicke auf Instagram und YouTube
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a

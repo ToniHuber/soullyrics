@@ -51,11 +51,10 @@ export default function AGBPage() {
 
       <h2>6. Änderungen und Abstimmung</h2>
       <p>
-        Im vereinbarten Preis sind drei Korrekturschleifen enthalten, sofern der Auftraggeber
-        diese innerhalb von 14 Werktagen nach der ersten Entwurfsvorstellung schriftlich
-        einreicht. Weitere Änderungswünsche sowie nach Ablauf dieser Frist eingereichte
-        Änderungen (z.B. an Liedtext, Stimme oder Musikrichtung) werden gesondert berechnet.
-        Der genaue Ablauf wird individuell mit dem Auftraggeber abgestimmt.
+        Änderungswünsche (z.B. an Liedtext, Stimme oder Musikrichtung) werden im vereinbarten
+        Umfang berücksichtigt. Zusätzliche Änderungen können gesondert berechnet werden. [Der
+        genaue Umfang inkludierter Korrekturschleifen sowie etwaige Fristen werden mit der
+        finalen Fassung dieser AGB festgelegt.]
       </p>
 
       <h2>7. Nutzungsrechte</h2>

@@ -35,7 +35,7 @@ const addOns = [
     icon: Pencil,
     title: "Weitere Änderungen",
     price: "ab 10 €",
-    description: "Für Änderungswünsche über die drei enthaltenen Korrekturschleifen hinaus oder nach Ablauf der 14-Tage-Frist.",
+    description: "Für Änderungswünsche über den vereinbarten Umfang hinaus.",
   },
   {
     icon: Zap,
@@ -62,8 +62,8 @@ export function PricingSection() {
             Transparente <span className="gradient-text-gold">Preise</span>
           </h2>
           <p className="text-white/70 text-lg max-w-2xl mx-auto">
-            Die folgenden Preise verstehen sich als Startpreise. Den genauen Umfang
-            und Endpreis besprechen wir persönlich mit dir.
+            Die folgenden Preise verstehen sich als Startpreise. Den genauen
+            Leistungsumfang und Endpreis bespreche ich persönlich mit dir.
           </p>
         </AnimatedSection>
 
@@ -89,8 +89,8 @@ export function PricingSection() {
           <div className="glass-card p-6 sm:p-8">
             <p className="text-white font-semibold mb-2">Zusatzoptionen</p>
             <p className="text-white/70 text-sm leading-relaxed mb-5">
-              In jedem Preis sind bereits drei Korrekturschleifen enthalten, wenn du sie
-              innerhalb von 14 Werktagen nach dem ersten Entwurf schriftlich einreichst.
+              Änderungswünsche werden je nach Umfang individuell abgestimmt. Zusätzliche
+              Änderungen können ab 10 € berechnet werden.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {addOns.map((addOn) => {

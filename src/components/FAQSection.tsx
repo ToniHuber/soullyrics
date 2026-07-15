@@ -8,27 +8,27 @@ const faqs = [
   {
     question: "Wie läuft die Erstellung meines Songs ab?",
     answer:
-      "Du sendest uns deine Anfrage mit Anlass und gewünschter Stimmung, teilst uns anschließend deine persönliche Geschichte mit und wir arbeiten daraus Liedtext, Musikrichtung und Stimme aus. Nach deiner Freigabe erhältst du deinen fertigen Song als digitale Datei.",
+      "Du sendest mir deine Anfrage mit Anlass und gewünschter Stimmung, teilst mir anschließend deine persönliche Geschichte mit und ich arbeite daraus Liedtext, Musikrichtung und Stimme aus. Nach deiner Freigabe erhältst du deinen fertigen Song als digitale Datei.",
   },
   {
     question: "Wie lange dauert es, bis mein Song fertig ist?",
     answer:
-      "Die Bearbeitungszeit hängt vom gewählten Leistungsumfang und der aktuellen Auslastung ab. Den genauen Zeitrahmen besprechen wir direkt bei deiner Anfrage mit dir. Gegen eine zusätzliche Gebühr ist auch eine Expressbearbeitung möglich.",
+      "Die Bearbeitungszeit hängt vom gewählten Leistungsumfang und der aktuellen Auslastung ab. Den genauen Zeitrahmen bespreche ich direkt bei deiner Anfrage mit dir. Gegen eine zusätzliche Gebühr ist auch eine Expressbearbeitung möglich.",
   },
   {
     question: "In welchen Sprachen kann mein Song geschrieben werden?",
     answer:
-      "Dein Song kann unter anderem auf Deutsch oder Englisch entstehen — sprich uns gerne auf weitere Sprachen an.",
+      "Dein Song kann in vielen Sprachen entstehen. Teile mir deine gewünschte Sprache mit – die passende Umsetzung wird individuell geprüft.",
   },
   {
     question: "Kann ich Änderungswünsche äußern, wenn mir etwas nicht gefällt?",
     answer:
-      "Ja. Drei Korrekturschleifen sind im Preis enthalten, wenn du sie innerhalb von 14 Werktagen nach dem ersten Entwurf schriftlich einreichst. Weitere oder später eingereichte Änderungen berechnen wir ab 10 €.",
+      "Ja. Änderungswünsche können im vereinbarten Umfang berücksichtigt werden. Zusätzliche Änderungen werden je nach Aufwand ab 10 € berechnet.",
   },
   {
     question: "Eignet sich ein Song auch als Geschenk?",
     answer:
-      "Auf jeden Fall — viele unserer Songs entstehen als Geschenk zu Hochzeiten, Geburtstagen oder als bleibende Erinnerung an einen besonderen Menschen.",
+      "Auf jeden Fall — viele meiner Songs entstehen als Geschenk zu Hochzeiten, Geburtstagen oder als bleibende Erinnerung an einen besonderen Menschen.",
   },
   {
     question: "In welchem Format erhalte ich meinen fertigen Song?",
@@ -38,7 +38,7 @@ const faqs = [
   {
     question: "Was kostet ein persönlicher Song?",
     answer:
-      "Die Preise richten sich nach der gewünschten Leistung — von einzelnem Liedtext bis Song mit Video. Eine Übersicht findest du im Bereich „Preise“, dein individuelles Angebot besprechen wir gerne persönlich mit dir.",
+      "Die Preise richten sich nach der gewünschten Leistung — von einzelnem Liedtext bis Song mit Video. Eine Übersicht findest du im Bereich „Preise“, dein individuelles Angebot bespreche ich gerne persönlich mit dir.",
   },
 ];
 

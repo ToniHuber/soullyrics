@@ -7,7 +7,7 @@ import { songRequests } from "@/db/schema";
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { name, email, recipient, occasion, mood, story, packageName } = body;
+    const { name, email, recipient, occasion, mood, story, packageName, consentGiven, consentVersion } = body;
 
     if (!name || !email || !recipient || !occasion || !mood || !story) {
       return NextResponse.json(
@@ -24,6 +24,13 @@ export async function POST(request: NextRequest) {
       );
     }
 
+    if (!consentGiven || !consentVersion) {
+      return NextResponse.json(
+        { error: "Bitte bestätige die Datenschutzhinweise." },
+        { status: 400 }
+      );
+    }
+
     await db.insert(songRequests).values({
       name: name.trim(),
       email: email.trim().toLowerCase(),
@@ -32,6 +39,8 @@ export async function POST(request: NextRequest) {
       mood: mood.trim(),
       story: story.trim(),
       packageName: packageName?.trim() || null,
+      consentVersion,
+      consentAt: new Date(),
     });
 
     return NextResponse.json({ success: true });

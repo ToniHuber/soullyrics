@@ -18,14 +18,14 @@ export function ContactSection() {
             className="text-4xl sm:text-5xl font-black text-white mb-6"
             style={{ fontFamily: "var(--font-playfair), serif" }}
           >
-            Lass uns{" "}
-            <span className="gradient-text">gemeinsam</span> etwas
+            <span className="gradient-text">Gemeinsam</span> etwas
             Besonderes schaffen
           </h2>
           <p className="text-white/75 text-lg leading-relaxed mb-10">
-            Hast du eine allgemeine Frage oder möchtest du zusammenarbeiten? Für einen
-            persönlichen Song nutze gerne das Anfrageformular weiter oben — für alles
-            andere erreichst du uns direkt hier.
+            Hast du eine allgemeine Frage oder möchtest du mit Soul Lyrics Studio
+            zusammenarbeiten? Für einen persönlichen Song nutze bitte das
+            Anfrageformular weiter oben. Für alles andere erreichst du mich direkt
+            hier.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

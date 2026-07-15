@@ -8,31 +8,31 @@ const features = [
     icon: Heart,
     title: "Deine Geschichte im Mittelpunkt",
     description:
-      "Du erzählst uns deine persönliche Geschichte, deine Erinnerungen und Wünsche — sie sind die Grundlage für deinen Song.",
+      "Du erzählst mir deine persönliche Geschichte, deine Erinnerungen und Wünsche – sie bilden die Grundlage für deinen Song.",
   },
   {
     icon: PenLine,
     title: "Individuell geschriebener Liedtext",
     description:
-      "Kein Baukasten-Text: Jeder Liedtext wird eigens für dich verfasst und musikalisch ausgearbeitet.",
+      "Kein Baukastentext: Jeder Liedtext wird eigens für dich verfasst – individuell, persönlich und passend zu deiner Geschichte.",
   },
   {
     icon: Mic2,
     title: "Passende Stimme und Musikrichtung",
     description:
-      "Ob Ballade, Pop, Rap, R&B oder eine andere Musikrichtung — wir finden gemeinsam die passende Stimme und den Musikstil für deine Geschichte.",
+      "Ich stimme die Stimme und Musikrichtung gemeinsam mit dir auf deine Geschichte und die gewünschte Stimmung ab.",
   },
   {
     icon: Users,
     title: "Persönliche Abstimmung",
     description:
-      "Wir stehen während des gesamten Entstehungsprozesses mit dir im Austausch, damit dein Song genau richtig klingt.",
+      "Ich stehe während des gesamten Entstehungsprozesses mit dir im Austausch, damit dein Song genau so klingt, wie du es dir wünschst.",
   },
   {
     icon: Globe,
     title: "Viele Sprachen möglich",
     description:
-      "Ob Deutsch, Englisch oder eine andere Sprache — dein Song entsteht in der Sprache, die zu dir passt.",
+      "Dein Song kann in vielen Sprachen entstehen. Teile mir deine gewünschte Sprache mit – die passende Umsetzung wird individuell geprüft.",
   },
   {
     icon: Sparkles,
@@ -51,7 +51,7 @@ export function FeaturesSection() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <AnimatedSection className="text-center mb-12 sm:mb-16">
           <p className="text-gold-400 font-semibold text-sm uppercase tracking-widest mb-4">
-            Was uns einzigartig macht
+            Was Soul Lyrics Studio besonders macht
           </p>
           <h2
             className="text-4xl sm:text-5xl lg:text-6xl font-black text-white mb-6"

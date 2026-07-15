@@ -28,5 +28,7 @@ export const songRequests = pgTable("song_requests", {
   mood: text("mood").notNull(),
   story: text("story").notNull(),
   packageName: text("package_name"),
+  consentVersion: text("consent_version").notNull(),
+  consentAt: timestamp("consent_at").notNull(),
   createdAt: timestamp("created_at").defaultNow().notNull(),
 });

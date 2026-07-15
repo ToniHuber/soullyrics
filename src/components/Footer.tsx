@@ -38,7 +38,7 @@ export function Footer() {
             <ul className="space-y-2">
               {[
                 { label: "Start", href: "/#hero" },
-                { label: "Über uns", href: "/#about" },
+                { label: "Über Soul Lyrics Studio", href: "/#about" },
                 { label: "Ablauf", href: "/#how-it-works" },
                 { label: "Hörproben", href: "/#showcase" },
                 { label: "Preise", href: "/#pricing" },
@@ -81,7 +81,7 @@ export function Footer() {
                   onClick={() => window.dispatchEvent(new Event("open-cookie-settings"))}
                   className="text-white/65 text-sm hover:text-white transition-colors"
                 >
-                  Cookie-Einstellungen
+                  Cookie-Hinweis
                 </button>
               </li>
             </ul>
@@ -89,7 +89,7 @@ export function Footer() {
 
           {/* Social */}
           <div>
-            <h4 className="text-white font-semibold text-sm mb-4">Folge uns</h4>
+            <h4 className="text-white font-semibold text-sm mb-4">Folge Soul Lyrics Studio</h4>
             <div className="space-y-3">
               <a
                 href="https://www.instagram.com/soullyrics.studio/"

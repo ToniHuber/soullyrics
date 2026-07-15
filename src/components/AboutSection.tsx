@@ -12,12 +12,12 @@ const values = [
   {
     icon: Sparkles,
     title: "Persönlich gestaltet",
-    description: "Liedtext, Stimme und Musikrichtung wählen wir gemeinsam mit dir aus und setzen sie mit Unterstützung moderner Technologie musikalisch um.",
+    description: "Liedtext, Stimme und Musikrichtung stimme ich gemeinsam mit dir ab und setze sie mithilfe moderner Technologie musikalisch um.",
   },
   {
     icon: ShieldCheck,
     title: "Diskret",
-    description: "Deine Geschichte bleibt deine Geschichte. Wir gehen vertraulich mit allem um, was du uns anvertraust.",
+    description: "Deine Geschichte bleibt deine Geschichte. Ich behandle alles, was du mir anvertraust, vertraulich.",
   },
 ];
 
@@ -30,7 +30,7 @@ export function AboutSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           <AnimatedSection>
             <p className="text-gold-400 font-semibold text-sm uppercase tracking-widest mb-4">
-              Über uns
+              Über Soul Lyrics Studio
             </p>
             <h2
               className="text-4xl sm:text-5xl font-black text-white mb-6"
@@ -40,21 +40,21 @@ export function AboutSection() {
             </h2>
             <div className="space-y-4 text-white/75 text-lg leading-relaxed">
               <p>
-                Soul Lyrics Studio ist entstanden aus der Überzeugung, dass jede
-                Geschichte einen eigenen Klang verdient. Statt Musik von der
-                Stange zu produzieren, hören wir zu — deinen Erinnerungen,
+                Soul Lyrics Studio ist aus der Überzeugung entstanden, dass jede
+                Geschichte ihren eigenen Klang verdient. Statt Musik von der
+                Stange zu produzieren, höre ich dir zu – deinen Erinnerungen,
                 deinen Emotionen und den Momenten, die dich geprägt haben.
               </p>
               <p>
-                Aus dem, was du uns erzählst, entsteht ein Liedtext, der
-                wirklich dir gehört, und ein Song, der genau die Stimmung
-                trifft, die du dir wünschst. Moderne Technologie hilft uns
-                dabei als Werkzeug im Hintergrund — im Mittelpunkt stehen aber
-                immer du und deine Geschichte.
+                Aus dem, was du mir erzählst, entsteht ein individueller
+                Liedtext und daraus ein Song, der die gewünschte Stimmung
+                trägt. Moderne Technologie dient dabei als Werkzeug im
+                Hintergrund. Im Mittelpunkt stehen immer du und deine
+                Geschichte.
               </p>
               <p>
-                Ob als Geschenk zu einem besonderen Anlass oder als bleibende
-                Erinnerung: Wir nehmen uns Zeit, gemeinsam mit dir den
+                Ob als Geschenk für einen besonderen Anlass oder als bleibende
+                Erinnerung: Ich nehme mir die Zeit, gemeinsam mit dir den
                 passenden Sound für deine Geschichte zu finden.
               </p>
             </div>

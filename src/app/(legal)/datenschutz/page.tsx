@@ -78,7 +78,7 @@ export default function DatenschutzPage() {
         ein Hinweis zu den technisch notwendigen Funktionen angezeigt; deine Bestätigung wird
         lokal in deinem Browser (localStorage) gespeichert, nicht als Cookie und nicht auf
         unseren Servern. Du kannst diesen Hinweis jederzeit über den Link
-        „Cookie-Einstellungen“ im Footer der Website erneut aufrufen. Sollten wir künftig
+        „Cookie-Hinweis“ im Footer der Website erneut aufrufen. Sollten wir künftig
         Statistik- oder Marketing-Dienste einsetzen, werden diese ausschließlich nach deiner
         ausdrücklichen Einwilligung aktiviert und diese Erklärung entsprechend aktualisiert.
       </p>

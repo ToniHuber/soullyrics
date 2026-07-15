@@ -16,7 +16,7 @@ const steps = [
     icon: BookHeart,
     title: "Persönliche Geschichte übermitteln",
     description:
-      "Namen, Erinnerungen, besondere Erlebnisse und persönliche Botschaften werden gesammelt.",
+      "Du teilst die Namen, Erinnerungen, besonderen Erlebnisse und persönlichen Botschaften mit, die im Song vorkommen sollen.",
   },
   {
     number: "03",
