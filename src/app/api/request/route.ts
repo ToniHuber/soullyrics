@@ -3,6 +3,7 @@ import { db } from "@/db";
 
 export const dynamic = "force-dynamic";
 import { songRequests } from "@/db/schema";
+import { sendSongRequestConfirmation, sendSongRequestNotification } from "@/lib/mail";
 
 export async function POST(request: NextRequest) {
   try {
@@ -31,7 +32,7 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    await db.insert(songRequests).values({
+    const trimmed = {
       name: name.trim(),
       email: email.trim().toLowerCase(),
       recipient: recipient.trim(),
@@ -39,9 +40,22 @@ export async function POST(request: NextRequest) {
       mood: mood.trim(),
       story: story.trim(),
       packageName: packageName?.trim() || null,
+    };
+
+    await db.insert(songRequests).values({
+      ...trimmed,
       consentVersion,
       consentAt: new Date(),
     });
+
+    try {
+      await Promise.all([
+        sendSongRequestNotification(trimmed),
+        sendSongRequestConfirmation(trimmed),
+      ]);
+    } catch (mailError) {
+      console.error("Song request email error:", mailError);
+    }
 
     return NextResponse.json({ success: true });
   } catch (error) {
