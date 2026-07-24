@@ -10,14 +10,30 @@ const NOTIFY_ADDRESS = process.env.REQUEST_NOTIFY_EMAIL ?? "anfrage@soullyrics.a
 function getTransporter() {
   if (globalForMail.__transporter) return globalForMail.__transporter;
 
-  const host = process.env.SMTP_HOST;
-  const port = Number(process.env.SMTP_PORT ?? 465);
-  const user = process.env.SMTP_USER;
-  const pass = process.env.SMTP_PASSWORD;
+  const rawHost = process.env.SMTP_HOST ?? "";
+  const rawUser = process.env.SMTP_USER ?? "";
+  const rawPass = process.env.SMTP_PASSWORD ?? "";
+
+  const host = rawHost.trim();
+  const port = Number((process.env.SMTP_PORT ?? "465").trim());
+  const user = rawUser.trim();
+  const pass = rawPass.trim();
 
   if (!host || !user || !pass) {
     throw new Error("SMTP-Konfiguration fehlt (SMTP_HOST/SMTP_USER/SMTP_PASSWORD).");
   }
+
+  // TEMPORÄRE DIAGNOSE — deckt Whitespace-/Kopierfehler auf, ohne das Passwort selbst zu loggen.
+  console.log("SMTP-Diagnose:", {
+    host,
+    port,
+    userLength: user.length,
+    userRawLength: rawUser.length,
+    userHasWhitespace: user.length !== rawUser.length,
+    passLength: pass.length,
+    passRawLength: rawPass.length,
+    passHasWhitespace: pass.length !== rawPass.length,
+  });
 
   const transporter = nodemailer.createTransport({
     host,
