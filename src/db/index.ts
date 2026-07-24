@@ -13,7 +13,12 @@ function getDb(): NodePgDatabase {
   const databaseUrl = process.env.DATABASE_URL;
   if (!databaseUrl) throw new Error("DATABASE_URL is required");
 
-  const pool = new Pool({ connectionString: databaseUrl });
+  const isLocal = databaseUrl.includes("localhost") || databaseUrl.includes("127.0.0.1");
+
+  const pool = new Pool({
+    connectionString: databaseUrl,
+    ssl: isLocal ? undefined : { rejectUnauthorized: false },
+  });
   const db = drizzle(pool);
 
   if (process.env.NODE_ENV !== "production") {
