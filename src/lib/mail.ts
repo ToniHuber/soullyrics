@@ -23,18 +23,6 @@ function getTransporter() {
     throw new Error("SMTP-Konfiguration fehlt (SMTP_HOST/SMTP_USER/SMTP_PASSWORD).");
   }
 
-  // TEMPORÄRE DIAGNOSE — deckt Whitespace-/Kopierfehler auf, ohne das Passwort selbst zu loggen.
-  console.log("SMTP-Diagnose:", {
-    host,
-    port,
-    userLength: user.length,
-    userRawLength: rawUser.length,
-    userHasWhitespace: user.length !== rawUser.length,
-    passLength: pass.length,
-    passRawLength: rawPass.length,
-    passHasWhitespace: pass.length !== rawPass.length,
-  });
-
   const transporter = nodemailer.createTransport({
     host,
     port,
