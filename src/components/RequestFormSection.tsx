@@ -7,8 +7,8 @@ import { toast } from "sonner";
 
 // Bump these whenever the linked text (Datenschutzerklärung-Einwilligung bzw. AGB-Fassung)
 // changes materially, so stored requests stay tied to the version a customer saw.
-const PRIVACY_CONSENT_VERSION = "2026-07-15";
-const AGB_VERSION = "2026-08-14";
+const PRIVACY_CONSENT_VERSION = "2026-08-11";
+const AGB_VERSION = "2026-08-11";
 
 const SERVICE_OPTIONS = [
   "Persönlicher Liedtext – ab 20 €",
@@ -786,13 +786,36 @@ export function RequestFormSection() {
                       className="mt-0.5 w-4 h-4 shrink-0 rounded border-white/20 bg-surface-800/50 accent-gold-500 cursor-pointer"
                     />
                     <span className="text-white/65 text-xs leading-relaxed">
-                      Ich habe die{" "}
+                      <strong className="text-white/80 block mb-1.5">
+                        Einwilligung in die Verarbeitung personenbezogener und sensibler Daten
+                        mittels KI
+                      </strong>
+                      Ich willige ausdrücklich ein, dass die von mir im nachfolgenden Formular
+                      freiwillig angegebenen personenbezogenen Daten – einschließlich etwaiger
+                      besonderer Kategorien personenbezogener Daten im Sinne des Art. 9 DSGVO
+                      (z. B. Angaben zur Gesundheit, religiösen oder weltanschaulichen
+                      Überzeugung oder sexuellen Orientierung) – zum Zweck der Erstellung der von
+                      mir beauftragten Inhalte, insbesondere personalisierter Lieder und Videos,
+                      verarbeitet werden dürfen.
+                      <br />
+                      <br />
+                      Mir ist bekannt und ich bin damit einverstanden, dass meine Angaben hierfür
+                      auch an die zur Erstellung der Inhalte eingesetzten KI-Dienste bzw. deren
+                      Anbieter übermittelt und von diesen verarbeitet werden können.
+                      <br />
+                      <br />
+                      Nähere Informationen zu den eingesetzten Anbietern, den
+                      Verarbeitungszwecken, einer etwaigen Übermittlung in Drittländer sowie zu
+                      Speicherdauer und meinen Datenschutzrechten finde ich in der{" "}
                       <a href="/datenschutz" className="text-gold-400 hover:text-gold-300 underline">
                         Datenschutzerklärung
-                      </a>{" "}
-                      gelesen und stimme der Verarbeitung meiner Angaben, einschließlich etwaiger
-                      persönlicher oder sensibler Informationen in meiner Geschichte, sowie dem Einsatz
-                      KI-gestützter Werkzeuge bei der Umsetzung zur Bearbeitung dieser Anfrage zu. *
+                      </a>
+                      .
+                      <br />
+                      <br />
+                      Ich kann diese Einwilligung jederzeit mit Wirkung für die Zukunft
+                      widerrufen. Die Rechtmäßigkeit der bis zum Widerruf erfolgten Verarbeitung
+                      bleibt hiervon unberührt. *
                     </span>
                   </label>
                   {errors.consent && (

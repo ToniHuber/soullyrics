@@ -65,7 +65,9 @@ export function Footer() {
               {[
                 { label: "Impressum", href: "/impressum" },
                 { label: "Datenschutz", href: "/datenschutz" },
-                { label: "AGB & Widerruf", href: "/agb" },
+                { label: "AGB", href: "/agb" },
+                { label: "Widerrufsbelehrung", href: "/widerruf" },
+                { label: "Muster-Widerrufsformular", href: "/widerrufsformular" },
               ].map((link) => (
                 <li key={link.href}>
                   <a
