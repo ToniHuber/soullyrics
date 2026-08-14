@@ -65,6 +65,9 @@ export function PricingSection() {
             Die folgenden Preise verstehen sich als Startpreise. Den genauen
             Leistungsumfang und Endpreis bespreche ich persönlich mit dir.
           </p>
+          <p className="text-white/55 text-sm mt-3">
+            Umsatzsteuerbefreit aufgrund der Kleinunternehmerregelung gem. § 6 Abs. 1 Z 27 UStG.
+          </p>
         </AnimatedSection>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">

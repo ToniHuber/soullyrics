@@ -1,5 +1,5 @@
 {
-  "id": "aeeb7e6c-f418-4840-a027-aca5a9ade90e",
+  "id": "01c2377a-25ac-44b2-a5c8-997aac031b3f",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "version": "7",
   "dialect": "postgresql",
@@ -54,8 +54,147 @@
           "primaryKey": true,
           "notNull": true
         },
+        "service": {
+          "name": "service",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "express": {
+          "name": "express",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": true,
+          "default": false
+        },
+        "occasion": {
+          "name": "occasion",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "occasion_other": {
+          "name": "occasion_other",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "for_whom": {
+          "name": "for_whom",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "from_whom": {
+          "name": "from_whom",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "genre": {
+          "name": "genre",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "genre_description": {
+          "name": "genre_description",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "idea": {
+          "name": "idea",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "wishes": {
+          "name": "wishes",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "no_gos": {
+          "name": "no_gos",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "language": {
+          "name": "language",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "language_details": {
+          "name": "language_details",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "voice": {
+          "name": "voice",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "voice_notes": {
+          "name": "voice_notes",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "pronunciation": {
+          "name": "pronunciation",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "length": {
+          "name": "length",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "usage": {
+          "name": "usage",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "usage_other": {
+          "name": "usage_other",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "story": {
+          "name": "story",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "deadline": {
+          "name": "deadline",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "visual_description": {
+          "name": "visual_description",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
         "name": {
           "name": "name",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "address": {
+          "name": "address",
           "type": "text",
           "primaryKey": false,
           "notNull": true
@@ -66,32 +205,44 @@
           "primaryKey": false,
           "notNull": true
         },
-        "recipient": {
-          "name": "recipient",
+        "phone": {
+          "name": "phone",
           "type": "text",
           "primaryKey": false,
           "notNull": true
         },
-        "occasion": {
-          "name": "occasion",
+        "contact_method": {
+          "name": "contact_method",
           "type": "text",
           "primaryKey": false,
           "notNull": true
         },
-        "mood": {
-          "name": "mood",
+        "availability": {
+          "name": "availability",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "availability_notes": {
+          "name": "availability_notes",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "payment_method": {
+          "name": "payment_method",
           "type": "text",
           "primaryKey": false,
           "notNull": true
         },
-        "story": {
-          "name": "story",
+        "delivery_method": {
+          "name": "delivery_method",
           "type": "text",
           "primaryKey": false,
           "notNull": true
         },
-        "package_name": {
-          "name": "package_name",
+        "correction_wishes": {
+          "name": "correction_wishes",
           "type": "text",
           "primaryKey": false,
           "notNull": false
@@ -104,6 +255,18 @@
         },
         "consent_at": {
           "name": "consent_at",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "agb_version": {
+          "name": "agb_version",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "agb_accepted_at": {
+          "name": "agb_accepted_at",
           "type": "timestamp",
           "primaryKey": false,
           "notNull": true

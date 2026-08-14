@@ -1,0 +1,60 @@
+CREATE TABLE "newsletter_subscribers" (
+	"id" serial PRIMARY KEY NOT NULL,
+	"email" text NOT NULL,
+	"created_at" timestamp DEFAULT now() NOT NULL,
+	CONSTRAINT "newsletter_subscribers_email_unique" UNIQUE("email")
+);
+--> statement-breakpoint
+CREATE TABLE "song_requests" (
+	"id" serial PRIMARY KEY NOT NULL,
+	"service" text NOT NULL,
+	"express" boolean DEFAULT false NOT NULL,
+	"occasion" text NOT NULL,
+	"occasion_other" text,
+	"for_whom" text,
+	"from_whom" text,
+	"genre" text NOT NULL,
+	"genre_description" text,
+	"idea" text NOT NULL,
+	"wishes" text NOT NULL,
+	"no_gos" text,
+	"language" text NOT NULL,
+	"language_details" text,
+	"voice" text NOT NULL,
+	"voice_notes" text,
+	"pronunciation" text,
+	"length" text NOT NULL,
+	"usage" text NOT NULL,
+	"usage_other" text,
+	"story" text,
+	"deadline" text NOT NULL,
+	"visual_description" text,
+	"name" text NOT NULL,
+	"address" text NOT NULL,
+	"email" text NOT NULL,
+	"phone" text NOT NULL,
+	"contact_method" text NOT NULL,
+	"availability" text,
+	"availability_notes" text,
+	"payment_method" text NOT NULL,
+	"delivery_method" text NOT NULL,
+	"correction_wishes" text,
+	"consent_version" text NOT NULL,
+	"consent_at" timestamp NOT NULL,
+	"agb_version" text NOT NULL,
+	"agb_accepted_at" timestamp NOT NULL,
+	"created_at" timestamp DEFAULT now() NOT NULL
+);
+--> statement-breakpoint
+CREATE TABLE "tracks" (
+	"id" serial PRIMARY KEY NOT NULL,
+	"title" text NOT NULL,
+	"artist" text NOT NULL,
+	"genre" text NOT NULL,
+	"description" text,
+	"duration" text NOT NULL,
+	"image_url" text,
+	"plays" integer DEFAULT 0 NOT NULL,
+	"featured" boolean DEFAULT false NOT NULL,
+	"created_at" timestamp DEFAULT now() NOT NULL
+);

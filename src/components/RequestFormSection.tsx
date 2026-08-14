@@ -5,34 +5,328 @@ import { AnimatedSection } from "./AnimatedSection";
 import { Send, Loader2, CheckCircle2 } from "lucide-react";
 import { toast } from "sonner";
 
-const packages = [
-  "Liedtext",
-  "Persönlicher Song",
-  "Song mit Cover",
-  "Song mit Video",
-  "Ich bin mir noch nicht sicher",
-];
-
-// Bump this whenever the consent text below or the linked Datenschutzerklärung
+// Bump these whenever the linked text (Datenschutzerklärung-Einwilligung bzw. AGB-Fassung)
 // changes materially, so stored requests stay tied to the version a customer saw.
 const PRIVACY_CONSENT_VERSION = "2026-07-15";
+const AGB_VERSION = "2026-08-14";
 
-type FieldErrors = Partial<Record<"name" | "email" | "recipient" | "occasion" | "mood" | "story" | "consent", string>>;
+const SERVICE_OPTIONS = [
+  "Persönlicher Liedtext – ab 20 €",
+  "Kompletter personalisierter Song – ab 40 €",
+  "Song inklusive Cover – ab 55 €",
+  "Song inklusive Video – ab 75 €",
+];
+
+const OCCASION_OPTIONS = [
+  "Geburtstag",
+  "Hochzeit",
+  "Jahrestag",
+  "Liebe / Liebeserklärung",
+  "Familie",
+  "Freundschaft",
+  "Geburt / Baby",
+  "Trauer / Erinnerung",
+  "Entschuldigung / Versöhnung",
+  "Motivation / persönliche Botschaft",
+  "Feiertag / besonderer Anlass",
+  "Sonstiges",
+];
+
+const GENRE_OPTIONS = [
+  "Pop",
+  "Ballade",
+  "Soft-Hip-Hop",
+  "Rap",
+  "R&B",
+  "Akustisch",
+  "Ilahi / Nasheed",
+  "Patriotisch",
+  "Fangesang",
+  "Balkan / Albanisch",
+  "Orientalisch / Arabisch",
+  "Modern",
+  "Emotional / ruhig",
+  "Fröhlich / energiegeladen",
+  "Keine Präferenz",
+  "Sonstiges",
+];
+
+const LANGUAGE_OPTIONS = ["Deutsch", "Albanisch", "Englisch", "Mehrsprachig", "Andere Sprache"];
+const VOICE_OPTIONS = ["Weibliche Stimme", "Männliche Stimme", "Duett / weiblich und männlich", "Keine Präferenz"];
+const LENGTH_OPTIONS = ["bis ca. 2 Minuten", "ca. 2–3 Minuten", "ca. 3–4 Minuten", "über 4 Minuten", "Keine Präferenz"];
+
+const USAGE_OPTIONS = [
+  "Nur privat",
+  "Geschenk",
+  "Familienfeier / Veranstaltung",
+  "Veröffentlichung auf Social Media",
+  "Veröffentlichung auf YouTube",
+  "Gewerbliche / kommerzielle Verwendung",
+  "Sonstiges",
+  "Noch nicht entschieden",
+];
+
+const CONTACT_METHOD_OPTIONS = ["E-Mail", "WhatsApp", "Telefon"];
+const AVAILABILITY_OPTIONS = ["Vormittags", "Nachmittags", "Abends", "Egal"];
+const PAYMENT_OPTIONS = ["Banküberweisung", "PayPal"];
+const DELIVERY_OPTIONS = ["E-Mail", "WhatsApp"];
+
+type FormState = {
+  service: string;
+  express: boolean;
+  occasion: string;
+  occasionOther: string;
+  forWhom: string;
+  fromWhom: string;
+  genre: string;
+  genreDescription: string;
+  idea: string;
+  wishes: string;
+  noGos: string;
+  language: string;
+  languageDetails: string;
+  voice: string;
+  voiceNotes: string;
+  pronunciation: string;
+  length: string;
+  usage: string;
+  usageOther: string;
+  story: string;
+  deadline: string;
+  visualDescription: string;
+  name: string;
+  address: string;
+  email: string;
+  phone: string;
+  contactMethod: string;
+  availability: string;
+  availabilityNotes: string;
+  paymentMethod: string;
+  deliveryMethod: string;
+  correctionWishes: string;
+  consent: boolean;
+  agbAccepted: boolean;
+};
+
+const initialForm: FormState = {
+  service: "",
+  express: false,
+  occasion: "",
+  occasionOther: "",
+  forWhom: "",
+  fromWhom: "",
+  genre: "",
+  genreDescription: "",
+  idea: "",
+  wishes: "",
+  noGos: "",
+  language: "",
+  languageDetails: "",
+  voice: "",
+  voiceNotes: "",
+  pronunciation: "",
+  length: "",
+  usage: "",
+  usageOther: "",
+  story: "",
+  deadline: "",
+  visualDescription: "",
+  name: "",
+  address: "",
+  email: "",
+  phone: "",
+  contactMethod: "",
+  availability: "",
+  availabilityNotes: "",
+  paymentMethod: "",
+  deliveryMethod: "",
+  correctionWishes: "",
+  consent: false,
+  agbAccepted: false,
+};
+
+type FieldKey =
+  | "service"
+  | "occasion"
+  | "occasionOther"
+  | "genre"
+  | "idea"
+  | "wishes"
+  | "language"
+  | "languageDetails"
+  | "voice"
+  | "length"
+  | "usage"
+  | "usageOther"
+  | "deadline"
+  | "name"
+  | "address"
+  | "email"
+  | "phone"
+  | "contactMethod"
+  | "paymentMethod"
+  | "deliveryMethod"
+  | "consent"
+  | "agb";
+
+type FieldErrors = Partial<Record<FieldKey, string>>;
+
+function inputClass(hasError: boolean) {
+  return `w-full px-4 py-3.5 bg-surface-800/50 border rounded-xl text-white placeholder:text-white/46 placeholder:text-sm focus:outline-none focus:ring-2 transition-all ${
+    hasError
+      ? "border-rose-500/60 focus:border-rose-500/60 focus:ring-rose-500/15"
+      : "border-white/10 focus:border-gold-500/50 focus:ring-gold-500/15"
+  }`;
+}
+
+function Field({
+  id,
+  label,
+  optional,
+  error,
+  children,
+}: {
+  id: string;
+  label: string;
+  optional?: boolean;
+  error?: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <div>
+      <label htmlFor={id} className="block text-sm font-medium text-white/79 mb-2">
+        {label}
+        {optional && <span className="text-white/40 font-normal"> (optional)</span>}
+      </label>
+      {children}
+      {error && (
+        <p id={`${id}-error`} className="text-rose-400 text-xs mt-1.5">
+          {error}
+        </p>
+      )}
+    </div>
+  );
+}
+
+function TextInput({
+  id,
+  label,
+  value,
+  onChange,
+  error,
+  placeholder,
+  optional,
+  type = "text",
+}: {
+  id: string;
+  label: string;
+  value: string;
+  onChange: (value: string) => void;
+  error?: string;
+  placeholder?: string;
+  optional?: boolean;
+  type?: string;
+}) {
+  return (
+    <Field id={id} label={label} optional={optional} error={error}>
+      <input
+        id={id}
+        type={type}
+        value={value}
+        onChange={(e) => onChange(e.target.value)}
+        placeholder={placeholder}
+        className={inputClass(!!error)}
+        aria-invalid={!!error}
+        aria-describedby={error ? `${id}-error` : undefined}
+      />
+    </Field>
+  );
+}
+
+function TextAreaInput({
+  id,
+  label,
+  value,
+  onChange,
+  error,
+  placeholder,
+  optional,
+  rows = 4,
+}: {
+  id: string;
+  label: string;
+  value: string;
+  onChange: (value: string) => void;
+  error?: string;
+  placeholder?: string;
+  optional?: boolean;
+  rows?: number;
+}) {
+  return (
+    <Field id={id} label={label} optional={optional} error={error}>
+      <textarea
+        id={id}
+        value={value}
+        onChange={(e) => onChange(e.target.value)}
+        placeholder={placeholder}
+        rows={rows}
+        className={`${inputClass(!!error)} resize-none`}
+        aria-invalid={!!error}
+        aria-describedby={error ? `${id}-error` : undefined}
+      />
+    </Field>
+  );
+}
+
+function SelectInput({
+  id,
+  label,
+  value,
+  onChange,
+  options,
+  error,
+  optional,
+}: {
+  id: string;
+  label: string;
+  value: string;
+  onChange: (value: string) => void;
+  options: string[];
+  error?: string;
+  optional?: boolean;
+}) {
+  return (
+    <Field id={id} label={label} optional={optional} error={error}>
+      <select
+        id={id}
+        value={value}
+        onChange={(e) => onChange(e.target.value)}
+        className={inputClass(!!error)}
+        aria-invalid={!!error}
+        aria-describedby={error ? `${id}-error` : undefined}
+      >
+        <option value="">Bitte wählen...</option>
+        {options.map((option) => (
+          <option key={option} value={option}>
+            {option}
+          </option>
+        ))}
+      </select>
+    </Field>
+  );
+}
 
 export function RequestFormSection() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [recipient, setRecipient] = useState("");
-  const [occasion, setOccasion] = useState("");
-  const [mood, setMood] = useState("");
-  const [packageName, setPackageName] = useState("");
-  const [story, setStory] = useState("");
-  const [consent, setConsent] = useState(false);
+  const [form, setForm] = useState<FormState>(initialForm);
   const [loading, setLoading] = useState(false);
   const [sent, setSent] = useState(false);
   const [errors, setErrors] = useState<FieldErrors>({});
 
-  const clearError = (field: keyof FieldErrors) => {
+  const update = <K extends keyof FormState>(field: K, value: FormState[K]) => {
+    setForm((prev) => ({ ...prev, [field]: value }));
+  };
+
+  const clearError = (field: FieldKey) => {
     setErrors((prev) => {
       if (!prev[field]) return prev;
       const next = { ...prev };
@@ -41,19 +335,44 @@ export function RequestFormSection() {
     });
   };
 
+  const set = <K extends keyof FormState>(field: K, errorField?: FieldKey) => (value: FormState[K]) => {
+    update(field, value);
+    if (errorField) clearError(errorField);
+  };
+
+  const showVisualDescription = form.service.includes("Cover") || form.service.includes("Video");
+  const showOccasionOther = form.occasion === "Sonstiges";
+  const showUsageOther = form.usage === "Sonstiges";
+  const showLanguageDetails = form.language === "Mehrsprachig" || form.language === "Andere Sprache";
+
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const nextErrors: FieldErrors = {};
-    if (!name.trim()) nextErrors.name = "Bitte gib deinen Namen an.";
-    if (!email.trim()) nextErrors.email = "Bitte gib deine E-Mail-Adresse an.";
-    else if (!emailRegex.test(email.trim())) nextErrors.email = "Bitte gib eine gültige E-Mail-Adresse an.";
-    if (!recipient.trim()) nextErrors.recipient = "Bitte gib an, für wen der Song gedacht ist.";
-    if (!occasion.trim()) nextErrors.occasion = "Bitte gib den Anlass an.";
-    if (!mood.trim()) nextErrors.mood = "Bitte gib die gewünschte Stimmung an.";
-    if (!story.trim()) nextErrors.story = "Bitte erzähl mir deine Geschichte.";
-    if (!consent) nextErrors.consent = "Bitte bestätige die Datenschutzhinweise.";
+
+    if (!form.service) nextErrors.service = "Bitte wähle eine Leistung aus.";
+    if (!form.occasion) nextErrors.occasion = "Bitte wähle einen Anlass aus.";
+    if (showOccasionOther && !form.occasionOther.trim()) nextErrors.occasionOther = "Bitte beschreibe den Anlass.";
+    if (!form.genre) nextErrors.genre = "Bitte wähle eine Musikrichtung aus.";
+    if (!form.idea.trim()) nextErrors.idea = "Bitte beschreibe die Grundidee.";
+    if (!form.wishes.trim()) nextErrors.wishes = "Bitte gib an, was unbedingt vorkommen soll.";
+    if (!form.language) nextErrors.language = "Bitte wähle eine Sprache aus.";
+    if (!form.voice) nextErrors.voice = "Bitte wähle eine Stimmwahl aus.";
+    if (!form.length) nextErrors.length = "Bitte wähle eine gewünschte Länge aus.";
+    if (!form.usage) nextErrors.usage = "Bitte wähle die geplante Verwendung aus.";
+    if (showUsageOther && !form.usageOther.trim()) nextErrors.usageOther = "Bitte beschreibe die Verwendung.";
+    if (!form.deadline) nextErrors.deadline = "Bitte gib einen gewünschten Fertigstellungstermin an.";
+    if (!form.name.trim()) nextErrors.name = "Bitte gib deinen Namen an.";
+    if (!form.address.trim()) nextErrors.address = "Bitte gib deine Adresse an.";
+    if (!form.email.trim()) nextErrors.email = "Bitte gib deine E-Mail-Adresse an.";
+    else if (!emailRegex.test(form.email.trim())) nextErrors.email = "Bitte gib eine gültige E-Mail-Adresse an.";
+    if (!form.phone.trim()) nextErrors.phone = "Bitte gib deine Telefonnummer an.";
+    if (!form.contactMethod) nextErrors.contactMethod = "Bitte wähle deine bevorzugte Kontaktart aus.";
+    if (!form.paymentMethod) nextErrors.paymentMethod = "Bitte wähle eine Zahlungsart aus.";
+    if (!form.deliveryMethod) nextErrors.deliveryMethod = "Bitte wähle einen Lieferweg aus.";
+    if (!form.consent) nextErrors.consent = "Bitte bestätige die Datenschutzhinweise.";
+    if (!form.agbAccepted) nextErrors.agb = "Bitte bestätige die AGB.";
 
     if (Object.keys(nextErrors).length > 0) {
       setErrors(nextErrors);
@@ -67,15 +386,11 @@ export function RequestFormSection() {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          name,
-          email,
-          recipient,
-          occasion,
-          mood,
-          story,
-          packageName,
-          consentGiven: true,
+          ...form,
+          consentGiven: form.consent,
           consentVersion: PRIVACY_CONSENT_VERSION,
+          agbAccepted: form.agbAccepted,
+          agbVersion: AGB_VERSION,
         }),
       });
 
@@ -89,16 +404,6 @@ export function RequestFormSection() {
       setLoading(false);
     }
   };
-
-  const inputClass = (hasError: boolean) =>
-    `w-full px-4 py-3.5 bg-surface-800/50 border rounded-xl text-white placeholder:text-white/46 placeholder:text-sm focus:outline-none focus:ring-2 transition-all ${
-      hasError
-        ? "border-rose-500/60 focus:border-rose-500/60 focus:ring-rose-500/15"
-        : "border-white/10 focus:border-gold-500/50 focus:ring-gold-500/15"
-    }`;
-
-  const errorText = (message?: string) =>
-    message ? <p className="text-rose-400 text-xs mt-1.5">{message}</p> : null;
 
   return (
     <section id="request" className="relative py-12 sm:py-28">
@@ -117,8 +422,8 @@ export function RequestFormSection() {
             Deinen persönlichen <span className="gradient-text">Song</span> anfragen
           </h2>
           <p className="text-white/75 text-lg max-w-xl mx-auto">
-            Erzähl mir von deiner Geschichte — ich melde mich bei dir, um alles Weitere
-            gemeinsam zu besprechen. Alternativ erreichst du Soul Lyrics Studio direkt
+            Erzähl mir von deiner Geschichte — ich melde mich bei dir mit einem
+            individuellen Angebot. Alternativ erreichst du Soul Lyrics Studio direkt
             unter{" "}
             <a href="mailto:anfrage@soullyrics.at" className="text-gold-400 hover:text-gold-300 underline">
               anfrage@soullyrics.at
@@ -135,11 +440,14 @@ export function RequestFormSection() {
                   <CheckCircle2 className="w-8 h-8 text-emerald-400" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2">Anfrage gesendet!</h3>
-                <p className="text-white/75 mb-6">Ich melde mich in Kürze bei dir.</p>
+                <p className="text-white/75 mb-2">Ich melde mich in Kürze bei dir.</p>
+                <p className="text-white/50 text-sm mb-6">
+                  Deine Anfrage ist unverbindlich — es ist dadurch noch kein Vertrag zustande gekommen.
+                </p>
                 <button
                   onClick={() => {
                     setSent(false);
-                    setConsent(false);
+                    setForm(initialForm);
                   }}
                   className="btn-outline !text-sm"
                 >
@@ -147,165 +455,330 @@ export function RequestFormSection() {
                 </button>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} noValidate className="space-y-5">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                  <div>
-                    <label htmlFor="req-name" className="block text-sm font-medium text-white/79 mb-2">
-                      Dein Name
-                    </label>
-                    <input
-                      id="req-name"
-                      type="text"
-                      value={name}
-                      onChange={(e) => {
-                        setName(e.target.value);
-                        clearError("name");
-                      }}
-                      placeholder="Dein Name"
-                      className={inputClass(!!errors.name)}
-                      aria-invalid={!!errors.name}
-                      aria-describedby={errors.name ? "req-name-error" : undefined}
-                    />
-                    {errors.name && <p id="req-name-error" className="text-rose-400 text-xs mt-1.5">{errors.name}</p>}
-                  </div>
-                  <div>
-                    <label htmlFor="req-email" className="block text-sm font-medium text-white/79 mb-2">
-                      E-Mail
-                    </label>
-                    <input
-                      id="req-email"
-                      type="email"
-                      value={email}
-                      onChange={(e) => {
-                        setEmail(e.target.value);
-                        clearError("email");
-                      }}
-                      placeholder="deine@email.de"
-                      className={inputClass(!!errors.email)}
-                      aria-invalid={!!errors.email}
-                      aria-describedby={errors.email ? "req-email-error" : undefined}
-                    />
-                    {errors.email && <p id="req-email-error" className="text-rose-400 text-xs mt-1.5">{errors.email}</p>}
-                  </div>
-                </div>
-
-                <div>
-                  <label htmlFor="req-recipient" className="block text-sm font-medium text-white/79 mb-2">
-                    Für wen ist der Song gedacht?
-                  </label>
-                  <input
-                    id="req-recipient"
-                    type="text"
-                    value={recipient}
-                    onChange={(e) => {
-                      setRecipient(e.target.value);
-                      clearError("recipient");
-                    }}
-                    placeholder="z. B. meine Frau oder bester Freund"
-                    className={inputClass(!!errors.recipient)}
-                    aria-invalid={!!errors.recipient}
-                    aria-describedby={errors.recipient ? "req-recipient-error" : undefined}
+              <form onSubmit={handleSubmit} noValidate className="space-y-8">
+                <div className="space-y-5">
+                  <h3 className="text-white font-bold text-lg">Gewünschte Leistung</h3>
+                  <SelectInput
+                    id="req-service"
+                    label="Welche Leistung interessiert dich?"
+                    value={form.service}
+                    onChange={set("service", "service")}
+                    options={SERVICE_OPTIONS}
+                    error={errors.service}
                   />
-                  {errors.recipient && <p id="req-recipient-error" className="text-rose-400 text-xs mt-1.5">{errors.recipient}</p>}
-                </div>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                  <div>
-                    <label htmlFor="req-occasion" className="block text-sm font-medium text-white/79 mb-2">
-                      Anlass
-                    </label>
+                  <label className="flex items-start gap-3 cursor-pointer">
                     <input
-                      id="req-occasion"
-                      type="text"
-                      value={occasion}
-                      onChange={(e) => {
-                        setOccasion(e.target.value);
-                        clearError("occasion");
-                      }}
-                      placeholder="z.B. Hochzeit, Geburtstag"
-                      className={inputClass(!!errors.occasion)}
-                      aria-invalid={!!errors.occasion}
-                      aria-describedby={errors.occasion ? "req-occasion-error" : undefined}
+                      type="checkbox"
+                      checked={form.express}
+                      onChange={(e) => update("express", e.target.checked)}
+                      className="mt-0.5 w-4 h-4 shrink-0 rounded border-white/20 bg-surface-800/50 accent-gold-500 cursor-pointer"
                     />
-                    {errors.occasion && <p id="req-occasion-error" className="text-rose-400 text-xs mt-1.5">{errors.occasion}</p>}
-                  </div>
-                  <div>
-                    <label htmlFor="req-mood" className="block text-sm font-medium text-white/79 mb-2">
-                      Gewünschte Stimmung
-                    </label>
-                    <input
-                      id="req-mood"
-                      type="text"
-                      value={mood}
-                      onChange={(e) => {
-                        setMood(e.target.value);
-                        clearError("mood");
-                      }}
-                      placeholder="z.B. warm, fröhlich, ruhig"
-                      className={inputClass(!!errors.mood)}
-                      aria-invalid={!!errors.mood}
-                      aria-describedby={errors.mood ? "req-mood-error" : undefined}
-                    />
-                    {errors.mood && <p id="req-mood-error" className="text-rose-400 text-xs mt-1.5">{errors.mood}</p>}
-                  </div>
+                    <span className="text-white/65 text-xs leading-relaxed">
+                      Expressbearbeitung gewünscht (+15 €) — nur nach vorheriger Vereinbarung möglich.
+                    </span>
+                  </label>
                 </div>
 
-                <div>
-                  <label htmlFor="req-package" className="block text-sm font-medium text-white/79 mb-2">
-                    Welche Leistung interessiert dich? (optional)
-                  </label>
-                  <select
-                    id="req-package"
-                    value={packageName}
-                    onChange={(e) => setPackageName(e.target.value)}
-                    className={inputClass(false)}
-                  >
-                    <option value="">Bitte wählen...</option>
-                    {packages.map((p) => (
-                      <option key={p} value={p}>
-                        {p}
-                      </option>
-                    ))}
-                  </select>
-                </div>
+                <div className="space-y-5">
+                  <h3 className="text-white font-bold text-lg">Angaben zum Projekt</h3>
 
-                <div>
-                  <label htmlFor="req-story" className="block text-sm font-medium text-white/79 mb-2">
-                    Deine Geschichte
-                  </label>
-                  <textarea
+                  <SelectInput
+                    id="req-occasion"
+                    label="Anlass"
+                    value={form.occasion}
+                    onChange={set("occasion", "occasion")}
+                    options={OCCASION_OPTIONS}
+                    error={errors.occasion}
+                  />
+                  {showOccasionOther && (
+                    <TextInput
+                      id="req-occasion-other"
+                      label="Welcher Anlass?"
+                      value={form.occasionOther}
+                      onChange={set("occasionOther", "occasionOther")}
+                      error={errors.occasionOther}
+                    />
+                  )}
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                    <TextInput
+                      id="req-for-whom"
+                      label="Für wen ist das Projekt?"
+                      value={form.forWhom}
+                      onChange={set("forWhom")}
+                      optional
+                    />
+                    <TextInput
+                      id="req-from-whom"
+                      label="Von wem kommt das Projekt / Geschenk?"
+                      value={form.fromWhom}
+                      onChange={set("fromWhom")}
+                      optional
+                    />
+                  </div>
+
+                  <SelectInput
+                    id="req-genre"
+                    label="Musikrichtung / Klangrichtung"
+                    value={form.genre}
+                    onChange={set("genre", "genre")}
+                    options={GENRE_OPTIONS}
+                    error={errors.genre}
+                  />
+                  <TextInput
+                    id="req-genre-description"
+                    label="Genauere Beschreibung der gewünschten Musik- oder Klangrichtung"
+                    value={form.genreDescription}
+                    onChange={set("genreDescription")}
+                    optional
+                  />
+
+                  <TextAreaInput
+                    id="req-idea"
+                    label="Grundidee des Liedes / Projekts"
+                    value={form.idea}
+                    onChange={set("idea", "idea")}
+                    error={errors.idea}
+                    rows={4}
+                  />
+
+                  <TextAreaInput
+                    id="req-wishes"
+                    label="Besondere Wünsche / was unbedingt vorkommen soll"
+                    value={form.wishes}
+                    onChange={set("wishes", "wishes")}
+                    error={errors.wishes}
+                    rows={4}
+                  />
+
+                  <TextAreaInput
+                    id="req-no-gos"
+                    label="No-Gos / was soll vermieden werden"
+                    value={form.noGos}
+                    onChange={set("noGos")}
+                    optional
+                    rows={3}
+                  />
+
+                  <SelectInput
+                    id="req-language"
+                    label="Sprache"
+                    value={form.language}
+                    onChange={set("language", "language")}
+                    options={LANGUAGE_OPTIONS}
+                    error={errors.language}
+                  />
+                  {showLanguageDetails && (
+                    <TextInput
+                      id="req-language-details"
+                      label="Besondere Wünsche zur Sprache"
+                      value={form.languageDetails}
+                      onChange={set("languageDetails")}
+                      optional
+                    />
+                  )}
+
+                  <SelectInput
+                    id="req-voice"
+                    label="Stimmwahl"
+                    value={form.voice}
+                    onChange={set("voice", "voice")}
+                    options={VOICE_OPTIONS}
+                    error={errors.voice}
+                  />
+                  <TextInput
+                    id="req-voice-notes"
+                    label="Hinweise zur gewünschten Stimme"
+                    value={form.voiceNotes}
+                    onChange={set("voiceNotes")}
+                    placeholder="z. B. warm, tief, ruhig, weich, kraftvoll..."
+                    optional
+                  />
+
+                  <TextAreaInput
+                    id="req-pronunciation"
+                    label="Aussprachehinweise (Namen, Orte, besondere Wörter)"
+                    value={form.pronunciation}
+                    onChange={set("pronunciation")}
+                    optional
+                    rows={3}
+                  />
+
+                  <SelectInput
+                    id="req-length"
+                    label="Song-/Projektlänge"
+                    value={form.length}
+                    onChange={set("length", "length")}
+                    options={LENGTH_OPTIONS}
+                    error={errors.length}
+                  />
+
+                  <SelectInput
+                    id="req-usage"
+                    label="Geplante Verwendung des Songs"
+                    value={form.usage}
+                    onChange={set("usage", "usage")}
+                    options={USAGE_OPTIONS}
+                    error={errors.usage}
+                  />
+                  {showUsageOther && (
+                    <TextInput
+                      id="req-usage-other"
+                      label="Welche Verwendung?"
+                      value={form.usageOther}
+                      onChange={set("usageOther", "usageOther")}
+                      error={errors.usageOther}
+                    />
+                  )}
+
+                  <TextAreaInput
                     id="req-story"
-                    value={story}
-                    onChange={(e) => {
-                      setStory(e.target.value);
-                      clearError("story");
-                    }}
-                    placeholder="Erzähl mir von Namen, Erinnerungen, besonderen Erlebnissen und der persönlichen Botschaft, die im Song vorkommen soll..."
+                    label="Geschichte und Botschaft"
+                    value={form.story}
+                    onChange={set("story")}
+                    optional
                     rows={6}
-                    className={`${inputClass(!!errors.story)} resize-none`}
-                    aria-invalid={!!errors.story}
-                    aria-describedby={errors.story ? "req-story-error" : undefined}
+                    placeholder="Erzähl mir von Namen, Erinnerungen, besonderen Erlebnissen und der persönlichen Botschaft, die im Song vorkommen soll..."
                   />
-                  {errors.story && <p id="req-story-error" className="text-rose-400 text-xs mt-1.5">{errors.story}</p>}
+
+                  <TextInput
+                    id="req-deadline"
+                    label="Gewünschter Fertigstellungstermin"
+                    type="date"
+                    value={form.deadline}
+                    onChange={set("deadline", "deadline")}
+                    error={errors.deadline}
+                  />
+                  <p className="text-white/50 text-xs -mt-3">
+                    Der endgültige Termin wird erst mit dem individuellen Angebot bestätigt.
+                  </p>
+
+                  {showVisualDescription && (
+                    <TextAreaInput
+                      id="req-visual-description"
+                      label="Beschreibung der gewünschten Bilder, des Covers oder Videos"
+                      value={form.visualDescription}
+                      onChange={set("visualDescription")}
+                      optional
+                      rows={3}
+                    />
+                  )}
+                </div>
+
+                <div className="space-y-5">
+                  <h3 className="text-white font-bold text-lg">Deine Kontaktdaten</h3>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                    <TextInput
+                      id="req-name"
+                      label="Name"
+                      value={form.name}
+                      onChange={set("name", "name")}
+                      error={errors.name}
+                    />
+                    <TextInput
+                      id="req-address"
+                      label="Adresse"
+                      value={form.address}
+                      onChange={set("address", "address")}
+                      error={errors.address}
+                    />
+                  </div>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                    <TextInput
+                      id="req-email"
+                      label="E-Mail-Adresse"
+                      type="email"
+                      value={form.email}
+                      onChange={set("email", "email")}
+                      placeholder="deine@email.de"
+                      error={errors.email}
+                    />
+                    <TextInput
+                      id="req-phone"
+                      label="Telefonnummer"
+                      type="tel"
+                      value={form.phone}
+                      onChange={set("phone", "phone")}
+                      error={errors.phone}
+                    />
+                  </div>
+
+                  <SelectInput
+                    id="req-contact-method"
+                    label="Bevorzugte Kontaktart"
+                    value={form.contactMethod}
+                    onChange={set("contactMethod", "contactMethod")}
+                    options={CONTACT_METHOD_OPTIONS}
+                    error={errors.contactMethod}
+                  />
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                    <SelectInput
+                      id="req-availability"
+                      label="Bevorzugte Erreichbarkeit"
+                      value={form.availability}
+                      onChange={set("availability")}
+                      options={AVAILABILITY_OPTIONS}
+                      optional
+                    />
+                    <TextInput
+                      id="req-availability-notes"
+                      label="Zusätzliche Hinweise zur Erreichbarkeit"
+                      value={form.availabilityNotes}
+                      onChange={set("availabilityNotes")}
+                      optional
+                    />
+                  </div>
+                </div>
+
+                <div className="space-y-5">
+                  <h3 className="text-white font-bold text-lg">Zahlung &amp; Lieferung</h3>
+
+                  <SelectInput
+                    id="req-payment-method"
+                    label="Gewünschte Zahlungsart"
+                    value={form.paymentMethod}
+                    onChange={set("paymentMethod", "paymentMethod")}
+                    options={PAYMENT_OPTIONS}
+                    error={errors.paymentMethod}
+                  />
+                  <SelectInput
+                    id="req-delivery-method"
+                    label="Gewünschter Lieferweg"
+                    value={form.deliveryMethod}
+                    onChange={set("deliveryMethod", "deliveryMethod")}
+                    options={DELIVERY_OPTIONS}
+                    error={errors.deliveryMethod}
+                  />
+                  <TextAreaInput
+                    id="req-correction-wishes"
+                    label="Besondere Wünsche zu späteren Korrekturen oder Änderungen"
+                    value={form.correctionWishes}
+                    onChange={set("correctionWishes")}
+                    optional
+                    rows={3}
+                  />
+                  <p className="text-white/50 text-xs">
+                    Der endgültige Umfang und etwaige Kosten für Korrekturen werden im individuellen Angebot festgelegt.
+                  </p>
                 </div>
 
                 <p className="text-white/65 text-xs leading-relaxed">
-                  Mit dem Absenden dieser Anfrage entsteht noch kein kostenpflichtiger
-                  Auftrag — sie ist für dich unverbindlich. Deine Angaben werden nur zur
-                  Bearbeitung deiner Anfrage verwendet, siehe{" "}
-                  <a href="/datenschutz" className="text-gold-400 hover:text-gold-300 underline">
-                    Datenschutzerklärung
-                  </a>
-                  .
+                  Mit dem Absenden dieses Formulars kommt noch <strong>kein Vertrag</strong> zustande —
+                  es handelt sich um eine unverbindliche Anfrage. Auf Basis deiner Angaben erstelle ich
+                  dir ein individuelles Angebot; ein Auftrag entsteht erst, wenn du dieses Angebot
+                  annimmst und du eine Auftragsbestätigung erhältst.
                 </p>
 
                 <div>
                   <label className="flex items-start gap-3 cursor-pointer">
                     <input
                       type="checkbox"
-                      checked={consent}
+                      checked={form.consent}
                       onChange={(e) => {
-                        setConsent(e.target.checked);
+                        update("consent", e.target.checked);
                         clearError("consent");
                       }}
                       aria-invalid={!!errors.consent}
@@ -317,12 +790,44 @@ export function RequestFormSection() {
                       <a href="/datenschutz" className="text-gold-400 hover:text-gold-300 underline">
                         Datenschutzerklärung
                       </a>{" "}
-                      gelesen und stimme der Verarbeitung meiner Angaben, einschließlich
-                      etwaiger persönlicher oder sensibler Informationen in meiner Geschichte,
-                      zur Bearbeitung dieser Anfrage zu. *
+                      gelesen und stimme der Verarbeitung meiner Angaben, einschließlich etwaiger
+                      persönlicher oder sensibler Informationen in meiner Geschichte, sowie dem Einsatz
+                      KI-gestützter Werkzeuge bei der Umsetzung zur Bearbeitung dieser Anfrage zu. *
                     </span>
                   </label>
-                  {errors.consent && <p id="req-consent-error" className="text-rose-400 text-xs mt-1.5 ml-7">{errors.consent}</p>}
+                  {errors.consent && (
+                    <p id="req-consent-error" className="text-rose-400 text-xs mt-1.5 ml-7">
+                      {errors.consent}
+                    </p>
+                  )}
+                </div>
+
+                <div>
+                  <label className="flex items-start gap-3 cursor-pointer">
+                    <input
+                      type="checkbox"
+                      checked={form.agbAccepted}
+                      onChange={(e) => {
+                        update("agbAccepted", e.target.checked);
+                        clearError("agb");
+                      }}
+                      aria-invalid={!!errors.agb}
+                      aria-describedby={errors.agb ? "req-agb-error" : undefined}
+                      className="mt-0.5 w-4 h-4 shrink-0 rounded border-white/20 bg-surface-800/50 accent-gold-500 cursor-pointer"
+                    />
+                    <span className="text-white/65 text-xs leading-relaxed">
+                      Ich habe die{" "}
+                      <a href="/agb" className="text-gold-400 hover:text-gold-300 underline">
+                        Allgemeinen Geschäftsbedingungen (AGB)
+                      </a>{" "}
+                      von Soul Lyrics Studio gelesen und akzeptiere diese. *
+                    </span>
+                  </label>
+                  {errors.agb && (
+                    <p id="req-agb-error" className="text-rose-400 text-xs mt-1.5 ml-7">
+                      {errors.agb}
+                    </p>
+                  )}
                 </div>
 
                 <button type="submit" disabled={loading} className="btn-primary w-full !text-base">
@@ -334,7 +839,7 @@ export function RequestFormSection() {
                   ) : (
                     <>
                       <Send className="w-5 h-5" />
-                      Anfrage senden
+                      Unverbindlich anfragen
                     </>
                   )}
                 </button>

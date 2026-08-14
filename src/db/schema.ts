@@ -21,14 +21,50 @@ export const newsletterSubscribers = pgTable("newsletter_subscribers", {
 
 export const songRequests = pgTable("song_requests", {
   id: serial("id").primaryKey(),
-  name: text("name").notNull(),
-  email: text("email").notNull(),
-  recipient: text("recipient").notNull(),
+
+  // Gewünschte Leistung
+  service: text("service").notNull(),
+  express: boolean("express").default(false).notNull(),
+
+  // Angaben zum Projekt
   occasion: text("occasion").notNull(),
-  mood: text("mood").notNull(),
-  story: text("story").notNull(),
-  packageName: text("package_name"),
+  occasionOther: text("occasion_other"),
+  forWhom: text("for_whom"),
+  fromWhom: text("from_whom"),
+  genre: text("genre").notNull(),
+  genreDescription: text("genre_description"),
+  idea: text("idea").notNull(),
+  wishes: text("wishes").notNull(),
+  noGos: text("no_gos"),
+  language: text("language").notNull(),
+  languageDetails: text("language_details"),
+  voice: text("voice").notNull(),
+  voiceNotes: text("voice_notes"),
+  pronunciation: text("pronunciation"),
+  length: text("length").notNull(),
+  usage: text("usage").notNull(),
+  usageOther: text("usage_other"),
+  story: text("story"),
+  deadline: text("deadline").notNull(),
+  visualDescription: text("visual_description"),
+
+  // Kundendaten
+  name: text("name").notNull(),
+  address: text("address").notNull(),
+  email: text("email").notNull(),
+  phone: text("phone").notNull(),
+  contactMethod: text("contact_method").notNull(),
+  availability: text("availability"),
+  availabilityNotes: text("availability_notes"),
+  paymentMethod: text("payment_method").notNull(),
+  deliveryMethod: text("delivery_method").notNull(),
+  correctionWishes: text("correction_wishes"),
+
+  // Einwilligungen
   consentVersion: text("consent_version").notNull(),
   consentAt: timestamp("consent_at").notNull(),
+  agbVersion: text("agb_version").notNull(),
+  agbAcceptedAt: timestamp("agb_accepted_at").notNull(),
+
   createdAt: timestamp("created_at").defaultNow().notNull(),
 });

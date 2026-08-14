@@ -5,16 +5,76 @@ export const dynamic = "force-dynamic";
 import { songRequests } from "@/db/schema";
 import { sendSongRequestConfirmation, sendSongRequestNotification } from "@/lib/mail";
 
+const REQUIRED_FIELDS = [
+  "service",
+  "occasion",
+  "genre",
+  "idea",
+  "wishes",
+  "language",
+  "voice",
+  "length",
+  "usage",
+  "deadline",
+  "name",
+  "address",
+  "email",
+  "phone",
+  "contactMethod",
+  "paymentMethod",
+  "deliveryMethod",
+] as const;
+
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { name, email, recipient, occasion, mood, story, packageName, consentGiven, consentVersion } = body;
+    const {
+      service,
+      express,
+      occasion,
+      occasionOther,
+      forWhom,
+      fromWhom,
+      genre,
+      genreDescription,
+      idea,
+      wishes,
+      noGos,
+      language,
+      languageDetails,
+      voice,
+      voiceNotes,
+      pronunciation,
+      length,
+      usage,
+      usageOther,
+      story,
+      deadline,
+      visualDescription,
+      name,
+      address,
+      email,
+      phone,
+      contactMethod,
+      availability,
+      availabilityNotes,
+      paymentMethod,
+      deliveryMethod,
+      correctionWishes,
+      consentGiven,
+      consentVersion,
+      agbAccepted,
+      agbVersion,
+    } = body;
 
-    if (!name || !email || !recipient || !occasion || !mood || !story) {
-      return NextResponse.json(
-        { error: "Bitte fülle alle Pflichtfelder aus." },
-        { status: 400 }
-      );
+    for (const field of REQUIRED_FIELDS) {
+      const value = body[field];
+      if (typeof value !== "string" || !value.trim()) {
+        return NextResponse.json(
+          { error: "Bitte fülle alle Pflichtfelder aus." },
+          { status: 400 }
+        );
+      }
     }
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -32,20 +92,54 @@ export async function POST(request: NextRequest) {
       );
     }
 
+    if (!agbAccepted || !agbVersion) {
+      return NextResponse.json(
+        { error: "Bitte bestätige die AGB." },
+        { status: 400 }
+      );
+    }
+
     const trimmed = {
-      name: name.trim(),
-      email: email.trim().toLowerCase(),
-      recipient: recipient.trim(),
+      service: service.trim(),
+      express: Boolean(express),
       occasion: occasion.trim(),
-      mood: mood.trim(),
-      story: story.trim(),
-      packageName: packageName?.trim() || null,
+      occasionOther: occasionOther?.trim() || null,
+      forWhom: forWhom?.trim() || null,
+      fromWhom: fromWhom?.trim() || null,
+      genre: genre.trim(),
+      genreDescription: genreDescription?.trim() || null,
+      idea: idea.trim(),
+      wishes: wishes.trim(),
+      noGos: noGos?.trim() || null,
+      language: language.trim(),
+      languageDetails: languageDetails?.trim() || null,
+      voice: voice.trim(),
+      voiceNotes: voiceNotes?.trim() || null,
+      pronunciation: pronunciation?.trim() || null,
+      length: length.trim(),
+      usage: usage.trim(),
+      usageOther: usageOther?.trim() || null,
+      story: story?.trim() || null,
+      deadline: deadline.trim(),
+      visualDescription: visualDescription?.trim() || null,
+      name: name.trim(),
+      address: address.trim(),
+      email: email.trim().toLowerCase(),
+      phone: phone.trim(),
+      contactMethod: contactMethod.trim(),
+      availability: availability?.trim() || null,
+      availabilityNotes: availabilityNotes?.trim() || null,
+      paymentMethod: paymentMethod.trim(),
+      deliveryMethod: deliveryMethod.trim(),
+      correctionWishes: correctionWishes?.trim() || null,
     };
 
     await db.insert(songRequests).values({
       ...trimmed,
       consentVersion,
       consentAt: new Date(),
+      agbVersion,
+      agbAcceptedAt: new Date(),
     });
 
     try {
