@@ -8,12 +8,12 @@ const faqs = [
   {
     question: "Wie läuft die Erstellung meines Songs ab?",
     answer:
-      "Du sendest mir deine Anfrage mit Anlass und gewünschter Stimmung, teilst mir anschließend deine persönliche Geschichte mit und ich arbeite daraus Liedtext, Musikrichtung und Stimme aus. Nach deiner Freigabe erhältst du deinen fertigen Song als digitale Datei.",
+      "Du sendest mir zunächst unverbindlich deine Anfrage und die wichtigsten Angaben zu deinem Wunschprojekt. Auf Grundlage deiner Anfrage erhältst du ein individuelles Angebot. Wenn du dieses annimmst, bekommst du eine Auftragsbestätigung. Anschließend beginnt – unter Berücksichtigung der gesetzlichen Widerrufsfrist bzw. einer gegebenenfalls gesondert erklärten Zustimmung zum vorzeitigen Produktionsbeginn – die vereinbarte Produktion. Nach Fertigstellung erhältst du dein Projekt auf dem vereinbarten Lieferweg.",
   },
   {
     question: "Wie lange dauert es, bis mein Song fertig ist?",
     answer:
-      "Die Bearbeitungszeit hängt vom gewählten Leistungsumfang und der aktuellen Auslastung ab. Den genauen Zeitrahmen bespreche ich direkt bei deiner Anfrage mit dir. Gegen eine zusätzliche Gebühr ist auch eine Expressbearbeitung möglich.",
+      "Die Bearbeitungszeit hängt vom gewählten Leistungsumfang und der aktuellen Auslastung ab. Den genauen Zeitrahmen bespreche ich direkt bei deiner Anfrage mit dir. Nach vorheriger Vereinbarung ist gegen einen Expresszuschlag von 15 € eine schnellere Bearbeitung möglich.",
   },
   {
     question: "In welchen Sprachen kann mein Song geschrieben werden?",

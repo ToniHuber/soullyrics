@@ -1,36 +1,36 @@
 "use client";
 
 import { AnimatedSection } from "./AnimatedSection";
-import { Send, BookHeart, PenTool, CheckCircle2 } from "lucide-react";
+import { Send, FileText, ClipboardCheck, Music2 } from "lucide-react";
 
 const steps = [
   {
     number: "01",
     icon: Send,
-    title: "Anfrage senden",
+    title: "Unverbindliche Anfrage",
     description:
-      "Du teilst mit, für wen der Song gedacht ist, zu welchem Anlass er entsteht und welche Stimmung gewünscht ist.",
+      "Du schickst mir dein Wunschprojekt mit allen wichtigen Angaben — unverbindlich und ohne Kosten.",
   },
   {
     number: "02",
-    icon: BookHeart,
-    title: "Persönliche Geschichte übermitteln",
+    icon: FileText,
+    title: "Individuelles Angebot",
     description:
-      "Du teilst die Namen, Erinnerungen, besonderen Erlebnisse und persönlichen Botschaften mit, die im Song vorkommen sollen.",
+      "Auf Grundlage deiner Anfrage erstelle ich dir ein individuelles Angebot mit Leistungsumfang und Gesamtpreis.",
   },
   {
     number: "03",
-    icon: PenTool,
-    title: "Individuelle Gestaltung des Songs",
+    icon: ClipboardCheck,
+    title: "Angebot annehmen & Auftragsbestätigung",
     description:
-      "Auf Grundlage der Angaben entstehen der Liedtext, die Musikrichtung, die Stimme und die emotionale Atmosphäre.",
+      "Nimmst du das Angebot an, erhältst du eine Auftragsbestätigung — erst damit kommt der Vertrag zustande.",
   },
   {
     number: "04",
-    icon: CheckCircle2,
-    title: "Abstimmung und Fertigstellung",
+    icon: Music2,
+    title: "Produktion, Abstimmung & Fertigstellung",
     description:
-      "Nach der vereinbarten Abstimmung erhältst du deinen persönlichen Song als digitale Datei.",
+      "Anschließend beginnt die Produktion. Nach Abstimmung erhältst du dein fertiges Projekt auf dem vereinbarten Lieferweg.",
   },
 ];
 

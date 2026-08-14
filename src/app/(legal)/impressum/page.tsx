@@ -9,7 +9,7 @@ export default function ImpressumPage() {
     <>
       <h1>Impressum</h1>
 
-      <h2>Angaben gemäß § 5 ECG, § 63 GewO, § 14 UGB</h2>
+      <h2>Angaben gemäß § 5 ECG, § 63 GewO</h2>
       <p>
         Meriton Huber
         <br />
@@ -40,6 +40,13 @@ export default function ImpressumPage() {
         Mitglied der Wirtschaftskammer Österreich (WKO-Mitgliedsnummer: 1532808)
         <br />
         Anwendbare Rechtsvorschriften: Gewerbeordnung 1994 (abrufbar unter www.ris.bka.gv.at)
+      </p>
+
+      <h2>Medienrechtliche Offenlegung gemäß § 25 Mediengesetz</h2>
+      <p>
+        Medieninhaber: Meriton Huber
+        <br />
+        Unternehmensgegenstand: Ton- und Musikproduktion
       </p>
 
       <h2>Umsatzsteuer</h2>
