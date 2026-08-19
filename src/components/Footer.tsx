@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import { Heart } from "lucide-react";
 
 export function Footer() {
   return (
@@ -126,7 +125,14 @@ export function Footer() {
             &copy; {new Date().getFullYear()} Soul Lyrics Studio. Alle Rechte vorbehalten.
           </p>
           <p className="text-white/46 text-xs flex items-center gap-1">
-            Made with <Heart className="w-3 h-3 text-rose-400 fill-rose-400" /> für deine Geschichte
+            <a
+              href="https://www.besina.at"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-white/70 transition-colors"
+            >
+              BESINA
+            </a>
           </p>
         </div>
       </div>
