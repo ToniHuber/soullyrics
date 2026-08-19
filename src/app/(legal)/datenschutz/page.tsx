@@ -58,15 +58,25 @@ export default function DatenschutzPage() {
 
       <h2>5. Hosting und technische Infrastruktur</h2>
       <p>
-        Diese Website wird bei Netlify gehostet. Formulardaten werden zusätzlich in einer
-        PostgreSQL-Datenbank bei Supabase (Serverstandort Frankfurt/Deutschland) gespeichert.
-        Beim Aufruf der Website werden durch den Hosting-Anbieter automatisch technische
-        Zugriffsdaten (z.B. IP-Adresse, Zeitpunkt des Zugriffs) in Server-Logs verarbeitet, die
-        zur Absicherung des Betriebs erforderlich sind. Nach dem Absenden des Anfrageformulars
-        wird zudem automatisch eine Bestätigungs-E-Mail an dich sowie eine interne
-        Benachrichtigung versendet; der Versand erfolgt über den E-Mail-Anbieter easyname. [Genaue
-        Speicherdauer der Server-Logs sowie Auftragsverarbeitungsverträge mit den eingesetzten
-        Dienstleistern bitte final ergänzen.]
+        Diese Website wird bei Netlify gehostet. Statische Inhalte (z.B. Texte, Bilder) werden
+        dabei über ein weltweites Content-Delivery-Netzwerk ausgeliefert. Die serverseitige
+        Verarbeitung, insbesondere die Verarbeitung deiner Eingaben im Anfrageformular, erfolgt in
+        einem Rechenzentrum von Netlify in Columbus, Ohio, USA. Dies stellt eine Datenübermittlung
+        in ein Land außerhalb der EU/des EWR (Drittland) dar. Netlify Inc. hat seinen Sitz in den
+        USA; für eine solche Übermittlung sind geeignete Garantien nach Art. 46 DSGVO
+        erforderlich, üblicherweise in Form von EU-Standardvertragsklauseln im Rahmen einer
+        Auftragsverarbeitungsvereinbarung mit Netlify. [Bitte bestätigen, ob eine entsprechende
+        Auftragsverarbeitungsvereinbarung mit Netlify abgeschlossen bzw. aktiviert wurde.]
+      </p>
+      <p>
+        Formulardaten werden zusätzlich in einer PostgreSQL-Datenbank bei Supabase
+        (Serverstandort Frankfurt/Deutschland) gespeichert. Beim Aufruf der Website werden durch
+        den Hosting-Anbieter automatisch technische Zugriffsdaten (z.B. IP-Adresse, Zeitpunkt des
+        Zugriffs) in Server-Logs verarbeitet, die zur Absicherung des Betriebs erforderlich sind.
+        Nach dem Absenden des Anfrageformulars wird zudem automatisch eine Bestätigungs-E-Mail an
+        dich sowie eine interne Benachrichtigung versendet; der Versand erfolgt über den
+        E-Mail-Anbieter easyname. [Genaue Speicherdauer der Server-Logs sowie
+        Auftragsverarbeitungsverträge mit den eingesetzten Dienstleistern bitte final ergänzen.]
       </p>
 
       <h2>6. Schriftarten</h2>
