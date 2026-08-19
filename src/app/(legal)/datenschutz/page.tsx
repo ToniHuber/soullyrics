@@ -63,10 +63,10 @@ export default function DatenschutzPage() {
         Verarbeitung, insbesondere die Verarbeitung deiner Eingaben im Anfrageformular, erfolgt in
         einem Rechenzentrum von Netlify in Columbus, Ohio, USA. Dies stellt eine Datenübermittlung
         in ein Land außerhalb der EU/des EWR (Drittland) dar. Netlify Inc. hat seinen Sitz in den
-        USA; für eine solche Übermittlung sind geeignete Garantien nach Art. 46 DSGVO
-        erforderlich, üblicherweise in Form von EU-Standardvertragsklauseln im Rahmen einer
-        Auftragsverarbeitungsvereinbarung mit Netlify. [Bitte bestätigen, ob eine entsprechende
-        Auftragsverarbeitungsvereinbarung mit Netlify abgeschlossen bzw. aktiviert wurde.]
+        USA und ist nach dem EU-U.S. Data Privacy Framework zertifiziert; die Übermittlung stützt
+        sich daher auf den Angemessenheitsbeschluss der Europäischen Kommission nach Art. 45
+        DSGVO. Die Auftragsverarbeitungsvereinbarung mit Netlify ist automatisch Bestandteil des
+        mit Netlify geschlossenen Nutzungsvertrags (Self-Serve Subscription Agreement).
       </p>
       <p>
         Formulardaten werden zusätzlich in einer PostgreSQL-Datenbank bei Supabase
