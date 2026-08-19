@@ -70,14 +70,16 @@ export default function DatenschutzPage() {
       </p>
       <p>
         Formulardaten werden zusätzlich in einer PostgreSQL-Datenbank bei Supabase
-        (Serverstandort Frankfurt/Deutschland) gespeichert. Beim Aufruf der Website werden durch
-        den Hosting-Anbieter automatisch technische Zugriffsdaten (z.B. IP-Adresse, Zeitpunkt des
-        Zugriffs) in Server-Logs verarbeitet, die zur Absicherung des Betriebs erforderlich sind.
-        Diese Logs werden bei Netlify (aktueller Tarif: Free) 24 Stunden lang gespeichert und
-        danach automatisch gelöscht. Nach dem Absenden des Anfrageformulars wird zudem
-        automatisch eine Bestätigungs-E-Mail an dich sowie eine interne Benachrichtigung
-        versendet; der Versand erfolgt über den E-Mail-Anbieter easyname. [Auftragsverarbeitungsverträge
-        mit den eingesetzten Dienstleistern bitte final ergänzen.]
+        (Serverstandort Frankfurt/Deutschland) gespeichert. Die Auftragsverarbeitungsvereinbarung
+        mit Supabase ist automatisch Bestandteil der mit Supabase geschlossenen
+        Nutzungsbedingungen. Beim Aufruf der Website werden durch den Hosting-Anbieter automatisch
+        technische Zugriffsdaten (z.B. IP-Adresse, Zeitpunkt des Zugriffs) in Server-Logs
+        verarbeitet, die zur Absicherung des Betriebs erforderlich sind. Diese Logs werden bei
+        Netlify (aktueller Tarif: Free) 24 Stunden lang gespeichert und danach automatisch
+        gelöscht. Nach dem Absenden des Anfrageformulars wird zudem automatisch eine
+        Bestätigungs-E-Mail an dich sowie eine interne Benachrichtigung versendet; der Versand
+        erfolgt über den E-Mail-Anbieter easyname. [Auftragsverarbeitungsvertrag mit easyname
+        bitte final bestätigen.]
       </p>
 
       <h2>6. Schriftarten</h2>
