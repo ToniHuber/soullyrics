@@ -73,10 +73,11 @@ export default function DatenschutzPage() {
         (Serverstandort Frankfurt/Deutschland) gespeichert. Beim Aufruf der Website werden durch
         den Hosting-Anbieter automatisch technische Zugriffsdaten (z.B. IP-Adresse, Zeitpunkt des
         Zugriffs) in Server-Logs verarbeitet, die zur Absicherung des Betriebs erforderlich sind.
-        Nach dem Absenden des Anfrageformulars wird zudem automatisch eine Bestätigungs-E-Mail an
-        dich sowie eine interne Benachrichtigung versendet; der Versand erfolgt über den
-        E-Mail-Anbieter easyname. [Genaue Speicherdauer der Server-Logs sowie
-        Auftragsverarbeitungsverträge mit den eingesetzten Dienstleistern bitte final ergänzen.]
+        Diese Logs werden bei Netlify (aktueller Tarif: Free) 24 Stunden lang gespeichert und
+        danach automatisch gelöscht. Nach dem Absenden des Anfrageformulars wird zudem
+        automatisch eine Bestätigungs-E-Mail an dich sowie eine interne Benachrichtigung
+        versendet; der Versand erfolgt über den E-Mail-Anbieter easyname. [Auftragsverarbeitungsverträge
+        mit den eingesetzten Dienstleistern bitte final ergänzen.]
       </p>
 
       <h2>6. Schriftarten</h2>
