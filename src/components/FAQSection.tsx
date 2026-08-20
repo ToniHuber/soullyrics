@@ -13,7 +13,7 @@ const faqs = [
   {
     question: "Wie lange dauert es, bis mein Song fertig ist?",
     answer:
-      "Die Bearbeitungszeit hängt vom gewählten Leistungsumfang und der aktuellen Auslastung ab. Den genauen Zeitrahmen bespreche ich direkt bei deiner Anfrage mit dir. Nach vorheriger Vereinbarung ist gegen einen Expresszuschlag von 15 € eine schnellere Bearbeitung möglich.",
+      "Die Bearbeitungszeit hängt vom gewählten Leistungsumfang und der aktuellen Auslastung ab. Den genauen Zeitrahmen bespreche ich direkt bei deiner Anfrage mit dir. Expressbearbeitung zzgl. 15 € ist nach vorheriger Vereinbarung und je nach Verfügbarkeit möglich.",
   },
   {
     question: "In welchen Sprachen kann mein Song geschrieben werden?",

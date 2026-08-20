@@ -23,7 +23,7 @@ const steps = [
     icon: ClipboardCheck,
     title: "Angebot annehmen & Auftragsbestätigung",
     description:
-      "Nimmst du das Angebot an, erhältst du eine Auftragsbestätigung — erst damit kommt der Vertrag zustande.",
+      "Nimmst du das Angebot an, kommt der Vertrag zustande. Anschließend erhältst du eine Auftragsbestätigung mit den vereinbarten Vertragsdaten.",
   },
   {
     number: "04",

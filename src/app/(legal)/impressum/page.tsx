@@ -63,7 +63,16 @@ export default function ImpressumPage() {
 
       <h2>Haftung für Inhalte</h2>
       <p>
-        [Haftungshinweis nach österreichischem Recht (ECG) bitte final festlegen.]
+        Diese Website wurde mit größtmöglicher Sorgfalt und nach bestem Wissen erstellt. Für die
+        Richtigkeit, Vollständigkeit und Aktualität der bereitgestellten Inhalte kann dennoch
+        keine Gewähr übernommen werden. Als Diensteanbieter ist Soul Lyrics Studio gemäß § 7
+        Abs. 1 ECG für eigene Inhalte auf dieser Website nach den allgemeinen Gesetzen
+        verantwortlich. Nach §§ 8 bis 9 ECG besteht jedoch keine Verpflichtung, übermittelte oder
+        gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf
+        eine rechtswidrige Tätigkeit hinweisen. Verpflichtungen zur Entfernung oder Sperrung der
+        Nutzung von Informationen nach den allgemeinen Gesetzen aufgrund gerichtlicher oder
+        behördlicher Anordnungen bleiben auch im Falle der Nichtverantwortlichkeit nach §§ 13 bis
+        17 ECG unberührt.
       </p>
 
       <h2>Haftung für Links</h2>

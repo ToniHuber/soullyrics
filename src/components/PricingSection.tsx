@@ -41,7 +41,7 @@ const addOns = [
     icon: Zap,
     title: "Expressbearbeitung",
     price: "zzgl. 15 €",
-    description: "Schnellere Bearbeitung deiner Anfrage gegen Aufpreis.",
+    description: "Nach vorheriger Vereinbarung und je nach Verfügbarkeit.",
   },
 ];
 

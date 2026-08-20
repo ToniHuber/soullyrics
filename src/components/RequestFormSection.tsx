@@ -617,8 +617,8 @@ export function RequestFormSection() {
                           className="mt-0.5 w-4 h-4 shrink-0 rounded border-white/20 bg-surface-800/50 accent-gold-500 cursor-pointer"
                         />
                         <span className="text-white/65 text-xs leading-relaxed">
-                          Expressbearbeitung anfragen (+15 €, vorbehaltlich Verfügbarkeit und
-                          Bestätigung im individuellen Angebot)
+                          Expressbearbeitung anfragen (zzgl. 15 €, nach vorheriger Vereinbarung
+                          und je nach Verfügbarkeit)
                         </span>
                       </label>
                     </div>
